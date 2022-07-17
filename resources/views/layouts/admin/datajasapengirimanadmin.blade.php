@@ -23,7 +23,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-7">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar Jasa Pengiriman</h3>
@@ -35,6 +35,7 @@
                   <tr>
                     <th>No</th>
                     <th>Nama Jasa Pengiriman</th>
+                    <th>Telepon</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -42,10 +43,14 @@
                   <tr>
                     <td>1</td>
                     <td>JNE</td>
+                    <td>(021) 29278888</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   <tr>
                     <td>2</td>
                     <td>Si Cepat</td>
+                    <td>(021) 50200050</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   </tbody>
                 </table>

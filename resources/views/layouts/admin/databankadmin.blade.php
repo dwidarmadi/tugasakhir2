@@ -23,7 +23,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-7">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar Bank</h3>
@@ -43,12 +43,14 @@
                   <tr>
                     <td>1</td>
                     <td>Bank Central Asia</td>
-                    <td>776844673/td>
+                    <td>776844673</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   <tr>
                     <td>2</td>
                     <td>Bank Rakyan Indonesia</td>
                     <td>1452651772445896</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   </tbody>
                 </table>
