@@ -11,3 +11,9 @@
 @include('layouts.buyer.footerbuyer')
 
 <!-- ini adalah first config saya -->
+
+
+<!-- ini adalah first config saya -->
+
+<!-- ini adalah first config saya -->
+<!-- ini adalah first config saya -->
