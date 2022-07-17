@@ -59,3 +59,7 @@ Route::get('/datajasapengirimanadmin', function () {
 Route::get('/editdatabank', function () {
     return view('layouts.admin.editdatabank');
 });
+
+Route::get('/editdatajasapengiriman', function () {
+    return view('layouts.admin.editdatajasapengiriman');
+});

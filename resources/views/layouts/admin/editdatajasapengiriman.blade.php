@@ -13,7 +13,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit Data Bank</h1>
+            <h1>Edit Data Jasa Pengiriman</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -28,7 +28,7 @@
                  <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Data Bank</h3>
+                            <h3 class="card-title">Data Jasa Pengiriman</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -36,11 +36,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nama</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nama Bank">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nama Jasa Pengiriman">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">No. Rekening</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nomor Rekening">
+                                <label for="exampleInputPassword1">Telepon</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nomor Telepon">
                             </div>
                         </div>
                         <!-- /.card-body -->
