@@ -24,16 +24,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+/* ROUTE ADMIN */
+
 Route::get('/contentdashboardadmin', function () {
     return view('layouts.admin.contentdashboardadmin');
-});
-
-Route::get('/contentdashboardseller', function () {
-    return view('layouts..seller.contentdashboardseller');
-});
-
-Route::get('/contentdashboardbuyer', function () {
-    return view('layouts.buyer.contentdashboardbuyer');
 });
 
 Route::get('/pesananmasukadmin', function () {
@@ -74,4 +68,21 @@ Route::get('/tambahjasapengiriman', function () {
 
 Route::get('/editdatapengguna', function () {
     return view('layouts.admin.editdatapengguna');
+});
+
+/* ROUTE SELLER */
+
+Route::get('/contentdashboardseller', function () {
+    return view('layouts..seller.contentdashboardseller');
+});
+
+Route::get('/tambahprodukseller', function () {
+    return view('layouts..seller.tambahprodukseller');
+});
+
+
+/* ROUTE BUYER */
+
+Route::get('/contentdashboardbuyer', function () {
+    return view('layouts.buyer.contentdashboardbuyer');
 });
