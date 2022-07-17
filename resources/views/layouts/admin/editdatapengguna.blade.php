@@ -36,19 +36,25 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nama</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nama Pengguna">
+                                <input type="email" class="form-control" id="exampleInputNama" placeholder="Nama Pengguna">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">No. Telepon</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nomor Telepon">
+                                <input type="text" class="form-control" id="exampleInputNoTelepon" placeholder="Nomor Telepon">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Email</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Role</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <div class="form-group">
+                                    <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                      <option>Admin</option>
+                                      <option>Seller</option>
+                                      <option>Buyer</option>
+                                    </select>
+                                  </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
