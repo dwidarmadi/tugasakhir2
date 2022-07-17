@@ -13,7 +13,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit Data Bank</h1>
+            <h1>Tambah Data Bank</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -28,7 +28,7 @@
                  <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Data Bank</h3>
+                            <h3 class="card-title">Input Data Bank</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -46,7 +46,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="submit" class="btn btn-success">Tambah</button>
                         </div>
                         </form>
                     </div>

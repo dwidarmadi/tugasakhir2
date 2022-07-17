@@ -23,7 +23,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-10">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar Data Pengguna</h3>
@@ -47,9 +47,10 @@
                     <td>1</td>
                     <td>Komang Odo</td>
                     <td>komangodo@gimail.com</td>
-                    <td>087861356278/td>
+                    <td>087861356278</td>
                     <td>Seller</td>
                     <td>03-04-2022</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   <tr>
                     <td>2</td>
@@ -58,6 +59,7 @@
                     <td>089786543565</td>
                     <td>Buyer</td>
                     <td>20-04-2022</td>
+                    <td>Edit & Hapus</td>
                   </tr>
                   </tbody>
                 </table>

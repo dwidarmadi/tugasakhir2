@@ -63,3 +63,15 @@ Route::get('/editdatabank', function () {
 Route::get('/editdatajasapengiriman', function () {
     return view('layouts.admin.editdatajasapengiriman');
 });
+
+Route::get('/tambahbank', function () {
+    return view('layouts.admin.tambahbank');
+});
+
+Route::get('/tambahjasapengiriman', function () {
+    return view('layouts.admin.tambahjasapengiriman');
+});
+
+Route::get('/editdatapengguna', function () {
+    return view('layouts.admin.editdatapengguna');
+});

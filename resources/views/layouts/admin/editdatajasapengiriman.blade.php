@@ -19,7 +19,7 @@
       </div><!-- /.container-fluid -->
     </section>
 
-
+    <!-- Table input -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -57,5 +57,6 @@
     </section>
   </div>
   <!-- /.content-wrapper -->
+  <!-- /.table input -->
 
 @include('layouts.admin.footeradmin')
