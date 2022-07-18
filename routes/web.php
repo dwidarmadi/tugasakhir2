@@ -24,6 +24,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/tamplate', function () {
+    return view('layouts.tamplate');
+});
+
 /* ROUTE ADMIN */
 
 Route::get('/contentdashboardadmin', function () {
@@ -50,9 +54,9 @@ Route::get('/datajasapengirimanadmin', function () {
     return view('layouts.admin.datajasapengirimanadmin');
 });
 
-// Route::get('/editdatabank', function () {
-//     return view('layouts.admin.editdatabank');
-// });
+Route::get('/editdatabank', function () {
+         return view('layouts.admin.editdatabank');
+ });
 
 Route::get('/editdatabank', function(){
     return('asdasdasd');
