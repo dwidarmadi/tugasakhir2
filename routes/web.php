@@ -19,74 +19,77 @@ Route::get('/', function () {
     return view('layouts.admin.masteradmin');
 });
 
-
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/test', function(){
+    return view('layouts.admin.masteradmin');
 });
 
-Route::get('/tamplate', function () {
-    return view('layouts.tamplate');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
-/* ROUTE ADMIN */
+// Route::get('/tamplate', function () {
+//     return view('layouts.tamplate');
+// });
 
-Route::get('/contentdashboardadmin', function () {
-    return view('layouts.admin.contentdashboardadmin');
-});
+// /* ROUTE ADMIN */
 
-Route::get('/pesananmasukadmin', function () {
-    return view('layouts.admin.pesananmasukadmin');
-});
+// Route::get('/contentdashboardadmin', function () {
+//     return view('layouts.admin.contentdashboardadmin');
+// });
 
-Route::get('/pengirimanhariiniadmin', function () {
-    return view('layouts.admin.pengirimanhariiniadmin');
-});
+// Route::get('/pesananmasukadmin', function () {
+//     return view('layouts.admin.pesananmasukadmin');
+// });
 
-Route::get('/datapenggunaadmin', function () {
-    return view('layouts.admin.datapenggunaadmin');
-});
+// Route::get('/pengirimanhariiniadmin', function () {
+//     return view('layouts.admin.pengirimanhariiniadmin');
+// });
 
-Route::get('/databankadmin', function () {
-    return view('layouts.admin.databankadmin');
-});
+// Route::get('/datapenggunaadmin', function () {
+//     return view('layouts.admin.datapenggunaadmin');
+// });
 
-Route::get('/datajasapengirimanadmin', function () {
-    return view('layouts.admin.datajasapengirimanadmin');
-});
+// Route::get('/databankadmin', function () {
+//     return view('layouts.admin.databankadmin');
+// });
 
-Route::get('/editdatabank', function () {
-         return view('layouts.admin.editdatabank');
- });
+// Route::get('/datajasapengirimanadmin', function () {
+//     return view('layouts.admin.datajasapengirimanadmin');
+// });
 
-Route::get('/editdatabank', function(){
-    return('asdasdasd');
-});
+// Route::get('/editdatabank', function () {
+//          return view('layouts.admin.editdatabank');
+//  });
 
-Route::get('/editdatajasapengiriman', function () {
-    return view('layouts.admin.editdatajasapengiriman');
-});
+// Route::get('/editdatabank', function(){
+//     return('asdasdasd');
+// });
 
-Route::get('/tambahbank', function () {
-    return view('layouts.admin.tambahbank');
-});
+// Route::get('/editdatajasapengiriman', function () {
+//     return view('layouts.admin.editdatajasapengiriman');
+// });
 
-Route::get('/tambahjasapengiriman', function () {
-    return view('layouts.admin.tambahjasapengiriman');
-});
+// Route::get('/tambahbank', function () {
+//     return view('layouts.admin.tambahbank');
+// });
 
-Route::get('/editdatapengguna', function () {
-    return view('layouts.admin.editdatapengguna');
-});
+// Route::get('/tambahjasapengiriman', function () {
+//     return view('layouts.admin.tambahjasapengiriman');
+// });
 
-/* ROUTE SELLER */
+// Route::get('/editdatapengguna', function () {
+//     return view('layouts.admin.editdatapengguna');
+// });
 
-Route::get('/contentdashboardseller', function () {
-    return view('layouts..seller.contentdashboardseller');
-});
+// /* ROUTE SELLER */
 
-Route::get('/tambahprodukseller', function () {
-    return view('layouts..seller.tambahprodukseller');
-});
+// Route::get('/contentdashboardseller', function () {
+//     return view('layouts..seller.contentdashboardseller');
+// });
+
+// Route::get('/tambahprodukseller', function () {
+//     return view('layouts..seller.tambahprodukseller');
+// });
 
 
 /* ROUTE BUYER */
