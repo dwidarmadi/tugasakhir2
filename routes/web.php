@@ -50,8 +50,12 @@ Route::get('/datajasapengirimanadmin', function () {
     return view('layouts.admin.datajasapengirimanadmin');
 });
 
-Route::get('/editdatabank', function () {
-    return view('layouts.admin.editdatabank');
+// Route::get('/editdatabank', function () {
+//     return view('layouts.admin.editdatabank');
+// });
+
+Route::get('/editdatabank', function(){
+    return('asdasdasd');
 });
 
 Route::get('/editdatajasapengiriman', function () {
@@ -83,6 +87,6 @@ Route::get('/tambahprodukseller', function () {
 
 /* ROUTE BUYER */
 
-Route::get('/contentdashboardbuyer', function () {
-    return view('layouts.buyer.contentdashboardbuyer');
-});
+// Route::get('/contentdashboardbuyer', function () {
+//     return view('layouts.buyer.contentdashboardbuyer');
+// });

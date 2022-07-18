@@ -1,4 +1,6 @@
+@extends('layouts.admin.contentdashboardadmin')
 
+{{--
 
 @include('layouts.admin.headeradmin')
 
@@ -9,4 +11,4 @@
 @include('layouts.admin.contentadmin')
 
 @include('layouts.admin.footeradmin')
-
+ --}}

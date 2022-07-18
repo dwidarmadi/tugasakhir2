@@ -1,13 +1,13 @@
+test123
 
-
-@include('layouts.admin.headeradmin')
+{{-- @include('layouts.admin.headeradmin')
 
 @include('layouts.admin.navbaradmin')
 
-@include('layouts.admin.sidebaradmin')
+@include('layouts.admin.sidebaradmin') --}}
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+{{-- <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -57,6 +57,6 @@
     </section>
   </div>
   <!-- /.table input -->
-  <!-- /.content-wrapper -->
+  <!-- /.content-wrapper --> --}}
 
-@include('layouts.admin.footeradmin')
+{{-- @include('layouts.admin.footeradmin') --}}
