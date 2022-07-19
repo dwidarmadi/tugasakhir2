@@ -122,7 +122,7 @@
 
     <!-- Footer -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2022 <a href="https://adminlte.io">KamenTenunSongket.com</a>.</strong>
+        <strong>Copyright &copy; 2022 <a href="https://adminlte.io">KamenTenunSongket.com</a></strong>
     </footer>
     <!-- /.footer -->
 

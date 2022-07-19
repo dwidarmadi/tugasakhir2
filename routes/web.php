@@ -24,3 +24,7 @@ Route::get('/test', function(){
 Route::get('/editdatapengguna', function(){
     return view('layouts.admin.editdatapengguna');
 });
+
+Route::get('/historipesanan', function(){
+    return view('layouts.buyer.historipesanan');
+});
