@@ -20,10 +20,7 @@ Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
 
-Route::get('/databankadmin', function(){
-    return view('layouts.admin.databankadmin');
-});
 
-Route::get('/tambahbank', function(){
-    return view('layouts.admin.tambahbank');
+Route::get('/editdatapengguna', function(){
+    return view('layouts.admin.editdatapengguna');
 });
