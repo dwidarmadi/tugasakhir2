@@ -104,45 +104,20 @@
                     </div>
                 </div>
 
+                @yield('sidebar')
                 <!-- Sidebar Menu -->
-                @php
-                $currentURL = URL::current();
+                <div>
 
-
-                @endphp
-
-
-                @if ($currentURL == "http://127.0.0.1:8000/test")
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <ul class="nav nav-treeview">
-                                <li>
-                                    test menu
-                                </li>
-                                <li>
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">Log Out</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                </div>
                 <!-- /.sidebar-menu -->
-                @endif
-
             </div>
             <!-- /.sidebar -->
         </aside>
 
         <!-- Body -->
-        <div class="content-wrapper">
-            @yield('content')
-        </div>
+            <div class="content-wrapper">
+                @yield('content')
+             </div>
         <!-- /.Body -->
 
         <!-- Footer -->
@@ -165,12 +140,12 @@
     <!-- Bootstrap 4 -->
     <script src="{{ asset('AdminLTE') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
-    <script src="{{ asset('AdminLTE') }}/plugins/chart.js/Chart.min.js"></script>
+    {{-- <script src="{{ asset('AdminLTE') }}/plugins/chart.js/Chart.min.js"></script> --}}
     <!-- Sparkline -->
     <script src="{{ asset('AdminLTE') }}/plugins/sparklines/sparkline.js"></script>
     <!-- JQVMap -->
-    <script src="{{ asset('AdminLTE') }}/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="{{ asset('AdminLTE') }}/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    {{-- <script src="{{ asset('AdminLTE') }}/plugins/jqvmap/jquery.vmap.min.js"></script> --}}
+    {{-- <script src="{{ asset('AdminLTE') }}/plugins/jqvmap/maps/jquery.vmap.usa.js"></script> --}}
     <!-- jQuery Knob Chart -->
     <script src="{{ asset('AdminLTE') }}/plugins/jquery-knob/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
@@ -188,7 +163,7 @@
     <!-- AdminLTE for demo purposes -->
     {{-- <script src="{{ asset('AdminLTE') }}/dist/js/demo.js"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('AdminLTE') }}/dist/js/pages/dashboard.js"></script>
+    {{-- <script src="{{ asset('AdminLTE') }}/dist/js/pages/dashboard.js"></script> --}}
 </body>
 
 </html>

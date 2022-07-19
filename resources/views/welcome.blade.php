@@ -1,6 +1,6 @@
 
 
-@extends('layouts.master')
+@extends('layouts.tamplate')
 
 @section('title','WELLCOME')
 
