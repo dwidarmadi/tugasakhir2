@@ -17,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/test', function(){
-    return view('layouts.admin.dashboardadmin');
+    return view('layouts.admin.pengirimanhariiniadmin');
+});
+
+Route::get('/pengirimanhariiniadmin', function(){
+    return view('layouts.admin.pengirimanhariiniadmin');
 });
