@@ -23,3 +23,7 @@ Route::get('/test', function(){
 Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
 });
+
+Route::get('/tambahbank', function(){
+    return view('layouts.admin.tambahbank');
+});
