@@ -20,6 +20,6 @@ Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
 
-Route::get('/pengirimanhariiniadmin', function(){
-    return view('layouts.admin.pengirimanhariiniadmin');
+Route::get('/databankadmin', function(){
+    return view('layouts.admin.databankadmin');
 });
