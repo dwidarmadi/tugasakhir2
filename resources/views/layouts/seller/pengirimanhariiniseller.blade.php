@@ -5,31 +5,43 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
-           with font-awesome or any other icon font library -->
+            with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
+                        <i class="fab fa-product-hunt nav-icon"></i>
+                        <p>Produk Saya</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                        <i class="far fa-plus-square nav-icon"></i>
+                        <p>Tambah Produk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">
+                        <i class="far fa-lightbulb nav-icon"></i>
+                        <p>Pesanan Masuk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                        <i class="fas fa-car-alt nav-icon"></i>
+                        <p>Pengiriman Hari Ini</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index3.html" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
-                        <p>Status Pesanan</p>
+                        <p>Informasi Pesanan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-history nav-icon"></i>
-                        <p>Histori Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-shopping-cart nav-icon"></i>
-                        <p>Keranjang Belanja</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-exclamation-circle nav-icon"></i>
-                        <p>Tentang</p>
+                    <a href="./index3.html" class="nav-link">
+                        <i class="far fa-file-alt nav-icon"></i>
+                        <p>Repots</p>
                     </a>
                 </li>
                 <li>
@@ -43,7 +55,6 @@
 </nav>
 <!-- /.sidebar-menu -->
 @endsection
-
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <!-- Content Header (Page header) -->
@@ -51,7 +62,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Histori Pesanan</h1>
+                <h1>Pengiriman Hari Ini</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -61,10 +72,10 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Histori Pesanan Selesai</h3>
+                        <h3 class="card-title">Daftar Pengiriman Hari Ini</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -72,29 +83,28 @@
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
-                                    <th>Dipesan</th>
-                                    <th>Alamat</th>
+                                    <th>Nama Pesanan</th>
+                                    <th>Waktu Pesanan</th>
                                     <th>Bank</th>
-                                    <th>Kurir</th>
-                                    <th>Harga Total</th>
-                                    <th>Status Pembayaran</th>
-                                    <th>Jadwal Pengiriman</th>
+                                    <th>Jasa Pengiriman</th>
+                                    <th>Total Pembayaran</th>
                                     <th>Status Produk</th>
+                                    <th>Jadwal Pengiriman</th>
+                                    <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>M001</td>
-                                    <td>15-04-2022</td>
-                                    <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
+                                    <td>T001</td>
+                                    <td>Putu Dehan</td>
+                                    <td>10-05-2022</td>
                                     <td>BCA</td>
-                                    <td>JNE</td>
-                                    <td>Rp. 1.000.000</td>
-                                    <td>Sudah Dibayar</td>
-                                    <td>17-05-2022</td>
-                                    <td>Diterima</td>
-                                    <td>Hapus</td>
+                                    <td>J&T</td>
+                                    <td>Rp. 1.300.000</td>
+                                    <td>Diproses</td>
+                                    <td>12-05-2022</td>
+                                    <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -112,4 +122,5 @@
 </section>
 <!-- /.content -->
 <!-- /.content-wrapper -->
+
 @endsection

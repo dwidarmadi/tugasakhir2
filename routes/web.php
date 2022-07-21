@@ -34,6 +34,11 @@ Route::get('/databankadmin', function(){
 });
 
 /* BUYER */
+Route::get('/dashboardbuyer', function(){
+    return view('layouts.buyer.dashboardbuyer');
+});
+
+
 Route::get('/statuspesananbuyer', function(){
     return view('layouts.buyer.statuspesananbuyer');
 });
@@ -45,4 +50,12 @@ Route::get('/historipesanan', function(){
 /* SELLER */
 Route::get('/dashboardseller', function(){
     return view('layouts.seller.dashboardseller');
+});
+
+Route::get('/pesananmasukseller', function(){
+    return view('layouts.seller.pesananmasukseller');
+});
+
+Route::get('/pengirimanhariiniseller', function(){
+    return view('layouts.seller.pengirimanhariiniseller');
 });

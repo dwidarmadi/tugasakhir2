@@ -10,25 +10,37 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fab fa-product-hunt nav-icon"></i>
                         <p>Produk Saya</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-plus-square nav-icon"></i>
                         <p>Tambah Produk</p>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="./index.html" class="nav-link">
+                        <i class="far fa-lightbulb nav-icon"></i>
+                        <p>Pesanan Masuk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                        <i class="fas fa-car-alt nav-icon"></i>
+                        <p>Pengiriman Hari Ini</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-file-alt nav-icon"></i>
                         <p>Repots</p>
                     </a>
                 </li>
@@ -74,7 +86,7 @@
                             <p>Produk Saya</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+                            <i class="fab fa-product-hunt nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -89,7 +101,22 @@
                             <p>Tambah Produk</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="far fa-plus-square nav-icon"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>12</h3>
+
+                            <p>Pesanan Masuk</p>
+                        </div>
+                        <div class="icon">
+                            <i class="far fa-lightbulb nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -104,7 +131,7 @@
                             <p>Informasi Pesanan</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-person-add"></i>
+                            <i class="fas fa-info nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -118,7 +145,7 @@
                             <p>Reports</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="far fa-file-alt nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
