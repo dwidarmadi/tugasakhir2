@@ -25,6 +25,10 @@ Route::get('/editdatapengguna', function(){
     return view('layouts.admin.editdatapengguna');
 });
 
+Route::get('/dashboardadmin', function(){
+    return view('layouts.admin.dashboardadmin');
+});
+
 /* BUYER */
 Route::get('/statuspesananbuyer', function(){
     return view('layouts.buyer.statuspesananbuyer');
