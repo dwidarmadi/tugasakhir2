@@ -11,37 +11,37 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-lightbulb nav-icon"></i>
                         <p>Pesanan Masuk</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-car-alt nav-icon"></i>
                         <p>Pengiriman Hari Ini</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-user nav-icon"></i>
                         <p>Data Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-money-check-alt nav-icon"></i>
                         <p>Data BANK</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-business-time nav-icon"></i>
                         <p>Data Jasa Pengiriman</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-file-alt nav-icon"></i>
                         <p>Repots</p>
                     </a>
                 </li>

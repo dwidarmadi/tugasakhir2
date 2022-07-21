@@ -29,6 +29,10 @@ Route::get('/dashboardadmin', function(){
     return view('layouts.admin.dashboardadmin');
 });
 
+Route::get('/databankadmin', function(){
+    return view('layouts.admin.databankadmin');
+});
+
 /* BUYER */
 Route::get('/statuspesananbuyer', function(){
     return view('layouts.buyer.statuspesananbuyer');

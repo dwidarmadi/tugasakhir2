@@ -17,31 +17,31 @@
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="fa-regular fa-car"></i>
+                        <i class="fas fa-car-alt nav-icon"></i>
                         <p>Pengiriman Hari Ini</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-people-circle-check nav-icon"></i>
+                        <i class="fas fa-user nav-icon"></i>
                         <p>Data Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-money-check-alt nav-icon"></i>
                         <p>Data BANK</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-business-time nav-icon"></i>
                         <p>Data Jasa Pengiriman</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-file-alt nav-icon"></i>
                         <p>Repots</p>
                     </a>
                 </li>
@@ -66,6 +66,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
                     <h1 class="m-0">Dashboard</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -87,7 +88,7 @@
                             <p>Pesanan Masuk</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+                            <i class="far fa-lightbulb nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -102,7 +103,7 @@
                             <p>Pengiriman Hari Ini</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="fas fa-car-alt nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -117,7 +118,7 @@
                             <p>Data Pengguna</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-person-add"></i>
+                            <i class="fas fa-user nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -132,7 +133,7 @@
                             <p>Data BANK</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
+                            <i class="fas fa-money-check-alt nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -147,7 +148,7 @@
                             <p>Data Jasa Pengiriman</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-person-add"></i>
+                            <i class="fas fa-business-time nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -161,7 +162,7 @@
                             <p>Reports</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="far fa-file-alt nav-icon"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
