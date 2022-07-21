@@ -3,6 +3,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\PHP;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +16,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+/* ADMIN */
 Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
-
 
 Route::get('/editdatapengguna', function(){
     return view('layouts.admin.editdatapengguna');
 });
 
+/* BUYER */
+Route::get('/statuspesananbuyer', function(){
+    return view('layouts.buyer.statuspesananbuyer');
+});
+
 Route::get('/historipesanan', function(){
     return view('layouts.buyer.historipesanan');
+});
+
+/* SELLER */
+Route::get('/dashboardseller', function(){
+    return view('layouts.seller.dashboardseller');
 });

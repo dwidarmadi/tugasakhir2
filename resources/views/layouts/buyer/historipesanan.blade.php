@@ -64,7 +64,7 @@
                 <div class="col-10">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Pesanan</h3>
+                            <h3 class="card-title">Histori Pesanan Selesai</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -91,10 +91,10 @@
                                         <td>BCA</td>
                                         <td>JNE</td>
                                         <td>Rp. 1.000.000</td>
-                                        <td>Belum Dibayar</td>
+                                        <td>Sudah Dibayar</td>
                                         <td>17-05-2022</td>
-                                        <td>Belum Dibayar</td>
-                                        <td>Detail</td>
+                                        <td>Diterima</td>
+                                        <td>Hapus</td>
                                     </tr>
                                 </tbody>
                             </table>
