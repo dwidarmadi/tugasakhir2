@@ -17,13 +17,13 @@
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="far fa-car-rear nav-icon"></i>
+                        <i class="fa-regular fa-car"></i>
                         <p>Pengiriman Hari Ini</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-people-circle-check nav-icon"></i>
                         <p>Data Pengguna</p>
                     </a>
                 </li>
