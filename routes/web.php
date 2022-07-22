@@ -59,3 +59,15 @@ Route::get('/pesananmasukseller', function(){
 Route::get('/pengirimanhariiniseller', function(){
     return view('layouts.seller.pengirimanhariiniseller');
 });
+
+Route::get('/profilseller', function(){
+    return view('layouts.seller.profilseller');
+});
+
+Route::get('/editpasswordseller', function(){
+    return view('layouts.seller.editpasswordseller');
+});
+
+Route::get('/informasipesananseller', function(){
+    return view('layouts.seller.informasipesananseller');
+});
