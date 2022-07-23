@@ -32,11 +32,14 @@
                         <p>Tentang</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
-                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </li>
     </ul>

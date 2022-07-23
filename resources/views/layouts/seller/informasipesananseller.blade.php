@@ -68,9 +68,68 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Informasi Pesanan</h1>
+                <h1><i class="fas fa-info nav-icon mt-3"></i><span class="ml-3"></span>Informasi Pesanan</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
 </section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Informasi Pesanan</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No Transaksi</th>
+                                    <th>Nama Pesanan</th>
+                                    <th>Waktu Pesanan</th>
+                                    <th>Bank</th>
+                                    <th>Jasa Pengiriman</th>
+                                    <th>Total Pembayaran</th>
+                                    <th>Status Produk</th>
+                                    <th>Jadwal Pengiriman</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>T001</td>
+                                    <td>Putu Dehan</td>
+                                    <td>10-05-2022</td>
+                                    <td>BCA</td>
+                                    <td>J&T</td>
+                                    <td>Rp. 1.300.000</td>
+                                    <td>Diproses</td>
+                                    <td>12-05-2022</td>
+                                    <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Detail</a>
+                                        <a href="#" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+<!-- /.content-wrapper -->
 @endsection

@@ -44,11 +44,14 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
-                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </li>
     </ul>
@@ -62,7 +65,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Pesanan Masuk</h1>
+                <h1><i class="far fa-lightbulb nav-icon"></i><span class="ml-3"></span>Pesanan Masuk</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -83,28 +86,23 @@
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
-                                    <th>Nama Pesanan</th>
                                     <th>Waktu Pesanan</th>
-                                    <th>Bank</th>
-                                    <th>Jasa Pengiriman</th>
-                                    <th>Total Pembayaran</th>
+                                    <th>Pembayaran</th>
                                     <th>Status Produk</th>
                                     <th>Jadwal Pengiriman</th>
-                                    <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>T001</td>
-                                    <td>Putu Dehan</td>
                                     <td>10-05-2022</td>
-                                    <td>BCA</td>
-                                    <td>J&T</td>
-                                    <td>Rp. 1.300.000</td>
+                                    <td>Belum Dibayar</td>
                                     <td>Diproses</td>
                                     <td>12-05-2022</td>
-                                    <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Detail</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

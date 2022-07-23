@@ -26,23 +26,23 @@
                         <p>Keranjang Belanja</p>
                     </a>
                 </li>
-                </li>
-                <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-exclamation-circle nav-icon"></i>
-                        <p>Tentang</p>
-                    </a>
-                </li>
-                <div>
-                    <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
-                            <i class="fas fa-sign-out-alt nav-icon"></i>
-                            <p>Log Out</p>
-                        </a>
-                    </li>
-                </div>
-            </ul>
         </li>
+        <li class="nav-item">
+            <a href="./index2.html" class="nav-link">
+                <i class="fas fa-exclamation-circle nav-icon"></i>
+                <p>Tentang</p>
+            </a>
+        </li>
+        <div>
+            <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                    <i class="fas fa-sign-out-alt nav-icon"></i>
+                    <p>Log Out</p>
+                </a>
+            </li>
+        </div>
+    </ul>
+    </li>
     </ul>
 </nav>
 <!-- /.sidebar-menu -->
@@ -55,7 +55,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-history nav-icon"></i><span class="ml-3"></span>Histori Pesanan</h1>
+                <h1><i class="fas fa-shopping-cart nav-icon"></i><span class="ml-3"></span>Keranjang Belanja</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -68,7 +68,9 @@
             <div class="col-10">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Histori Pesanan Selesai</h3>
+                        <h3 class="card-title">Daftar Keranjang Belanja
+                            <a href="#" class="btn btn-primary ml-3"><i class="fas fa-shopping-cart nav-icon"></i>Lanjut
+                                Belanja</a></h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -79,31 +81,39 @@
                                     <th>Produk</th>
                                     <th>Nama Produk</th>
                                     <th>Jumlah</th>
-                                    <th>Kurir</th>
+                                    <th>Harga</th>
                                     <th>Harga Total</th>
-                                    <th>Status Pembayaran</th>
-                                    <th>Jadwal Pengiriman</th>
-                                    <th>Status Produk</th>
                                     <th>Aksi</th>
-                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>T   001</td>
-                                    <td>15-04-2022</td>
-                                    <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
-                                    <td>BCA</td>
-                                    <td>JNE</td>
+                                    <td>1</td>
+                                    <td>Foto Produk</td>
+                                    <td>Kamen Motif Kedis</td>
+                                    <td>2</td>
                                     <td>Rp. 1.000.000</td>
-                                    <td>Sudah Dibayar</td>
-                                    <td>17-05-2022</td>
-                                    <td>Diterima</td>
+                                    <td>Rp. 2.000.000</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Foto Produk</td>
+                                    <td>Kamen Motif Bulan</td>
+                                    <td>1</td>
+                                    <td>Rp. 1.200.000</td>
+                                    <td>Rp. 1.200.000</td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="pt-2">
+                            <a href="#" class="btn btn-primary">CHeck Out</a>
+                            <a href="#" class="btn btn-danger">Kosongkan Keranjang Belanja</a>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -118,4 +128,5 @@
 </section>
 <!-- /.content -->
 <!-- /.content-wrapper -->
+
 @endsection

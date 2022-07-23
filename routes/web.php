@@ -47,6 +47,11 @@ Route::get('/historipesanan', function(){
     return view('layouts.buyer.historipesanan');
 });
 
+Route::get('/keranjangbelanja', function(){
+    return view('layouts.buyer.keranjangbelanja');
+});
+
+
 /* SELLER */
 Route::get('/dashboardseller', function(){
     return view('layouts.seller.dashboardseller');
@@ -70,4 +75,8 @@ Route::get('/editpasswordseller', function(){
 
 Route::get('/informasipesananseller', function(){
     return view('layouts.seller.informasipesananseller');
+});
+
+Route::get('/detailpesananseller', function(){
+    return view('layouts.seller.detailpesananseller');
 });

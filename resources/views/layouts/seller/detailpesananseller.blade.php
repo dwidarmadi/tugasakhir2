@@ -65,7 +65,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1> <i class="fas fa-car-alt nav-icon"></i><span class="ml-3"></span>Pengiriman Hari Ini</h1>
+                <h1><i class="far fas fa-search nav-icon"></i><span class="ml-3"></span>Detail Pesanan</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -78,7 +78,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Pengiriman Hari Ini</h3>
+                        <h3 class="card-title">Daftar Informasi Pesanan</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -86,15 +86,16 @@
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
-                                    <th>Nama Pesanan</th>
+                                    <th>Nama Pemesan</th>
                                     <th>Waktu Pesanan</th>
+                                    <th>Produk</th>
+                                    <th>Jumlah</th>
                                     <th>Bank</th>
                                     <th>Jasa Pengiriman</th>
                                     <th>Total Pembayaran</th>
                                     <th>Status Produk</th>
                                     <th>Jadwal Pengiriman</th>
                                     <th>Alamat</th>
-                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -102,17 +103,14 @@
                                     <td>T001</td>
                                     <td>Putu Dehan</td>
                                     <td>10-05-2022</td>
+                                    <td>Kamen Songket Motif Kedis</td>
+                                    <td>1</td>
                                     <td>BCA</td>
                                     <td>J&T</td>
                                     <td>Rp. 1.300.000</td>
-                                    <td>Dikirim</td>
+                                    <td>Diproses</td>
                                     <td>12-05-2022</td>
                                     <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary">Detail</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -129,5 +127,4 @@
 </section>
 <!-- /.content -->
 <!-- /.content-wrapper -->
-
 @endsection
