@@ -53,6 +53,10 @@ Route::get('/keranjangbelanja', function(){
 
 
 /* SELLER */
+Route::get('/produksaya', function(){
+    return view('layouts.seller.produksaya');
+});
+
 Route::get('/dashboardseller', function(){
     return view('layouts.seller.dashboardseller');
 });
