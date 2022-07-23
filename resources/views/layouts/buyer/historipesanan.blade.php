@@ -10,20 +10,20 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
-                        <i class="fas fa-info nav-icon"></i>
+                        <i class="fas fa-cart-arrow-down nav-icon"></i>
                         <p>Status Pesanan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                        <i class="fas fa-shopping-basket nav-icon"></i>
+                        <p>Keranjang Belanja</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                         <i class="fas fa-history nav-icon"></i>
                         <p>Histori Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-shopping-cart nav-icon"></i>
-                        <p>Keranjang Belanja</p>
                     </a>
                 </li>
                 </li>

@@ -10,8 +10,14 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
-                        <i class="fas fa-info nav-icon"></i>
+                        <i class="fas fa-cart-arrow-down  nav-icon"></i>
                         <p>Status Pesanan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                        <i class="fas fa-shopping-basket nav-icon"></i>
+                        <p>Keranjang Belanja</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -22,27 +28,20 @@
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-shopping-cart nav-icon"></i>
-                        <p>Keranjang Belanja</p>
+                        <i class="fas fa-exclamation-circle nav-icon"></i>
+                        <p>Tentang</p>
                     </a>
                 </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
+            </ul>
         </li>
-        <li class="nav-item">
-            <a href="./index2.html" class="nav-link">
-                <i class="fas fa-exclamation-circle nav-icon"></i>
-                <p>Tentang</p>
-            </a>
-        </li>
-        <div>
-            <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                    <i class="fas fa-sign-out-alt nav-icon"></i>
-                    <p>Log Out</p>
-                </a>
-            </li>
-        </div>
-    </ul>
-    </li>
     </ul>
 </nav>
 <!-- /.sidebar-menu -->
@@ -55,7 +54,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-shopping-cart nav-icon"></i><span class="ml-3"></span>Keranjang Belanja</h1>
+                <h1><i class="fas fa-shopping-basket nav-icon"></i><span class="ml-3"></span>Keranjang Belanja</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -69,8 +68,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Daftar Keranjang Belanja
-                            <a href="#" class="btn btn-primary ml-3"><i class="fas fa-shopping-cart nav-icon"></i>Lanjut
-                                Belanja</a></h3>
+                            <a href="#" class="btn btn-primary ml-3">
+                                <i class="fas fa-shopping-basket nav-icon"></i>
+                                Lanjut Belanja</a></h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
