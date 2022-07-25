@@ -45,11 +45,14 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
-                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </li>
     </ul>
@@ -64,7 +67,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit Data Pengguna</h1>
+                    <h1><i class="fas fa-edit nav-icon"><span class="ml-3"></span></i>Edit Data Pengguna</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -75,7 +78,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">

@@ -45,11 +45,14 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
-                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </li>
     </ul>
@@ -96,13 +99,35 @@
                                     <td>1</td>
                                     <td>Bank Central Asia</td>
                                     <td>776844673</td>
-                                    <td>Edit & Hapus</td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Bank Rakyan Indonesia</td>
                                     <td>1452651772445896</td>
-                                    <td>Edit & Hapus</td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

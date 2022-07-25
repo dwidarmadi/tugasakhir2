@@ -45,11 +45,14 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
-                </li>
+                <div>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Log Out</p>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </li>
     </ul>
@@ -63,7 +66,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Pengiriman Hari Ini</h1>
+                <h1><i class="fas fa-car"><span class="ml-3"></span></i>Pengiriman Hari Ini</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -106,6 +109,18 @@
                                     <td>Diproses</td>
                                     <td>12-05-2022</td>
                                     <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm mt-2" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

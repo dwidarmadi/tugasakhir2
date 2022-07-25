@@ -38,8 +38,42 @@ Route::get('/datajasapengirimanadmin', function(){
 });
 
 Route::get('/datapenggunaadmin', function(){
+    return view('layouts.admin.datajasapengirimanadmin');
+});
+
+Route::get('/editdatabank', function(){
+    return view('layouts.admin.editdatabank');
+});
+
+Route::get('/datapenggunaadmin', function(){
     return view('layouts.admin.datapenggunaadmin');
 });
+
+Route::get('/editdatajasapengiriman', function(){
+    return view('layouts.admin.editdatajasapengiriman');
+});
+
+Route::get('/pengirimanhariiniadmin', function(){
+    return view('layouts.admin.pengirimanhariiniadmin');
+});
+
+Route::get('/pesananmasukadmin', function(){
+    return view('layouts.admin.pesananmasukadmin');
+});
+
+Route::get('/tambahbank', function(){
+    return view('layouts.admin.tambahbank');
+});
+
+Route::get('/tambahjasapengiriman', function(){
+    return view('layouts.admin.tambahjasapengiriman');
+});
+
+
+
+
+
+
 
 
 /* BUYER */
@@ -66,6 +100,16 @@ Route::get('/historipesanan', function(){
 Route::get('/keranjangbelanja', function(){
     return view('layouts.buyer.keranjangbelanja');
 });
+
+
+
+
+
+
+
+
+
+
 
 
 /* SELLER */
