@@ -38,6 +38,9 @@ Route::get('/dashboardbuyer', function(){
     return view('layouts.buyer.dashboardbuyer');
 });
 
+Route::get('/profilbuyer', function(){
+    return view('layouts.buyer.profilbuyer');
+});
 
 Route::get('/statuspesananbuyer', function(){
     return view('layouts.buyer.statuspesananbuyer');
