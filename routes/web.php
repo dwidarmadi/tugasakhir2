@@ -33,6 +33,15 @@ Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
 });
 
+Route::get('/datajasapengirimanadmin', function(){
+    return view('layouts.admin.datajasapengirimanadmin');
+});
+
+Route::get('/datapenggunaadmin', function(){
+    return view('layouts.admin.datapenggunaadmin');
+});
+
+
 /* BUYER */
 Route::get('/dashboardbuyer', function(){
     return view('layouts.buyer.dashboardbuyer');
@@ -40,6 +49,10 @@ Route::get('/dashboardbuyer', function(){
 
 Route::get('/profilbuyer', function(){
     return view('layouts.buyer.profilbuyer');
+});
+
+Route::get('/editpasswordbuyer', function(){
+    return view('layouts.buyer.editpasswordbuyer');
 });
 
 Route::get('/statuspesananbuyer', function(){

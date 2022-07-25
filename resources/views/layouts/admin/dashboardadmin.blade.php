@@ -66,7 +66,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1><i class="fas fa-tachometer-alt nav-icon"></i>Dashboard</h1>
+                    <h1><i class="fas fa-tachometer-alt nav-icon"><span class="ml-3"></span></i>Dashboard</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->

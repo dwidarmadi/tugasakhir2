@@ -64,7 +64,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Jasa Pengiriman</h1>
+                    <h1><i class="fas fa-business-time nav-icon"><span class="ml-3"></span></i>Data Jasa Pengiriman</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->

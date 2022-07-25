@@ -64,7 +64,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Pengguna</h1>
+                    <h1><i class="fas fa-user nav-icon"><span class="ml-3"></span></i>Data Pengguna</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -101,7 +101,18 @@
                                         <td>087861356278</td>
                                         <td>Seller</td>
                                         <td>03-04-2022</td>
-                                        <td>Edit & Hapus</td>
+                                        <td>
+                                            <a class="btn btn-info btn-sm" href="#">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="#">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
@@ -110,7 +121,18 @@
                                         <td>089786543565</td>
                                         <td>Buyer</td>
                                         <td>20-04-2022</td>
-                                        <td>Edit & Hapus</td>
+                                        <td>
+                                            <a class="btn btn-info btn-sm" href="#">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="#">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -65,7 +65,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Data Bank</h1>
+                <h1><i class="fas fa-money-check-alt nav-icon"><span class="ml-3"></span></i> Data Bank</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
