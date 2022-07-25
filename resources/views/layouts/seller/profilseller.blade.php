@@ -104,7 +104,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col-md-9">
+          <div class="col-md-6">
             <div class="card">
               <div class="card-header p-2">
                 <ul class="nav nav-pills">

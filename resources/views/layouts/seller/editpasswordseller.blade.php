@@ -65,7 +65,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1><i class="fas fa-user nav-icon"></i> Profile</h1>
+            <h1><i class="fas fa-user nav-icon"><span class="ml-3"></span></i> Profile</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -104,7 +104,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col-md-5">
+          <div class="col-md-6">
             <div class="card">
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
