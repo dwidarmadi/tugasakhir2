@@ -56,7 +56,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Profile</h1>
+            <h1><i class="fas fa-user nav-icon"><span class="ml-3"></span></i>Profile</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -95,12 +95,12 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card">
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link active" href="#detail" data-toggle="tab">Detail</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#password" data-toggle="tab">Password</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="#detail" data-toggle="tab">Edit Profil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#password" data-toggle="tab">Edit Password</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <form>
@@ -118,16 +118,6 @@
                     <div class="form-group">
                         <label for="exampleInputPassword1">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Role</label>
-                        <div class="form-group">
-                            <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                                <option>Admin</option>
-                                <option>Seller</option>
-                                <option>Buyer</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
                 <!-- /.card-body -->

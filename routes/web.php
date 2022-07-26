@@ -101,7 +101,9 @@ Route::get('/keranjangbelanja', function(){
     return view('layouts.buyer.keranjangbelanja');
 });
 
-
+Route::get('/checkout', function(){
+    return view('layouts.buyer.checkout');
+});
 
 
 

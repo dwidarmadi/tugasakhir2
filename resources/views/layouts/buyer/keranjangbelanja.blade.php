@@ -95,6 +95,7 @@
                                     <td>Rp. 2.000.000</td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Delete</a>
+                                        <a href="#" class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -106,6 +107,7 @@
                                     <td>Rp. 1.200.000</td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Delete</a>
+                                        <a href="#" class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                             </tbody>
