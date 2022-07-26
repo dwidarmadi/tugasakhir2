@@ -45,4 +45,19 @@
     </ul>
 </nav>
 <!-- /.sidebar-menu -->
+<i class="fas fa-shopping-cart"></i>
+@endsection
+
+@section('content')
+<!-- Content Wrapper. Contains page content -->
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1><i class="fas fa-shopping-cart nav-icon"></i><span class="ml-3"></span>Check Out</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 @endsection
