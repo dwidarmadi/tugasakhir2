@@ -69,51 +69,59 @@
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Data Bank</h3>
+                            <h3 class="card-title">Konfirmasi Check Out</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
+                        <div class="ml-3 mt-3">
+                            <h5>Total Belanja :</h5>
+                        </div>
                         <form>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama</label>
+                                    <label for="exampleInputNama">Nama Pemesan</label>
                                     <input type="email" class="form-control" id="exampleInputNama"
-                                        placeholder="Nama Pengguna">
+                                        placeholder="Nama Pemesan">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">No. Telepon</label>
+                                    <label for="exampleInputNoTelepon">No. Telepon</label>
                                     <input type="text" class="form-control" id="exampleInputNoTelepon"
                                         placeholder="Nomor Telepon">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Email</label>
+                                    <label for="exampleInputEmail">Email</label>
                                     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Role</label>
+                                    <label for="exampleInputAlamat">Alamat Pesanan</label>
+                                    <input type="email" class="form-control" id="exampleInputAlamat"
+                                        placeholder="Alamat Pesanan">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputTransfer">Transfer via</label>
                                     <div class="form-group">
                                         <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                                            <option>Admin</option>
-                                            <option>Seller</option>
-                                            <option>Buyer</option>
+                                            <option>BCA</option>
+                                            <option>BNI</option>
+                                            <option>Mandiri</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Konfirmasi Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Konfirmasi Password">
+                                    <label for="exampleInputPengiriman">Pilih Jasa Pengiriman</label>
+                                    <div class="form-group">
+                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                            <option>J&N</option>
+                                            <option>JNE</option>
+                                            <option>Si Cepat Express</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success">Proses Pesanan</button>
                             </div>
                         </form>
                     </div>
