@@ -94,7 +94,9 @@
                                     <td>Belum Dibayar</td>
                                     <td>17-05-2022</td>
                                     <td>Belum Dibayar</td>
-                                    <td>Detail</td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Upload Bukti Pembayaran</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
