@@ -71,6 +71,11 @@ Route::get('/tambahjasapengiriman', function(){
 
 
 
+Route::get('/tamplate-landing', function(){
+    return view('layouts.tamplate-landing');
+});
+
+
 
 
 
