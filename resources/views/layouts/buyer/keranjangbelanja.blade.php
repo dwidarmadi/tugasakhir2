@@ -77,6 +77,13 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
+                                    <th>
+                                        <div>
+                                            <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i
+                                                    class="far fa-square"></i>
+                                            </button>
+                                        </div>
+                                    </th>
                                     <th>No</th>
                                     <th>Produk</th>
                                     <th>Nama Produk</th>
@@ -87,6 +94,12 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>
+                                        <div class="icheck-primary">
+                                            <input type="checkbox" value="" id="check1">
+                                            <label for="check1"></label>
+                                        </div>
+                                    </td>
                                     <td>1</td>
                                     <td>Foto Produk</td>
                                     <td>Kamen Motif Kedis</td>
@@ -95,9 +108,16 @@
                                     <td>Rp. 2.000.000</td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Delete</a>
+                                        <a href="#" class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>
+                                        <div class="icheck-primary">
+                                            <input type="checkbox" value="" id="check2">
+                                            <label for="check2"></label>
+                                        </div>
+                                    </td>
                                     <td>2</td>
                                     <td>Foto Produk</td>
                                     <td>Kamen Motif Bulan</td>
@@ -106,12 +126,14 @@
                                     <td>Rp. 1.200.000</td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Delete</a>
+                                        <a href="#" class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div><h5>Total Belanja :</h5></div>
                         <div class="pt-2">
-                            <a href="#" class="btn btn-primary">CHeck Out</a>
+                            <a href="#" class="btn btn-primary">Check Out</a>
                             <a href="#" class="btn btn-danger">Kosongkan Keranjang Belanja</a>
                         </div>
                     </div>

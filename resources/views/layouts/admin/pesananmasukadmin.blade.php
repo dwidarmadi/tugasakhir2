@@ -77,10 +77,10 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-10">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Transaksi</h3>
+                        <h3 class="card-title">Daftar Pesanan Masuk</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -88,40 +88,27 @@
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
-                                    <th>Nama Pesanan</th>
                                     <th>Waktu Pesanan</th>
-                                    <th>Bank</th>
-                                    <th>Jasa Pengiriman</th>
-                                    <th>Total Pembayaran</th>
+                                    <th>Pembayaran</th>
                                     <th>Status Produk</th>
                                     <th>Jadwal Pengiriman</th>
-                                    <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>T001</td>
-                                    <td>Putu Dehan</td>
                                     <td>10-05-2022</td>
-                                    <td>BCA</td>
-                                    <td>J&T</td>
-                                    <td>Rp. 1.300.000</td>
+                                    <td>Belum Dibayar</td>
                                     <td>Diproses</td>
                                     <td>12-05-2022</td>
-                                    <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm" href="#">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm mt-2" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Delete
-                                        </a>
-                                    </td>
+                                            <a class="btn btn-info btn-sm" href="#">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Detail
+                                            </a>
+                                        </td>
                                 </tr>
                             </tbody>
                         </table>
