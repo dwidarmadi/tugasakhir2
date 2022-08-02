@@ -151,3 +151,12 @@ Route::get('/informasipesananseller', function(){
 Route::get('/detailpesananseller', function(){
     return view('layouts.seller.detailpesananseller');
 });
+
+
+
+
+
+/*TAMPLATE LANDING*/
+Route::get('/tamplate-landing', function(){
+    return view('layouts.tamplate-landing');
+});
