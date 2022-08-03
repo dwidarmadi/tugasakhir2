@@ -95,14 +95,14 @@
           </div>
           <!-- /.col -->
           <div class="col-md-6">
-            <div class="card">
+            <div class="card detailcard">
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link" href="#detail" data-toggle="tab">Detail</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#editpassword" data-toggle="tab">Edit Password</a></li>
                 </ul>
               </div><!-- /.card-header -->
-              <form>
+              {{-- <form id="editpassword">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password Lama</label>
@@ -126,6 +126,30 @@
                     <button type="submit" class="btn btn-success">Edit</button>
                 </div>
             </form>
+
+            <form id="detailuser">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama</label>
+                        <input type="email" class="form-control" id="exampleInputNama"
+                            placeholder="Nama Pengguna">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">No. Telepon</label>
+                        <input type="text" class="form-control" id="exampleInputNoTelepon"
+                            placeholder="Nomor Telepon">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Edit</button>
+                </div>
+            </form> --}}
             </div>
             <!-- /.card -->
           </div>

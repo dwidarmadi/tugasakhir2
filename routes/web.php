@@ -5,6 +5,9 @@
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\PHP;
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BankController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +19,14 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 |
 */
 
-/* ADMIN */
+Route::resource('product', ProductController::class);
+
+Route::resource('bank', BankController::class);
+
+Route::get('/databankadmin', function(){
+    return view('layouts.admin.databankadmin');
+});
+
 Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
@@ -160,3 +170,8 @@ Route::get('/detailpesananseller', function(){
 Route::get('/tamplate-landing', function(){
     return view('layouts.tamplate-landing');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

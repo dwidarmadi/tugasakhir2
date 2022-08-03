@@ -169,15 +169,6 @@
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <div>
-                    <div class="card">
-                        <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1>Tailored Jeans</h1>
-                        <p class="price">$19.99</p>
-                        <p>Some text about the jeans..</p>
-                        <p><button>Add to Cart</button></p>
-                      </div>
-                </div>
                 <!-- /.row -->
                 <!-- Main row -->
                 <!-- /.row (main row) -->
