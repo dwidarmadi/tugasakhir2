@@ -128,6 +128,9 @@ Route::get('/checkout', function(){
     return view('layouts.buyer.checkout');
 });
 
+Route::get('/uploadpay', function(){
+    return view('layouts.buyer.uploadpay');
+});
 
 
 

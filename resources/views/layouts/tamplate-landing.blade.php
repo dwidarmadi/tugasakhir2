@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Top Navigation</title>
+    <title>TENUN SONGKET</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -114,17 +114,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         alt="...">
                                     <div class="text-center card-body">
                                         <h5>Tenun Songket Motif Bulan</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <div class="pt-3">
-                                            <table>
-                                                <tr>
-                                                    <td><a href="#" class="btn btn-primary">Check Out</a></td>
-                                                    <td><a href="#" class="btn btn-danger">Kosongkan Keranjang
-                                                            Belanja</a></td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                        <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span> Rp. 1.500.000</p>
+                                        <td class="project-actions text-right">
+                                            <a class="btn btn-success btn-sm" href="#">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            Details
+                                            </a>
+                                            </td>
                                     </div>
                                 </div>
                             </div>
