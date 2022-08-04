@@ -7,6 +7,7 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,16 @@ use App\Http\Controllers\BankController;
 |
 */
 
+/**ROUTE BARU */
+
 Route::resource('product', ProductController::class);
 
 Route::resource('bank', BankController::class);
+
+Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
+
+
+/**ADMIN */
 
 Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
@@ -112,9 +120,9 @@ Route::get('/historipesanan', function(){
     return view('layouts.buyer.historipesanan');
 });
 
-Route::get('/keranjangbelanja', function(){
-    return view('layouts.buyer.keranjangbelanja');
-});
+// Route::get('/keranjangbelanja', function(){
+//     return view('layouts.buyer.keranjangbelanja');
+// });
 
 Route::get('/checkout', function(){
     return view('layouts.buyer.checkout');
