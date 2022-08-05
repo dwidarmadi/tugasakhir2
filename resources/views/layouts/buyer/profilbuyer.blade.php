@@ -174,6 +174,10 @@
                                     <label for="exampleInputPassword1">Email</label>
                                     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Foto Profil</label><br>
+                                    <input type="file" name="attachment">
+                                </div>
                             </div>
                             <!-- /.card-body -->
 
