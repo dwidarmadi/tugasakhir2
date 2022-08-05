@@ -136,6 +136,11 @@ Route::get('/landingbuyer', function(){
     return view('layouts.buyer.landingbuyer');
 });
 
+Route::get('/detailproduk', function(){
+    return view('layouts.buyer.detailproduk');
+});
+
+
 
 
 
