@@ -132,6 +132,9 @@ Route::get('/uploadpay', function(){
     return view('layouts.buyer.uploadpay');
 });
 
+Route::get('/landingbuyer', function(){
+    return view('layouts.buyer.landingbuyer');
+});
 
 
 

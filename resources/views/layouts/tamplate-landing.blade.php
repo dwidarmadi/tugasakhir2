@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TENUN SONGKET</title>
+    <title>TENUN SONGKET SIDEMEN</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -104,33 +104,91 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
+            <section class="content">
+                <div class="container-fluid col-md-8">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Product</h3>
+                            </div>
+                            <!-- /.card-header -->
                             <div class="card card-primary pt-3">
-                                <div class="card ml-5 mr-5 pt-3" style="width: 18rem;">
-                                    <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
-                                        alt="...">
-                                    <div class="text-center card-body">
-                                        <h5>Tenun Songket Motif Bulan</h5>
-                                        <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span> Rp. 1.500.000</p>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-success btn-sm" href="#">
-                                            <i class="fas fa-folder">
-                                            </i>
-                                            Details
-                                            </a>
+                                <div class="row">
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                        <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
+                                            alt="...">
+                                        <div class="text-center card-body">
+                                            <h5>Tenun Songket Motif Bulan</h5>
+                                            <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>
+                                                Rp. 1.500.000</p>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-success btn-sm" href="#">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Details
+                                                </a>
                                             </td>
+                                        </div>
+                                    </div>
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                        <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
+                                            alt="...">
+                                        <div class="text-center card-body">
+                                            <h5>Tenun Songket Motif Bulan</h5>
+                                            <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>
+                                                Rp. 1.500.000</p>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-success btn-sm" href="#">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Details
+                                                </a>
+                                            </td>
+                                        </div>
+                                    </div>
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                        <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
+                                            alt="...">
+                                        <div class="text-center card-body">
+                                            <h5>Tenun Songket Motif Bulan</h5>
+                                            <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>
+                                                Rp. 1.500.000</p>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-success btn-sm" href="#">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Details
+                                                </a>
+                                            </td>
+                                        </div>
+                                    </div>
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                        <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
+                                            alt="...">
+                                        <div class="text-center card-body">
+                                            <h5>Tenun Songket Motif Bulan</h5>
+                                            <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>
+                                                Rp. 1.500.000</p>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-success btn-sm" href="#">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Details
+                                                </a>
+                                            </td>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.card -->
                         </div>
+                        <!-- /.card -->
+                        <!-- /.card -->
                     </div>
+                    <!-- /.col -->
                     <!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
