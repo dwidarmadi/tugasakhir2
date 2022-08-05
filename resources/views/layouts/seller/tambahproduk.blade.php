@@ -68,97 +68,92 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1><i class="fas fa-plus"<span class="ml-3"></span></i>Tambah Produk</h1>
+                    <h1><i class="fas fa-plus"><span class="ml-3"></span></i>Tambah Produk</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-primary">
-                        <div class="inner">
-                            <h3>12</h3>
+<!-- Table input -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-4">
+                <!-- general form elements -->
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Input Data Produk</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="col">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nama Produk</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Nama Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Deskripsi</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Deskripsi Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Jumlah</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Jumlah Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Role</label>
+                                <div class="form-group">
+                                    <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <option>Tersedia</option>
+                                        <option>Tidak Tersedia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nama Produk</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Nama Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Deskripsi</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Deskripsi Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Jumlah</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Jumlah Produk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Role</label>
+                                <div class="form-group">
+                                    <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <option>Tersedia</option>
+                                        <option>Tidak Tersedia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-                            <p>Produk Saya</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fab fa-product-hunt nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>12</h3>
+                        <!-- /.card-body -->
 
-                            <p>Tambah Produk</p>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Tambah</button>
                         </div>
-                        <div class="icon">
-                            <i class="far fa-plus-square nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
+                    </form>
                 </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>12</h3>
-
-                            <p>Pesanan Masuk</p>
-                        </div>
-                        <div class="icon">
-                            <i class="far fa-lightbulb nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>5</h3>
-
-                            <p>Informasi Pesanan</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-info nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-secondary">
-                        <div class="inner">
-                            <h3>2</h3>
-                            <p>Reports</p>
-                        </div>
-                        <div class="icon">
-                            <i class="far fa-file-alt nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <!-- Main row -->
-                <!-- /.row (main row) -->
+                <!-- /.card -->
             </div>
-
-    </section>
-    <!-- /.content -->
-    <!-- /.content-wrapper -->
+        </div>
+    </div>
+</section>
+<!-- /.table input -->
+<!-- /.content-wrapper -->
     @endsection
