@@ -181,7 +181,9 @@ Route::get('/detailpesananseller', function(){
     return view('layouts.seller.detailpesananseller');
 });
 
-
+Route::get('/tambahproduk', function(){
+    return view('layouts.seller.tambahproduk');
+});
 
 
 

@@ -65,14 +65,14 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Histori Pesanan Selesai</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -89,17 +89,31 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>T   001</td>
+                                    <td>T001</td>
                                     <td>15-04-2022</td>
                                     <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
                                     <td>BCA</td>
                                     <td>JNE</td>
                                     <td>Rp. 1.000.000</td>
-                                    <td>Sudah Dibayar</td>
-                                    <td>17-05-2022</td>
-                                    <td>Diterima</td>
                                     <td>
-                                        <a href="#" class="btn btn-danger">Delete</a>
+                                        <span class="badge badge-success">Sudah Dibayar</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                    </td>
+                                    <td>17-05-2022</td>
+                                    <td>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-success btn-sm" href="#">
+                                            <i class="fas fa-check"></i>
+                                            Diterima
+                                        </a>
+                                        <a class="btn btn-danger btn-sm mt-2" href="#">
+                                            <i class="fas fa-trash"> </i>
+                                            Delete
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>

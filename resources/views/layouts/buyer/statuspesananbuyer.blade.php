@@ -68,7 +68,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
@@ -85,17 +85,25 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>M001</td>
+                                    <td>T001</td>
                                     <td>15-04-2022</td>
                                     <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
                                     <td>BCA</td>
                                     <td>JNE</td>
                                     <td>Rp. 1.000.000</td>
-                                    <td>Belum Dibayar</td>
-                                    <td>17-05-2022</td>
-                                    <td>Belum Dibayar</td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">Upload Bukti Pembayaran</a>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
+                                    <td>17-05-2022</td>
+                                    <td>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary"><i class="fas fa-upload"></i><span class="ml-2"></span> Bukti Pembayaran</a>
                                     </td>
                                 </tr>
                             </tbody>

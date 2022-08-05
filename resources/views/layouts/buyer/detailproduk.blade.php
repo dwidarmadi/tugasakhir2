@@ -104,35 +104,18 @@
                                     <h5>4</h5>
                                     <div class="bg-gray py-2 px-3 mt-4">
                                         <h2 class="mb-0">
-                                            $80.00
+                                            Rp. 1.200.000
                                         </h2>
-                                        <h4 class="mt-0">
-                                            <small>Ex Tax: $80.00 </small>
-                                        </h4>
                                     </div>
                                     <div class="mt-4">
                                         <div class="btn btn-primary btn-lg btn-flat">
                                             <i class="fas fa-cart-plus fa-lg mr-2"></i>
-                                            Add to Cart
+                                            Keranjang
                                         </div>
-                                        <div class="btn btn-default btn-lg btn-flat">
-                                            <i class="fas fa-heart fa-lg mr-2"></i>
-                                            Add to Wishlist
+                                        <div class="btn btn-success btn-lg btn-flat">
+                                            <i class="fas fa-cash-register fa-lg mr-2"></i>
+                                            Bayar Sekarang
                                         </div>
-                                    </div>
-                                    <div class="mt-4 product-share">
-                                        <a href="#" class="text-gray">
-                                            <i class="fab fa-facebook-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" class="text-gray">
-                                            <i class="fab fa-twitter-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" class="text-gray">
-                                            <i class="fas fa-envelope-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" class="text-gray">
-                                            <i class="fas fa-rss-square fa-2x"></i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
