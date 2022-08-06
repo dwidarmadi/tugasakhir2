@@ -161,8 +161,8 @@ Route::get('/pesananmasukseller', function(){
     return view('layouts.seller.pesananmasukseller');
 });
 
-Route::get('/pengirimanhariiniseller', function(){
-    return view('layouts.seller.pengirimanhariiniseller');
+Route::get('/pesanandikirim', function(){
+    return view('layouts.seller.pesanandikirim');
 });
 
 Route::get('/profilseller', function(){

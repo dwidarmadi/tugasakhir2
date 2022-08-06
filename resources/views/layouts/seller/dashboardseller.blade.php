@@ -29,19 +29,13 @@
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                         <i class="fas fa-car-alt nav-icon"></i>
-                        <p>Pengiriman Hari Ini</p>
+                        <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
-                        <i class="far fa-file-alt nav-icon"></i>
-                        <p>Repots</p>
                     </a>
                 </li>
                 <div>
@@ -139,22 +133,6 @@
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-secondary">
-                        <div class="inner">
-                            <h3>2</h3>
-                            <p>Reports</p>
-                        </div>
-                        <div class="icon">
-                            <i class="far fa-file-alt nav-icon"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <!-- Main row -->
                 <!-- /.row (main row) -->
             </div>
 

@@ -92,7 +92,6 @@
                                     <td>JNE</td>
                                     <td>Rp. 1.000.000</td>
                                     <td>
-                                        <span class="badge badge-success">Diterima</span>
                                         <span class="badge badge-danger">Belum Dibayar</span>
                                         <span class="badge badge-primary">Dalam Proses</span>
                                     </td>

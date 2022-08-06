@@ -29,19 +29,13 @@
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                         <i class="fas fa-car-alt nav-icon"></i>
-                        <p>Pengiriman Hari Ini</p>
+                        <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
-                        <i class="far fa-file-alt nav-icon"></i>
-                        <p>Repots</p>
                     </a>
                 </li>
                 <div>

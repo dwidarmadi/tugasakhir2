@@ -14,7 +14,7 @@ class KeranjangBelanjaController extends Controller
      */
     public function index()
     {
-        return view('layouts.buyer.historipesanan');
+        return view('layouts.buyer.keranjangbelanja');
     }
 
     /**

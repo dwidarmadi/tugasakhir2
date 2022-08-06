@@ -29,19 +29,13 @@
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                         <i class="fas fa-car-alt nav-icon"></i>
-                        <p>Pengiriman Hari Ini</p>
+                        <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
-                        <i class="far fa-file-alt nav-icon"></i>
-                        <p>Repots</p>
                     </a>
                 </li>
                 <div>
@@ -82,7 +76,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
@@ -97,11 +91,25 @@
                                 <tr>
                                     <td>T001</td>
                                     <td>10-05-2022</td>
-                                    <td>Belum Dibayar</td>
-                                    <td>Diproses</td>
+                                    <td>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
                                     <td>12-05-2022</td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">Detail</a>
+                                        <a class="btn btn-success btn-sm" href="#">
+                                            <i class="fas fa-info"></i>
+                                            Detail
+                                        </a>
+                                        <a class="btn btn-danger btn-sm mt-2" href="#">
+                                            <i class="fas fa-trash"> </i>
+                                            Delete
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>

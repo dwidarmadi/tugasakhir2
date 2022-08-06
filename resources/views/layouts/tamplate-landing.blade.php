@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <!-- /.card-header -->
                             <div class="card card-primary pt-3">
                                 <div class="row">
-                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 14rem;">
                                         <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
                                             alt="...">
                                         <div class="text-center card-body">
@@ -130,7 +130,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </td>
                                         </div>
                                     </div>
-                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 14rem;">
                                         <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
                                             alt="...">
                                         <div class="text-center card-body">
@@ -146,7 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </td>
                                         </div>
                                     </div>
-                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 14rem;">
                                         <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
                                             alt="...">
                                         <div class="text-center card-body">
@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </td>
                                         </div>
                                     </div>
-                                    <div class="card ml-5 mr-3 pt-3" style="width: 16rem;">
+                                    <div class="card ml-5 mr-3 pt-3" style="width: 14rem;">
                                         <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="card-img-top"
                                             alt="...">
                                         <div class="text-center card-body">
