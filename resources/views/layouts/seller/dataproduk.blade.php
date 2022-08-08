@@ -103,7 +103,7 @@
                                         </td>
                                         <td>3</td>
                                         <td>
-                                            <span class="badge badge-success">Tersedia</span>
+                                            <span class="badge badge-success">Tersedia </span>
                                         </td>
                                         <td>05-06-2022</td>
                                         <td class="project-actions text-right">
