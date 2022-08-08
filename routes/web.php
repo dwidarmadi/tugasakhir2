@@ -185,6 +185,12 @@ Route::get('/tambahproduk', function(){
     return view('layouts.seller.tambahproduk');
 });
 
+Route::get('/dataproduk', function(){
+    return view('layouts.seller.dataproduk');
+});
+
+
+
 
 
 /*TAMPLATE LANDING*/

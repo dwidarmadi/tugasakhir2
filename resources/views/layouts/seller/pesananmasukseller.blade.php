@@ -93,11 +93,11 @@
                                     <td>10-05-2022</td>
                                     <td>
                                         <span class="badge badge-danger">Belum Dibayar</span>
-                                        <span class="badge badge-primary">Dalam Proses</span>
+                                        <span class="badge badge-primary">Dibayar</span>
                                     </td>
                                     <td>
                                         <span class="badge badge-success">Diterima</span>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-danger">Dalam Proses</span>
                                         <span class="badge badge-primary">Dalam Proses</span>
                                     </td>
                                     <td>12-05-2022</td>
@@ -106,7 +106,7 @@
                                             <i class="fas fa-info"></i>
                                             Detail
                                         </a>
-                                        <a class="btn btn-danger btn-sm mt-2" href="#">
+                                        <a class="btn btn-danger btn-sm" href="#">
                                             <i class="fas fa-trash"> </i>
                                             Delete
                                         </a>
