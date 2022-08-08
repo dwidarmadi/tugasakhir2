@@ -189,6 +189,11 @@ Route::get('/dataproduk', function(){
     return view('layouts.seller.dataproduk');
 });
 
+Route::get('/editdataproduk', function(){
+    return view('layouts.seller.editdataproduk');
+});
+
+
 
 
 
