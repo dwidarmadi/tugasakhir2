@@ -27,7 +27,7 @@ Route::resource('product', ProductController::class);
 
 Route::resource('bank', BankController::class);
 
-Route::resource('bank', JasaPengirimanController::class);
+Route::resource('jasapengiriman', JasaPengirimanController::class);
 
 Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
 
@@ -49,10 +49,6 @@ Route::get('/dashboardadmin', function(){
 
 Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
-});
-
-Route::get('/datajasapengirimanadmin', function(){
-    return view('layouts.admin.datajasapengirimanadmin');
 });
 
 Route::get('/datapenggunaadmin', function(){
