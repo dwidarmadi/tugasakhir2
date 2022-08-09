@@ -84,7 +84,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example2" class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -104,9 +104,17 @@
                                         <td>087861356278</td>
                                         <td>Seller</td>
                                         <td>03-04-2022</td>
-                                        <td>
-                                            <a class="btn btn-info btn-sm" href="#"> Edit</a>
-                                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                                        <td class="project-actions text-right">
+                                            <a class="btn btn-primary btn-sm" href="#">
+                                                <i class="fas fa-folder">
+                                                </i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="#">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -116,9 +124,17 @@
                                         <td>089786543565</td>
                                         <td>Buyer</td>
                                         <td>20-04-2022</td>
-                                        <td>
-                                            <a class="btn btn-info btn-sm" href="#"> Edit</a>
-                                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                                        <td class="project-actions text-right">
+                                            <a class="btn btn-primary btn-sm" href="#">
+                                                <i class="fas fa-folder">
+                                                </i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="#">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>

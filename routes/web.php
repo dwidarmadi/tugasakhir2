@@ -7,6 +7,7 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 
 /*
@@ -26,6 +27,8 @@ Route::resource('product', ProductController::class);
 
 Route::resource('bank', BankController::class);
 
+Route::resource('bank', JasaPengirimanController::class);
+
 Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
 
 
@@ -39,9 +42,6 @@ Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
 
-Route::get('/editdatapengguna', function(){
-    return view('layouts.admin.editdatapengguna');
-});
 
 Route::get('/dashboardadmin', function(){
     return view('layouts.admin.dashboardadmin');
@@ -88,10 +88,16 @@ Route::get('/tambahjasapengiriman', function(){
 });
 
 
-
 Route::get('/tamplate-landing', function(){
     return view('layouts.tamplate-landing');
 });
+
+Route::get('/viewpengguna', function(){
+    return view('layouts.admin.viewpengguna');
+});
+
+
+
 
 
 

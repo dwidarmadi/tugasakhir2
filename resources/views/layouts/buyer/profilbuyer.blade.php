@@ -78,7 +78,7 @@
 
                             <h3 class="profile-username text-center">I KADEK DWI DARMADI</h3>
 
-                            <p class="text-muted text-center">Seller</p>
+                            <p class="text-muted text-center">Buyer</p>
 
                             <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
@@ -107,7 +107,9 @@
                                         Password</a>
                                     </li>
                             </ul>
-                        </div><!-- /.card-header -->
+                        </div>
+
+                        <!-- /.card-header -->
                         {{-- <form>
                 <div class="card-body">
                     <div class="form-group">
@@ -200,7 +202,7 @@
 
 @section('scriptPlace')
     <script type="text/javascript">
-        $("#detailuser").hide();
+        $("#detailuser").show();
         $("#editpassword").hide();
 
         $("#tabprofil").on('click', function(){

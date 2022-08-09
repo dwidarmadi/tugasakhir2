@@ -106,7 +106,10 @@
                                     <td>BCA</td>
                                     <td>J&T</td>
                                     <td>Rp. 1.300.000</td>
-                                    <td>Diproses</td>
+                                    <td>
+                                        <span class="badge badge-primary">Dikirim</span>
+                                        <span class="badge badge-success">Diterima</span>
+                                    </td>
                                     <td>12-05-2022</td>
                                     <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
                                     <td>
