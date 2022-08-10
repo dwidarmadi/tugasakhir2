@@ -84,6 +84,9 @@
                         <h3 class="card-title">Daftar Bank</h3>
                     </div>
                     <!-- /.card-header -->
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
