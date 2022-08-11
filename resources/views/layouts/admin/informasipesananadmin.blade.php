@@ -60,7 +60,6 @@
 <!-- /.sidebar-menu -->
 @endsection
 
-
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <!-- Content Header (Page header) -->
@@ -68,7 +67,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-money-check-alt nav-icon"><span class="ml-3"></span></i> Data Bank</h1>
+                <h1><i class="far fa-lightbulb nav-icon"><span class="ml-3"></span></i>Pesanan Masuk</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -78,59 +77,42 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-10">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Bank</h3>
+                        <h3 class="card-title">Daftar Pesanan Masuk</h3>
                     </div>
                     <!-- /.card-header -->
-                    <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Nama Bank</th>
-                                    <th>Nomor Rekening</th>
+                                    <th>No Transaksi</th>
+                                    <th>Waktu Pesanan</th>
+                                    <th>Pembayaran</th>
+                                    <th>Status Produk</th>
+                                    <th>Jadwal Pengiriman</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Bank Central Asia</td>
-                                    <td>776844673</td>
+                                    <td>T001</td>
+                                    <td>10-05-2022</td>
+                                    <td>Belum Dibayar</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm" href="#">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Delete
-                                        </a>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Bank Rakyan Indonesia</td>
-                                    <td>1452651772445896</td>
+                                    <td>12-05-2022</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm" href="#">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Delete
-                                        </a>
-                                    </td>
+                                            <a class="btn btn-info btn-sm" href="#">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Detail
+                                            </a>
+                                        </td>
                                 </tr>
                             </tbody>
                         </table>

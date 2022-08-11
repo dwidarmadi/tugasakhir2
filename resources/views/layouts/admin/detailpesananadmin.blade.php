@@ -1,7 +1,6 @@
 @extends('layouts.tamplate')
 
 @section('sidebar')
-
 <!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -10,9 +9,9 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link">
-                        <i class="far fa-lightbulb nav-icon"></i>
-                        <p>Pesanan Masuk</p>
+                    <a href="./index3.html" class="nav-link">
+                        <i class="fas fa-info nav-icon"></i>
+                        <p>Informasi Pesanan</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -59,7 +58,6 @@
 </nav>
 <!-- /.sidebar-menu -->
 @endsection
-
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <!-- Content Header (Page header) -->
@@ -67,7 +65,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="far fa-lightbulb nav-icon"><span class="ml-3"></span></i>Pesanan Masuk</h1>
+                <h1><i class="far fas fa-search nav-icon"></i><span class="ml-3"></span>Detail Pesanan</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -77,10 +75,10 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Pesanan Masuk</h3>
+                        <h3 class="card-title">Daftar Informasi Pesanan</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -88,28 +86,35 @@
                             <thead>
                                 <tr>
                                     <th>No Transaksi</th>
+                                    <th>Nama Pemesan</th>
                                     <th>Waktu Pesanan</th>
-                                    <th>Pembayaran</th>
+                                    <th>Produk</th>
+                                    <th>Jumlah</th>
+                                    <th>Bank</th>
+                                    <th>Jasa Pengiriman</th>
+                                    <th>Total Pembayaran</th>
                                     <th>Status Produk</th>
                                     <th>Jadwal Pengiriman</th>
-                                    <th>Aksi</th>
+                                    <th>Alamat</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>T001</td>
+                                    <td>Putu Dehan</td>
                                     <td>10-05-2022</td>
-                                    <td>Belum Dibayar</td>
-                                    <td>Diproses</td>
-                                    <td>12-05-2022</td>
+                                    <td>Kamen Songket Motif Kedis</td>
+                                    <td>1</td>
+                                    <td>BCA</td>
+                                    <td>J&T</td>
+                                    <td>Rp. 1.300.000</td>
                                     <td>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Detail
-                                            </a>
-                                        </td>
-                                </tr>
+                                        <span class="badge badge-success">Diterima</span>
+                                        <span class="badge badge-danger">Belum Dibayar</span>
+                                        <span class="badge badge-primary">Dalam Proses</span>
+                                    </td>
+                                    <td>12-05-2022</td>
+                                    <td>Jln. Pasekan, Perumahan Tegal Sari, Batubulan Gianyar</td>
                             </tbody>
                         </table>
                     </div>

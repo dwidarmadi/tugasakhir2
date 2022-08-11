@@ -71,8 +71,8 @@ Route::get('/pengirimanhariiniadmin', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
 });
 
-Route::get('/pesananmasukadmin', function(){
-    return view('layouts.admin.pesananmasukadmin');
+Route::get('/informasipesananadmin', function(){
+    return view('layouts.admin.informasipesananadmin');
 });
 
 Route::get('/tambahbank', function(){
@@ -92,6 +92,9 @@ Route::get('/viewpengguna', function(){
     return view('layouts.admin.viewpengguna');
 });
 
+Route::get('/detailpesananadmin', function(){
+    return view('layouts.admin.detailpesananadmin');
+});
 
 
 
