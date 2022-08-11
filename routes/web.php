@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::resource('bank', BankController::class);
 Route::resource('jasapengiriman', JasaPengirimanController::class);
 
 Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
+
+Route::resource('order', OrderController::class);
 
 
 /**ADMIN */
@@ -117,9 +120,9 @@ Route::get('/editpasswordbuyer', function(){
     return view('layouts.buyer.editpasswordbuyer');
 });
 
-Route::get('/statuspesananbuyer', function(){
-    return view('layouts.buyer.statuspesananbuyer');
-});
+// Route::get('/statuspesananbuyer', function(){
+//     return view('layouts.buyer.statuspesananbuyer');
+// });
 
 Route::get('/historipesanan', function(){
     return view('layouts.buyer.historipesanan');
