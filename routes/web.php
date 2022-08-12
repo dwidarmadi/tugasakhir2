@@ -157,9 +157,9 @@ Route::get('/detailproduk', function(){
 
 
 /* SELLER */
-Route::get('/produksaya', function(){
-    return view('layouts.seller.produksaya');
-});
+// Route::get('/produksaya', function(){
+//     return view('layouts.seller.produksaya');
+// });
 
 Route::get('/dashboardseller', function(){
     return view('layouts.seller.dashboardseller');
@@ -193,9 +193,9 @@ Route::get('/tambahproduk', function(){
     return view('layouts.seller.tambahproduk');
 });
 
-Route::get('/dataproduk', function(){
-    return view('layouts.seller.dataproduk');
-});
+// Route::get('/dataproduk', function(){
+//     return view('layouts.seller.dataproduk');
+// });
 
 Route::get('/editdataproduk', function(){
     return view('layouts.seller.editdataproduk');

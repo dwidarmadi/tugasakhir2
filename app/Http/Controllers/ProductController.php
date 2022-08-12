@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
 
 class ProductController extends Controller
 {
@@ -14,7 +17,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('layouts.seller.produksaya');
+        $tbl_product = DB::table('tbl_product')->get();
+        return view('layouts.seller.dataproduk',['tbl_product'=>$tbl_product]);
     }
 
     /**

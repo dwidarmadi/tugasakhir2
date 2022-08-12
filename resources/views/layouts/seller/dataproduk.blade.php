@@ -1,5 +1,4 @@
 @extends('layouts.tamplate')
-
 @section('sidebar')
 <!-- Sidebar Menu -->
 <nav class="mt-2">
@@ -84,15 +83,47 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama Produk</th>
-                                        <th>Harga</th>
                                         <th>Deskripsi</th>
+                                        <th>Harga</th>
                                         <th>Jumlah</th>
+                                        <th>Foto</th>
                                         <th>Status</th>
-                                        <th>Dipasarkan</th>
+                                        <th>Dibuat</th>
+                                        <th>Update</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                @foreach ($tbl_product as $dm )
+                                    <tbody>
+                                        <td>{{ $dm->id }}</td>
+                                        <td>{{ $dm->nama }}</td>
+                                        <td>{{ $dm->description }}</td>
+                                        <td>Rp. {{ number_format($dm->price) }}</td>
+                                        <td>{{ $dm->qty }}</td>
+                                        <td>{{ $dm->img }}</td>
+                                        <td><span class="badge badge-success">{{ $dm->status }}</span></td>
+                                        <td>{{ $dm->created_at }}</td>
+                                        <td>{{ $dm->updated_at }}</td>
+                                        <td class="project-actions text-right">
+                                            <a class="btn btn-primary btn-sm" href="#">
+                                                <i class="fas fa-folder">
+                                                </i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-info btn-sm" href="#">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="#">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </a>
+                                        </td>
+                                    </tbody>
+                                @endforeach
+                                {{-- <tbody>
                                     <tr>
                                         <td>B001</td>
                                         <td>Kamen Songken Motif Bulan</td>
@@ -154,7 +185,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                </tbody>
+                                </tbody> --}}
                             </table>
                         </div>
                         <!-- /.card-body -->
