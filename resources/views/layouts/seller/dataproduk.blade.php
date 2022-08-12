@@ -76,8 +76,12 @@
                         <div class="card-header">
                             <h3 class="card-title">Daftar Produk</h3>
                         </div>
+
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div>
+                                <a href="layouts/seller/tambahproduk" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
+                            </div>
                             <table id="example2" class="table table-bordered">
                                 <thead>
                                     <tr>

@@ -21,6 +21,24 @@ class ProductController extends Controller
         return view('layouts.seller.dataproduk',['tbl_product'=>$tbl_product]);
     }
 
+    public function tambahproduk(){
+        return view('layouts.seller.tambahproduk');
+    }
+
+    public function dataproduk(Request $request){
+        DB::table('tbl_product')->insert([
+            'nama'=>$request->xnama,
+            'description'=>$request->xdeskripsi,
+            'qty'=>$request->xjumlah,
+            'price'=>$request->xharga,
+        ]);
+        return redirect('/layouts/seller/dataproduk');
+    }
+
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *

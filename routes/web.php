@@ -24,7 +24,13 @@ use App\Http\Controllers\OrderController;
 
 /**ROUTE BARU */
 
-Route::resource('product', ProductController::class);
+
+/**ROUTE PRODUCT */
+Route::get('product',[ProductController::class,'index']);
+Route::get('layouts/seller/tambahproduk',[ProductController::class,'tambahproduk']);
+Route::post('layouts/seller/dataproduk',[ProductController::class,'dataproduk']);
+
+
 
 Route::resource('bank', BankController::class);
 
@@ -189,9 +195,9 @@ Route::get('/detailpesananseller', function(){
     return view('layouts.seller.detailpesananseller');
 });
 
-Route::get('/tambahproduk', function(){
-    return view('layouts.seller.tambahproduk');
-});
+// Route::get('/tambahproduk', function(){
+//     return view('layouts.seller.tambahproduk');
+// });
 
 // Route::get('/dataproduk', function(){
 //     return view('layouts.seller.dataproduk');

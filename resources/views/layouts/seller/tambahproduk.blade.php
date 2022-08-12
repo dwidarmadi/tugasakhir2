@@ -74,7 +74,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
@@ -82,35 +82,36 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col">
+                        <form class="col" method="post" action="/layouts/seller/dataproduk">
+                            {{ csrf_field() }};
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="text" name="xnama" maxlength="255" class="form-control" required
                                         placeholder="Nama Produk">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Deskripsi</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Deskripsi Produk">
+                                    <label for="exampleInputEmail1">Deskripsi</label>
+                                    <input type="text" name="xdeskripsi" maxlength="255" class="form-control" required
+                                        placeholder="Deskripsi">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Jumlah</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Jumlah Produk">
+                                    <input type="text" name="xjumlah" maxlength="20" class="form-control" required
+                                        placeholder="Jumlah">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Status</label>
                                     <div class="form-group">
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <select class="custom-select rounded-0" name="xstatus" required>
                                             <option>Tersedia</option>
                                             <option>Tidak Tersedia</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Harga</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1">Harga</label></label>
+                                    <input type="text" name="xharga" maxlength="20" class="form-control" required
                                         placeholder="Harga">
                                 </div>
                                 <div class="form-group">
