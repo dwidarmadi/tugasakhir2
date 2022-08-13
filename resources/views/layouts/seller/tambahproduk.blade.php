@@ -114,9 +114,9 @@
                                     <input type="text" name="xharga" maxlength="20" class="form-control" required
                                         placeholder="Harga">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Foto Produk</label><br>
-                                    <input type="file" name="attachment">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Upload Foto</label>
+                                    <input class="form-control" type="file" id="formFile">
                                 </div>
                             </div>
 

@@ -104,8 +104,8 @@
                                         <td>{{ $dm->description }}</td>
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
-                                        <td>{{ $dm->img }}</td>
-                                        <td><span class="badge badge-success">{{ $dm->status }}</span></td>
+                                        {{-- <td>{{ $dm->img }}</td>
+                                        <td><span class="badge badge-success">{{ $dm->status }}</span></td> --}}
                                         <td>{{ $dm->created_at }}</td>
                                         <td>{{ $dm->updated_at }}</td>
                                         <td class="project-actions text-right">

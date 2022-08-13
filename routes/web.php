@@ -28,7 +28,8 @@ use App\Http\Controllers\OrderController;
 /**ROUTE PRODUCT */
 Route::get('product',[ProductController::class,'index']);
 Route::get('layouts/seller/tambahproduk',[ProductController::class,'tambahproduk']);
-Route::post('layouts/seller/dataproduk',[ProductController::class,'dataproduk']);
+
+
 
 
 
