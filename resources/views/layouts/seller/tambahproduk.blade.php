@@ -82,42 +82,43 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="/layouts/seller/dataproduk">
+                        <form class="col" method="post" action="product">
                             {{ csrf_field() }};
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>
-                                    <input type="text" name="xnama" maxlength="255" class="form-control" required
+                                    <input type="text" name="name" maxlength="255" class="form-control" required
                                         placeholder="Nama Produk">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Deskripsi</label>
-                                    <input type="text" name="xdeskripsi" maxlength="255" class="form-control" required
+                                    <input type="text" name="deskripsi" maxlength="255" class="form-control" required
                                         placeholder="Deskripsi">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Jumlah</label>
-                                    <input type="text" name="xjumlah" maxlength="20" class="form-control" required
+                                    <input type="text" name="jumlah" maxlength="20" class="form-control" required
                                         placeholder="Jumlah">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Status</label>
                                     <div class="form-group">
-                                        <select class="custom-select rounded-0" name="xstatus" required>
-                                            <option>Tersedia</option>
-                                            <option>Tidak Tersedia</option>
+                                        <select class="form-control" name="status" id="status" required>
+                                            <option value="">Pilih Satu</option>
+                                            <option value="Tersedia">Tersedia</option>
+                                            <option value="Tidak Tersedia">Tidak Tersedia</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Harga</label></label>
-                                    <input type="text" name="xharga" maxlength="20" class="form-control" required
+                                    <input type="text" name="harga" maxlength="20" class="form-control" required
                                         placeholder="Harga">
                                 </div>
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="formFile" class="form-label">Upload Foto</label>
                                     <input class="form-control" type="file" id="formFile">
-                                </div>
+                                </div> --}}
                             </div>
 
                             <!-- /.card-body -->
@@ -134,4 +135,5 @@
     </section>
     <!-- /.table input -->
     <!-- /.content-wrapper -->
-    @endsection
+</section>
+@endsection

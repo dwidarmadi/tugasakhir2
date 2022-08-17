@@ -17,16 +17,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $tbl_product = DB::table('tbl_product')->get();
-        return view('layouts.seller.dataproduk',['tbl_product'=>$tbl_product]);
+        //
     }
-
-    public function tambahproduk(){
-        return view('layouts.seller.tambahproduk');
-    }
-
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.seller.tambahproduk');
     }
 
     /**
@@ -46,7 +38,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+
+        $product->name = $request->name;
+        $product->description = $request->deskripsi;
+        $product->qty = $request->jumlah;
+        $product->status = $request->status;
+        $product->price = $request->harga;
+        $product->save();
+
     }
 
     /**
@@ -57,7 +57,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $products = DB::table('products')->get();
+        return view('layouts.seller.dataproduk',['products'=>$products]);
     }
 
     /**

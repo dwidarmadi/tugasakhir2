@@ -80,7 +80,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="layouts/seller/tambahproduk" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
+                                <a href="product-add" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
                             <table id="example2" class="table table-bordered">
                                 <thead>
@@ -92,22 +92,18 @@
                                         <th>Jumlah</th>
                                         <th>Foto</th>
                                         <th>Status</th>
-                                        <th>Dibuat</th>
-                                        <th>Update</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
-                                @foreach ($tbl_product as $dm )
+                                @foreach ($products as $dm )
                                     <tbody>
                                         <td>{{ $dm->id }}</td>
-                                        <td>{{ $dm->nama }}</td>
+                                        <td>{{ $dm->name }}</td>
                                         <td>{{ $dm->description }}</td>
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
-                                        {{-- <td>{{ $dm->img }}</td>
-                                        <td><span class="badge badge-success">{{ $dm->status }}</span></td> --}}
-                                        <td>{{ $dm->created_at }}</td>
-                                        <td>{{ $dm->updated_at }}</td>
+                                        <td></td>
+                                        <td></td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-folder">
