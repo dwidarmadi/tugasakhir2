@@ -82,7 +82,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="product">
+                        <form class="col" method="post" action="products">
                             {{ csrf_field() }};
                             <div class="card-body">
                                 <div class="form-group">
@@ -92,12 +92,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Deskripsi</label>
-                                    <input type="text" name="deskripsi" maxlength="255" class="form-control" required
+                                    <input type="text" name="description" maxlength="255" class="form-control" required
                                         placeholder="Deskripsi">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Jumlah</label>
-                                    <input type="text" name="jumlah" maxlength="20" class="form-control" required
+                                    <input type="text" name="qty" maxlength="20" class="form-control" required
                                         placeholder="Jumlah">
                                 </div>
                                 <div class="form-group">
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Harga</label></label>
-                                    <input type="text" name="harga" maxlength="20" class="form-control" required
+                                    <input type="text" name="price" maxlength="20" class="form-control" required
                                         placeholder="Harga">
                                 </div>
                                 {{-- <div class="mb-3">

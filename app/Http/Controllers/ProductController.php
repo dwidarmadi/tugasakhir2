@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -38,14 +39,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product();
+        // $product = new Product();
 
-        $product->name = $request->name;
-        $product->description = $request->deskripsi;
-        $product->qty = $request->jumlah;
-        $product->status = $request->status;
-        $product->price = $request->harga;
-        $product->save();
+        // $product->name = $request->name;
+        // $product->description = $request->description;
+        // $product->qty = $request->jumlah;
+        // $product->status = $request->status;
+        // $product->price = $request->harga;
+        // $product->save();
+
+        $product = Product::create($request->all());
+        return redirect('product');
 
     }
 
