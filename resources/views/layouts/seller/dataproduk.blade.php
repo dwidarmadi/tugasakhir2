@@ -80,7 +80,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="product-add" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
+                                <a href="/product-add" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
                             <table id="example2" class="table table-bordered">
                                 <thead>
@@ -103,7 +103,7 @@
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
                                         <td></td>
-                                        <td></td>
+                                        <td>{{ $dm->status}}</td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-folder">

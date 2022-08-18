@@ -39,20 +39,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // $product = new Product();
-
-        // $product->name = $request->name;
-        // $product->description = $request->description;
-        // $product->qty = $request->jumlah;
-        // $product->status = $request->status;
-        // $product->price = $request->harga;
-        // $product->save();
-
         //Mass Assignment
 
         $product = Product::create($request->all());
         return redirect('product');
-
     }
 
     /**
@@ -86,9 +76,12 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $product = Product::findOrfail($id);
+
+        $product->update($request->all());
+        return redirect('/product');
     }
 
     /**

@@ -83,8 +83,9 @@
                         <!-- /.card-header -->
                         <!-- form start -->
 
-                        <form class="col" method="post" action="product-edit">
-                            {{ csrf_field() }};
+                        <form class="col" method="POST" action="/product/{{$product->id}}">
+                            {{ csrf_field() }}
+                            @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>
@@ -106,6 +107,11 @@
                                     <div class="form-group">
                                         <select class="form-control" name="status" id="status" required>
                                             <option value="{{$product->status}}">{{$product->status}}   </option>
+                                            @if ($product->status == 'Tersedia')
+                                                <option value="Tidak Tersedia">Tidak Tersedia</option>
+                                            @else
+                                                <option value="Tersedia">Tersedia</option>
+                                            @endif
                                         </select>
                                     </div>
                                 </div>
@@ -123,7 +129,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-success">Tambah</button>
+                                <button type="submit" class="btn btn-success">Edit</button>
                             </div>
                         </form>
                     </div>

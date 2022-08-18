@@ -82,8 +82,8 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="products">
-                            {{ csrf_field() }};
+                        <form class="col" method="post" action="/products">
+                            @csrf
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>

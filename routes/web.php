@@ -26,10 +26,11 @@ use App\Http\Controllers\OrderController;
 
 
 /**ROUTE PRODUCT */
-Route::get('product',[ProductController::class,'show']);
-Route::get('product-add',[ProductController::class,'create']);
-Route::post('products', [ProductController::class,'store']);
-Route::get('product-edit/{id}',[ProductController::class,'edit']);
+Route::get('/product',[ProductController::class,'show']);
+Route::get('/product-add',[ProductController::class,'create']);
+Route::post('/products', [ProductController::class,'store']);
+Route::get('/product-edit/{id}',[ProductController::class,'edit']);
+Route::put('/product/{id}', [ProductController::class,'update']);
 
 
 
