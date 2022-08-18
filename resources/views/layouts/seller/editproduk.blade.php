@@ -104,10 +104,8 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Status</label>
                                     <div class="form-group">
-                                        <select class="form-control" name="status" id="status" value="{{$product->status}}" required>
-                                            <option value="">Pilih Satu</option>
-                                            <option value="Tersedia">Tersedia</option>
-                                            <option value="Tidak Tersedia">Tidak Tersedia</option>
+                                        <select class="form-control" name="status" id="status" required>
+                                            <option value="{{$product->status}}">{{$product->status}}   </option>
                                         </select>
                                     </div>
                                 </div>
