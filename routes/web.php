@@ -29,6 +29,7 @@ use App\Http\Controllers\OrderController;
 Route::get('product',[ProductController::class,'show']);
 Route::get('product-add',[ProductController::class,'create']);
 Route::post('products', [ProductController::class,'store']);
+Route::get('product-edit/{id}',[ProductController::class,'edit']);
 
 
 

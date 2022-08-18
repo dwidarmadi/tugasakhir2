@@ -48,6 +48,8 @@ class ProductController extends Controller
         // $product->price = $request->harga;
         // $product->save();
 
+        //Mass Assignment
+
         $product = Product::create($request->all());
         return redirect('product');
 
@@ -71,9 +73,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $product, $id )
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('layouts.seller.editproduk', ['product' => $product]);
     }
 
     /**
