@@ -39,9 +39,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //Mass Assignment
+        $newName = '';
 
+        if($request->file('photo')){
+       $extension = $request->file('photo')->getClientOriginalExtension();
+       $newName = $request->name.'-'.now()->timestamp.'.'.$extension;
+       $request->file('photo')->storeAs('photos', $newName);
+        }
+
+        //Mass Assignment
+        $request ['image'] = $newName;
         $product = Product::create($request->all());
+
         return redirect('product');
     }
 

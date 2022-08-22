@@ -120,10 +120,10 @@
                                     <input type="text" name="price" maxlength="20" class="form-control" value="{{$product->price}}" required
                                         placeholder="Harga">
                                 </div>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="formFile" class="form-label">Upload Foto</label>
                                     <input class="form-control" type="file" id="formFile">
-                                </div> --}}
+                                </div>
                             </div>
 
                             <!-- /.card-body -->

@@ -103,7 +103,7 @@
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
                                         <td></td>
-                                        <td>{{ $dm->status}}</td>
+                                        <td>    </td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-folder">

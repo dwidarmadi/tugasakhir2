@@ -82,7 +82,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="/products">
+                        <form class="col" method="post" action="/products" enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
@@ -115,10 +115,10 @@
                                     <input type="text" name="price" maxlength="20" class="form-control" required
                                         placeholder="Harga">
                                 </div>
-                                {{-- <div class="mb-3">
-                                    <label for="formFile" class="form-label">Upload Foto</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div> --}}
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Gambar</label>
+                                    <input class="form-control" type="file" id="photo" name="photo">
+                                </div>
                             </div>
 
                             <!-- /.card-body -->
