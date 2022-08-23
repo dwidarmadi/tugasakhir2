@@ -5,31 +5,37 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
-           with font-awesome or any other icon font library -->
+            with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
-                        <i class="fas fa-cart-arrow-down  nav-icon"></i>
-                        <p>Status Pesanan</p>
+                        <i class="fab fa-product-hunt nav-icon"></i>
+                        <p>Produk Saya</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-shopping-basket nav-icon"></i>
-                        <p>Keranjang Belanja</p>
+                        <i class="far fa-plus-square nav-icon"></i>
+                        <p>Tambah Produk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">
+                        <i class="far fa-lightbulb nav-icon"></i>
+                        <p>Pesanan Masuk</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-history nav-icon"></i>
-                        <p>Histori Pesanan</p>
+                        <i class="fas fa-car-alt nav-icon"></i>
+                        <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                        <i class="fas fa-exclamation-circle nav-icon"></i>
-                        <p>Tentang</p>
+                    <a href="./index3.html" class="nav-link">
+                        <i class="fas fa-info nav-icon"></i>
+                        <p>Informasi Pesanan</p>
                     </a>
                 </li>
                 <div>
@@ -46,20 +52,18 @@
 </nav>
 <!-- /.sidebar-menu -->
 @endsection
-
 @section('content')
-<!-- Content Wrapper. Contains page content -->
 <!-- Content Header (Page header) -->
-<section class="content-header">
+<div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-info-circle nav-icon"></i><span class="ml-3"></span>Detail Produk</h1>
-            </div>
-        </div>
+                <h1><i class="fab fa-product-hunt nav-icon"></i><span class="ml-3"></span>Detail Produk</h1>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
     </div><!-- /.container-fluid -->
-</section>
-
+</div>
+<!-- /.content-header -->
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
@@ -134,16 +138,6 @@
         <!-- /.container-fluid -->
 </section>
 <!-- /.content -->
+</div>
 <!-- /.content-wrapper -->
-{{-- <script>
-    $(document).ready(function() {
-        $('.product-image-thumb').on('click', function () {
-            var $image_element = $(this).find('img')
-            $('.product-image').prop('src', $image_element.attr('src'))
-            $('.product-image-thumb.active').removeClass('active')
-            $(this).addClass('active')
-        })
-    })
-</script> --}}
-
 @endsection

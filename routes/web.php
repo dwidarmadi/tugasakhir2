@@ -27,10 +27,16 @@ use App\Http\Controllers\OrderController;
 
 /**ROUTE PRODUCT */
 Route::get('/product',[ProductController::class,'show']);
+/**TAMBAH PRODUCT */
 Route::get('/product-add',[ProductController::class,'create']);
+/**DATA PRODUCT */
 Route::post('/products', [ProductController::class,'store']);
+/**EDIT PRODUCT */
 Route::get('/product-edit/{id}',[ProductController::class,'edit']);
+/**UPDATE PRODUCT */
 Route::put('/product/{id}', [ProductController::class,'update']);
+/**VIEW PRODUCT */
+Route::get('/product-view',[ProductController::class,'showDetail']);
 
 
 
@@ -166,8 +172,8 @@ Route::get('/detailproduk', function(){
 
 
 /* SELLER */
-// Route::get('/produksaya', function(){
-//     return view('layouts.seller.produksaya');
+// Route::get('/viewproduk', function(){
+//     return view('layouts.seller.viewproduk');
 // });
 
 Route::get('/dashboardseller', function(){

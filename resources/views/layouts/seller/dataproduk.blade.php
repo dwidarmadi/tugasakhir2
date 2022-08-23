@@ -90,7 +90,6 @@
                                         <th>Deskripsi</th>
                                         <th>Harga</th>
                                         <th>Jumlah</th>
-                                        <th>Foto</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -103,7 +102,6 @@
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
                                         <td></td>
-                                        <td>    </td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-primary btn-sm" href="#">
                                                 <i class="fas fa-folder">

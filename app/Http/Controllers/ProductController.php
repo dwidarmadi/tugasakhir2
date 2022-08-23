@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -64,6 +65,13 @@ class ProductController extends Controller
     {
         $products = DB::table('products')->get();
         return view('layouts.seller.dataproduk',['products'=>$products]);
+
+    }
+
+    public function showDetail(Product $product)
+    {
+
+        return view('layouts.seller.viewproduk');
     }
 
     /**
