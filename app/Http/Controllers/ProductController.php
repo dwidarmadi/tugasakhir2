@@ -101,6 +101,14 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
+    public function updateView(Request $request, $id)
+    {
+        $product = Product::findOrfail($id);
+
+        $product->updateView($request->all());
+        return redirect('/product');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

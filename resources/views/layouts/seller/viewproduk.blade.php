@@ -73,7 +73,9 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="card-body">
-                            <div class="row">
+                            <div class="row" method="POST" acttion="/product-view/{{$product->id}}">
+                                {{ csrf_field() }}
+                            @method('PUT')
                                 <div class="col-12 col-sm-6">
                                     <div class="col-12">
                                         <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="product-image"
@@ -100,9 +102,7 @@
                                 <div class="col-12 col-sm-6">
                                     <h3 class="my-3">Tenun Songket Motif Bulan</h3>
                                     <h4>Deskripsi</h4>
-                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
-                                        stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                                        banh mi, qui irure terr.</p>
+                                    <p>{{$product->description}}</p>
                                     <hr>
                                     <h4>Stok</h4>
                                     <h5>4</h5>

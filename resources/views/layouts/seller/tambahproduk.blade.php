@@ -82,7 +82,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="/products" enctype="multipart/form-data">
+                        <form class="col" method="post" action="/product" enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">

@@ -30,13 +30,13 @@ Route::get('/product',[ProductController::class,'show']);
 /**TAMBAH PRODUCT */
 Route::get('/product-add',[ProductController::class,'create']);
 /**DATA PRODUCT */
-Route::post('/products', [ProductController::class,'store']);
+Route::post('/product', [ProductController::class,'store']);
 /**EDIT PRODUCT */
 Route::get('/product-edit/{id}',[ProductController::class,'edit']);
 /**UPDATE PRODUCT */
 Route::put('/product/{id}', [ProductController::class,'update']);
 /**VIEW PRODUCT */
-Route::get('/product-view',[ProductController::class,'showDetail']);
+Route::put('/product-view{id}',[ProductController::class,'updateView']);
 
 
 

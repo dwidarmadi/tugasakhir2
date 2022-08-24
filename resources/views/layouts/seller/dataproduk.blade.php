@@ -90,6 +90,7 @@
                                         <th>Deskripsi</th>
                                         <th>Harga</th>
                                         <th>Jumlah</th>
+                                        <th>Foto</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -101,9 +102,10 @@
                                         <td>{{ $dm->description }}</td>
                                         <td>Rp. {{ number_format($dm->price) }}</td>
                                         <td>{{ $dm->qty }}</td>
+                                        <td><img src="{{ asset('public/storage/photos'.$dm->image) }}" alt="" width="150px" height="150px"></td>
                                         <td></td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="#">
+                                            <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
                                                 <i class="fas fa-folder">
                                                 </i>
                                                 View
