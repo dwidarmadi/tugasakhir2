@@ -98,97 +98,66 @@
                                 </thead>
                                 @foreach ($products as $dm )
                                 <tbody>
-                                    <td>{{ $dm->id }}</td>
-                                    <td>{{ $dm->name }}</td>
-                                    <td>{{ $dm->description }}</td>
-                                    <td>Rp. {{ number_format($dm->price) }}</td>
-                                    <td>{{ $dm->qty }}</td>
-                                    <td><img src="{{ asset('storage/photos/'.$dm->image) }}" alt="" width="150px"
-                                            height="150px"></td>
-                                    <td></td>
-                                    <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
-                                            <i class="fas fa-folder">
-                                            </i>
-                                            View
-                                        </a>
-                                        <a class="btn btn-info btn-sm" href="product-edit/{{ $dm->id }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal"
-                                            data-target="#modal-default" >
-                                            <i class="fas fa-trash"></i>
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tbody>
+                                    <tr>
+                                        <td>{{ $dm->id }}</td>
+                                        <td>{{ $dm->name }}</td>
+                                        <td>{{ $dm->description }}</td>
+                                        <td>Rp. {{ number_format($dm->price) }}</td>
+                                        <td>{{ $dm->qty }}</td>
+                                        <td><img src="{{ asset('storage/photos/'.$dm->image) }}" alt="" width="150px"
+                                                height="150px"></td>
+                                        <td></td>
+                                        <td class="project-actions text-right">
+                                            <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
+                                                <i class="fas fa-folder">
+                                                </i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-info btn-sm" href="product-edit/{{ $dm->id }}">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm" href="product/{{ $dm->id }}">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                               Delete
+                                            </a>
+                                            {{-- </button>
+                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
+                                                data-target="#delete{{$dm->id}}">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </button> --}}
+                                        </td>
+                                    </tr>
                                 @endforeach
-                                {{-- <tbody>
-                                    <tr>
-                                        <td>B001</td>
-                                        <td>Kamen Songken Motif Bulan</td>
-                                        <td>Rp. 1.000.000</td>
-                                        <td>
-                                            <p>Kamen Tenun Songket Motif Bunga, terbuat dari bahan benang biasa dan
-                                                campuran benang emas</p>
-                                        </td>
-                                        <td>3</td>
-                                        <td>
-                                            <span class="badge badge-success">Tersedia </span>
-                                        </td>
-                                        <td>05-06-2022</td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-folder">
-                                                </i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>B002</td>
-                                        <td>Kamen Songken Motif Angsa</td>
-                                        <td>Rp. 1.100.000</td>
-                                        <td>
-                                            <p>Kamen Tenun Songket Motif Bunga, terbuat dari bahan benang biasa dengan perpaduan warna</p>
-                                        </td>
-                                        <td>2</td>
-                                        <td>
-                                            <span class="badge badge-success">Tersedia</span>
-                                        </td>
-                                        <td>07-06-2022</td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-folder">
-                                                </i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody> --}}
+                                </tbody>
                             </table>
+
+                            {{-- @foreach ($products as $dm)
+                            <div class="modal fade" id="delete{{$dm->id}}">
+                                <div class="modal-dialog">
+                                    <div class="modal-content bg-default">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">{{$dm->name}}</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Apakah yakin untuk menghapus produk {{$dm->name}} &hellip; ?</p>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-outline-light"
+                                                data-dismiss="modal">Cancel</button>
+                                            <a  href="product-delete/" class="btn btn-outline-light">Yes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach --}}
                         </div>
                         <!-- /.card-body -->
                     </div>

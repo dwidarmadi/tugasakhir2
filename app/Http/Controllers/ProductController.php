@@ -109,6 +109,13 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
+    public function delete($id)
+    {
+        $product = Product::findOrfail($id);
+        $product->delete();
+        return redirect()->route('product')->with('success','Data Berhasil dihapus');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
