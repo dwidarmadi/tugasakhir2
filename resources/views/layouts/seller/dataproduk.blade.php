@@ -80,7 +80,8 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="/product-add" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah Produk</a>
+                                <a href="/product-add" class="btn btn-primary mb-2"><i
+                                        class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
                             <table id="example2" class="table table-bordered">
                                 <thead>
@@ -96,32 +97,33 @@
                                     </tr>
                                 </thead>
                                 @foreach ($products as $dm )
-                                    <tbody>
-                                        <td>{{ $dm->id }}</td>
-                                        <td>{{ $dm->name }}</td>
-                                        <td>{{ $dm->description }}</td>
-                                        <td>Rp. {{ number_format($dm->price) }}</td>
-                                        <td>{{ $dm->qty }}</td>
-                                        <td><img src="{{ asset('public/storage/photos'.$dm->image) }}" alt="" width="150px" height="150px"></td>
-                                        <td></td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
-                                                <i class="fas fa-folder">
-                                                </i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="product-edit/{{ $dm->id }}">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tbody>
+                                <tbody>
+                                    <td>{{ $dm->id }}</td>
+                                    <td>{{ $dm->name }}</td>
+                                    <td>{{ $dm->description }}</td>
+                                    <td>Rp. {{ number_format($dm->price) }}</td>
+                                    <td>{{ $dm->qty }}</td>
+                                    <td><img src="{{ asset('storage/photos/'.$dm->image) }}" alt="" width="150px"
+                                            height="150px"></td>
+                                    <td></td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            View
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="product-edit/{{ $dm->id }}">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                            data-target="#modal-default" >
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tbody>
                                 @endforeach
                                 {{-- <tbody>
                                     <tr>
