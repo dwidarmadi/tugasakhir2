@@ -73,9 +73,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        @if (Session::has('status'))
+                        @if (Session::has('success'))
                             <div class="alert alert-success" role="alert">
-                                {{Session::get('Success message')}}
+                                {{Session::get('success')}}
                             </div>
                         @endif
                         <div class="card-header">

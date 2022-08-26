@@ -125,8 +125,7 @@ class ProductController extends Controller
     {
         $deletedProduct = DB::table('products')->where('id', $id)->delete();
         if($deletedProduct){
-            Session::flash('status','success');
-            Session::flash('message','Hapus data produk Berhasil');
+            return redirect('/product')->with('success','Produk Telah Dihapus');
         }
 
         return redirect('/product');
