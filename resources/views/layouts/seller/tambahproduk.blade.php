@@ -82,7 +82,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="post" action="/product" enctype="multipart/form-data">
+                        <form class="col" method="post" action={{ route('product.store') }} enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Gambar</label>
-                                    <input class="form-control" type="file" id="photo" name="photo">
+                                    <input class="form-control" type="file" id="photo" name="photos[]" multiple>
                                 </div>
                             </div>
 

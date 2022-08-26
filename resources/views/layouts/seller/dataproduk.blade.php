@@ -85,7 +85,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="/product-add" class="btn btn-primary mb-2"><i
+                                <a href="/product/create" class="btn btn-primary mb-2"><i
                                         class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
                             <table id="example2" class="table table-bordered">
@@ -101,30 +101,30 @@
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
-                                @foreach ($products as $dm )
+                                @foreach ($products as $dm => $pr)
                                 <tbody>
                                     <tr>
-                                        <td>{{ $dm->id }}</td>
-                                        <td>{{ $dm->name }}</td>
-                                        <td>{{ $dm->description }}</td>
-                                        <td>Rp. {{ number_format($dm->price) }}</td>
-                                        <td>{{ $dm->qty }}</td>
-                                        <td><img src="{{ asset('storage/photos/'.$dm->image) }}" alt="" width="150px"
+                                        <td>{{ ++$dm }}</td>
+                                        <td>{{ $pr->name }}</td>
+                                        <td>{{ $pr->description }}</td>
+                                        <td>Rp. {{ number_format($pr->price) }}</td>
+                                        <td>{{ $pr->qty }}</td>
+                                        <td><img src="{{ asset('storage/photos/'.$pr->image) }}" alt="" width="150px"
                                                 height="150px"></td>
                                         <td></td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href="product-view/{{$dm->id}}">
+                                            <a class="btn btn-primary btn-sm" href={{ route('product.show',$pr->id) }}>
                                                 <i class="fas fa-folder">
                                                 </i>
                                                 View
                                             </a>
-                                            <a class="btn btn-info btn-sm" href="product-edit/{{ $dm->id }}">
+                                            <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->id)}}>
                                                 <i class="fas fa-pencil-alt">
                                                 </i>
                                                 Edit
                                             </a>
                                             <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                                data-target="#delete{{$dm->id}}">
+                                                data-target="#delete{{$pr->id}}">
                                                 <i class="fas fa-trash">
                                                 </i>
                                                 Delete
@@ -137,7 +137,7 @@
 
 
                             @foreach ($products as $dm)
-                            <form action="/product-destroy/{{$dm->id}}" method="POST">
+                            <form action={{route('product.destroy',$dm->id)}} method="POST">
                                 @csrf
                                 @method('delete')
                                 <div class="modal fade" id="delete{{$dm->id}}">

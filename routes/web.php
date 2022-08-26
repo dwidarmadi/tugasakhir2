@@ -10,6 +10,7 @@ use App\Http\Controllers\BankController;
 use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,24 +26,23 @@ use App\Http\Controllers\OrderController;
 /**ROUTE BARU */
 
 
-/**ROUTE PRODUCT */
-Route::get('/product',[ProductController::class,'show']);
-/**TAMBAH PRODUCT */
-Route::get('/product-add',[ProductController::class,'create']);
-/**DATA PRODUCT */
-Route::post('/product', [ProductController::class,'store']);
-/**EDIT PRODUCT */
-Route::get('/product-edit/{id}',[ProductController::class,'edit']);
-/**UPDATE PRODUCT */
-Route::put('/product/{id}', [ProductController::class,'update']);
-//**DELETE  PODUK */
-Route::get('/product-delete/{id}', [ProductController::class,'delete']);
-Route::delete('/product-destroy/{id}', [ProductController::class,'destroy']);
-/**VIEW PRODUCT */
-Route::put('/product-view{id}',[ProductController::class,'updateView']);
+// /**ROUTE PRODUCT */
+// Route::get('/product',[ProductController::class,'show']);
+// /**TAMBAH PRODUCT */
+// Route::get('/product-add',[ProductController::class,'create']);
+// /**DATA PRODUCT */
+// Route::post('/product', [ProductController::class,'store']);
+// /**EDIT PRODUCT */
+// Route::get('/product-edit/{id}',[ProductController::class,'edit']);
+// /**UPDATE PRODUCT */
+// Route::put('/product/{id}', [ProductController::class,'update']);
+// //**DELETE  PODUK */
+// Route::get('/product-delete/{id}', [ProductController::class,'delete']);
+// Route::delete('/product-destroy/{id}', [ProductController::class,'destroy']);
+// /**VIEW PRODUCT */
+// Route::put('/product-view{id}',[ProductController::class,'updateView']);
 
-
-
+Route::resource('product', ProductController::class);
 
 Route::resource('bank', BankController::class);
 
@@ -52,6 +52,8 @@ Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
 
 Route::resource('order', OrderController::class);
 
+
+Route::get('/', [LandingPageController::class,'index']);
 
 /**ADMIN */
 
@@ -105,9 +107,9 @@ Route::get('/tambahjasapengiriman', function(){
 });
 
 
-Route::get('/tamplate-landing', function(){
-    return view('layouts.tamplate-landing');
-});
+// Route::get('/tamplate-landing', function(){
+//     return view('layouts.tamplate-landing');
+// });
 
 Route::get('/viewpengguna', function(){
     return view('layouts.admin.viewpengguna');

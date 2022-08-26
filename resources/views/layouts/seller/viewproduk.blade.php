@@ -73,45 +73,32 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="card-body">
-                            <div class="row" method="POST" acttion="/product-view/{{$product->id}}">
-                                {{ csrf_field() }}
-                            @method('PUT')
+                            <div class="row" >
+
+                                @foreach ($products as $dm)
                                 <div class="col-12 col-sm-6">
                                     <div class="col-12">
-                                        <img src="{{ asset('AdminLTE/') }}/dist/img/nyuntik.png" class="product-image"
+                                        <img src="{{ asset('storage/photos/'.$dm->image) }}" class="product-image"
                                             alt="Product Image">
-                                    </div>
-                                    <div class="col-12 product-image-thumbs">
-                                        <div class="product-image-thumb active"><img
-                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-1.jpg" alt="Product Image">
-                                        </div>
-                                        <div class="product-image-thumb"><img
-                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-2.jpg" alt="Product Image">
-                                        </div>
-                                        <div class="product-image-thumb"><img
-                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-3.jpg" alt="Product Image">
-                                        </div>
-                                        <div class="product-image-thumb"><img
-                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-4.jpg" alt="Product Image">
-                                        </div>
-                                        <div class="product-image-thumb"><img
-                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-5.jpg" alt="Product Image">
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <h3 class="my-3">Tenun Songket Motif Bulan</h3>
+                                    <h3 class="my-3">{{$dm->name}}</h3>
                                     <h4>Deskripsi</h4>
-                                    <p>{{$product->description}}</p>
+                                    <p>{{$dm->description}}</p>
                                     <hr>
                                     <h4>Stok</h4>
-                                    <h5>4</h5>
+                                    <h5>{{$dm->qty}}</h5>
                                     <h4>Status</h4>
-                                    <span class="badge badge-success">Tersedia</span>
+
+                                    @if ($dm->status === 'Tidak Tersedia')
+                                        <span class="badge badge-danger">{{$dm->status}}</span>
+                                    @else
+                                        <span class="badge badge-success">{{$dm->status}}</span>
+                                    @endif
+
                                     <div class="bg-gray py-2 px-3 mt-4">
-                                        <h2 class="mb-0">
-                                            Rp. 1.200.000
-                                        </h2>
+                                        <h2 class="mb-0">Rp.{{number_format($dm->price)}}</h2>
                                     </div>
                                     <div class="mt-4">
                                         <div class="btn btn-primary btn-lg btn-flat">
@@ -124,6 +111,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                         <!-- /.card-body -->
