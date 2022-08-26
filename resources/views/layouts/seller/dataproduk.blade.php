@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="/product/create" class="nav-link">
                         <i class="far fa-plus-square nav-icon"></i>
                         <p>Tambah Produk</p>
                     </a>
