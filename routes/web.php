@@ -37,6 +37,7 @@ Route::get('/product-edit/{id}',[ProductController::class,'edit']);
 Route::put('/product/{id}', [ProductController::class,'update']);
 //**DELETE  PODUK */
 Route::get('/product-delete/{id}', [ProductController::class,'delete']);
+Route::delete('/product-destroy/{id}', [ProductController::class,'destroy']);
 /**VIEW PRODUCT */
 Route::put('/product-view{id}',[ProductController::class,'updateView']);
 

@@ -73,6 +73,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        @if (Session::has('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{Session::get('Success message')}}
+                            </div>
+                        @endif
                         <div class="card-header">
                             <h3 class="card-title">Daftar Produk</h3>
                         </div>
@@ -118,46 +123,47 @@
                                                 </i>
                                                 Edit
                                             </a>
-                                            <a class="btn btn-danger btn-sm" href="product/{{ $dm->id }}">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                               Delete
-                                            </a>
-                                            {{-- </button>
                                             <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
                                                 data-target="#delete{{$dm->id}}">
                                                 <i class="fas fa-trash">
                                                 </i>
                                                 Delete
-                                            </button> --}}
+                                            </button>
                                         </td>
                                     </tr>
-                                @endforeach
+                                    @endforeach
                                 </tbody>
                             </table>
 
-                            {{-- @foreach ($products as $dm)
-                            <div class="modal fade" id="delete{{$dm->id}}">
-                                <div class="modal-dialog">
-                                    <div class="modal-content bg-default">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">{{$dm->name}}</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Apakah yakin untuk menghapus produk {{$dm->name}} &hellip; ?</p>
-                                        </div>
-                                        <div class="modal-footer justify-content-between">
-                                            <button type="button" class="btn btn-outline-light"
-                                                data-dismiss="modal">Cancel</button>
-                                            <a  href="product-delete/" class="btn btn-outline-light">Yes</a>
+
+                            @foreach ($products as $dm)
+                            <form action="/product-destroy/{{$dm->id}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <div class="modal fade" id="delete{{$dm->id}}">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content bg-default">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Produk {{$dm->name}}</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Apakah yakin untuk menghapus produk {{$dm->name}} &hellip; ?</p>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-light"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary">Yes</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach --}}
+                            </form>
+                            @endforeach
+
                         </div>
                         <!-- /.card-body -->
                     </div>

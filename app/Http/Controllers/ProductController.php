@@ -112,8 +112,7 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::findOrfail($id);
-        $product->delete();
-        return redirect()->route('product')->with('success','Data Berhasil dihapus');
+        return view('product-delete',['products' => $product]);
     }
 
     /**
@@ -122,8 +121,16 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $deletedProduct = DB::table('products')->where('id', $id)->delete();
+        if($deletedProduct){
+            Session::flash('status','success');
+            Session::flash('message','Hapus data produk Berhasil');
+        }
+
+        return redirect('/product');
+
+
     }
 }
