@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class JasaPengiriman extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        'name',
+        'no_tlp',
+    ];
 }

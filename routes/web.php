@@ -42,6 +42,7 @@ use App\Http\Controllers\LandingPageController;
 // /**VIEW PRODUCT */
 // Route::put('/product-view{id}',[ProductController::class,'updateView']);
 
+
 Route::resource('product', ProductController::class);
 
 Route::resource('bank', BankController::class);
@@ -57,9 +58,9 @@ Route::get('/', [LandingPageController::class,'index']);
 
 /**ADMIN */
 
-Route::get('/databankadmin', function(){
-    return view('layouts.admin.databankadmin');
-});
+// Route::get('/databankadmin', function(){
+//     return view('layouts.admin.databankadmin');
+// });
 
 Route::get('/test', function(){
     return view('layouts.admin.pengirimanhariiniadmin');
@@ -74,9 +75,9 @@ Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
 });
 
-Route::get('/datapenggunaadmin', function(){
-    return view('layouts.admin.datajasapengirimanadmin');
-});
+// Route::get('/datapenggunaadmin', function(){
+//     return view('layouts.admin.datajasapengirimanadmin');
+// });
 
 Route::get('/editdatabank', function(){
     return view('layouts.admin.editdatabank');

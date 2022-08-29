@@ -86,16 +86,17 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form class="col" method="post" action={{ route('bank.store') }} enctype="multipart/form-data">
+                            @csrf
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="text" name="name" class="form-control" required
                                         placeholder="Nama Bank">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">No. Rekening</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                    <input type="text" name="no_rekening" class="form-control" required
                                         placeholder="Nomor Rekening">
                                 </div>
                             </div>

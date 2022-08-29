@@ -100,8 +100,6 @@ class ProductController extends Controller
                     // $photos[]['photo'] = $fileName;
                     $photos[$key]['idproduct'] = $insertProduct->id;
                     $photos[$key]['photo'] = $fileName;
-
-
                 }
             }
 
@@ -118,8 +116,6 @@ class ProductController extends Controller
 
             return redirect('/product');
         }
-
-
         // return redirect('product');
     }
 

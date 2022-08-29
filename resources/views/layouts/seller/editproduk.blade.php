@@ -84,7 +84,7 @@
                         <!-- form start -->
 
                         <form class="col" method="POST" action="/product/{{$product->id}}">
-                            {{ csrf_field() }}
+                            @csrf
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">

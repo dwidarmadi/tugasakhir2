@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JasaPengiriman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JasaPengirimanController extends Controller
 {
@@ -14,7 +15,8 @@ class JasaPengirimanController extends Controller
      */
     public function index()
     {
-        return view('layouts.admin.datajasapengirimanadmin');
+        $jasa_pengiriman = DB::table('jasa_pengiriman')->get();
+        return view('layouts.admin.datajasapengirimanadmin',['jasa_pengiriman'=>$jasa_pengiriman]);
     }
 
     /**
@@ -24,7 +26,7 @@ class JasaPengirimanController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.admin.tambahjasapengiriman');
     }
 
     /**
@@ -35,7 +37,8 @@ class JasaPengirimanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $jasa_pengiriman = JasaPengiriman::create($request->all());
+        return redirect('/jasapengiriman');
     }
 
     /**
@@ -57,7 +60,8 @@ class JasaPengirimanController extends Controller
      */
     public function edit(JasaPengiriman $jasaPengiriman)
     {
-        //
+        $jasa_pengiriman = JasaPengiriman::findOrFail($id);
+        return view('layouts.admin.datajasapengirimanadmin', ['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
     /**
@@ -69,7 +73,16 @@ class JasaPengirimanController extends Controller
      */
     public function update(Request $request, JasaPengiriman $jasaPengiriman)
     {
-        //
+        $jasa_pengiriman = JasaPengiriman::findOrfail($id);
+
+        $jasa_pengiriman->update($request->all());
+        return redirect('/jasapengiriman');
+    }
+
+    public function delete($id)
+    {
+        $jasa_pengiriman = JasaPengiriman::findOrfail($id);
+        return view('bank-delete',['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
     /**
@@ -78,8 +91,13 @@ class JasaPengirimanController extends Controller
      * @param  \App\Models\JasaPengiriman  $jasaPengiriman
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JasaPengiriman $jasaPengiriman)
+    public function destroy($id)
     {
-        //
+        $jasaPengiriman = DB::table('jasa_pengiriman')->where('id', $id)->delete();
+        if($jasaPengiriman){
+            return redirect('/jasapengiriman')->with('success','Data Bank Telah Dihapus');
+        }
+
+        return redirect('/jasapengiriman');
     }
 }

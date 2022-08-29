@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Bank;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class BankController extends Controller
 {
@@ -14,7 +16,8 @@ class BankController extends Controller
      */
     public function index()
     {
-        return view('layouts.admin.databankadmin');
+        $banks = DB::table('banks')->get();
+        return view('layouts.admin.databankadmin',['banks'=>$banks]);
     }
 
     /**
@@ -24,7 +27,7 @@ class BankController extends Controller
      */
     public function create()
     {
-        //
+        Return view('layouts.admin.tambahbank');
     }
 
     /**
@@ -35,7 +38,8 @@ class BankController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bank = Bank::create($request->all());
+        return redirect('/bank');
     }
 
     /**
@@ -55,9 +59,10 @@ class BankController extends Controller
      * @param  \App\Models\Bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bank $bank)
+    public function edit($id)
     {
-        //
+        $bank = Bank::findOrFail($id);
+        return view('layouts.admin.editdatabank', ['bank' => $bank]);
     }
 
     /**
@@ -67,9 +72,18 @@ class BankController extends Controller
      * @param  \App\Models\Bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bank $bank)
+    public function update(Request $request, $id)
     {
-        //
+        $bank = bank::findOrfail($id);
+
+        $bank->update($request->all());
+        return redirect('/bank');
+    }
+
+    public function delete($id)
+    {
+        $bank = Bank::findOrfail($id);
+        return view('bank-delete',['banks' => $bank]);
     }
 
     /**
@@ -78,8 +92,14 @@ class BankController extends Controller
      * @param  \App\Models\Bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bank $bank)
+    public function destroy($id)
     {
-        //
+        $deletedBank = DB::table('banks')->where('id', $id)->delete();
+        if($deletedBank){
+            return redirect('/bank')->with('success','Data Bank Telah Dihapus');
+        }
+
+        return redirect('/bank');
+
     }
 }

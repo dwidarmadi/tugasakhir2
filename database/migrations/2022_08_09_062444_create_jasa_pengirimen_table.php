@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('jasa_pengirimen', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('no_tlp');
             $table->timestamps();
         });
     }

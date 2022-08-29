@@ -84,6 +84,10 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div>
+                                <a href="/tambahjasapengiriman/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
+                                    Jasa Pengiriman</a>
+                            </div>
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>

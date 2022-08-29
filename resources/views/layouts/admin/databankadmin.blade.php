@@ -84,10 +84,11 @@
                         <h3 class="card-title">Daftar Bank</h3>
                     </div>
                     <!-- /.card-header -->
-                    <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
                     <div class="card-body">
+                        <div>
+                            <a href="/bank/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
+                                Bank</a>
+                        </div>
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -97,43 +98,57 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+                            @foreach ($banks as $bk => $fc)
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Bank Central Asia</td>
-                                    <td>776844673</td>
+                                    <td>{{++$bk}}</td>
+                                    <td>{{$fc->name}}</td>
+                                    <td>{{$fc->no_rekening}}</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-info btn-sm" href="{{ route('bank.edit',$fc->id)}}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Edit
                                         </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
+                                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
+                                            data-target="#delete{{$fc->id}}">
                                             <i class="fas fa-trash">
                                             </i>
                                             Delete
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Bank Rakyan Indonesia</td>
-                                    <td>1452651772445896</td>
-                                    <td>
-                                        <a class="btn btn-info btn-sm" href="#">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Delete
-                                        </a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        @foreach ($banks as $bk)
+                            <form action={{route('bank.destroy',$bk->id)}} method="POST">
+                                @csrf
+                                @method('delete')
+                                <div class="modal fade" id="delete{{$bk->id}}">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content bg-default">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Bank {{$bk->name}}</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Apakah yakin untuk hapus data bank {{$bk->name}} &hellip; ?</p>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-outline-light"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary">Yes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            @endforeach
+
                     </div>
                     <!-- /.card-body -->
                 </div>
