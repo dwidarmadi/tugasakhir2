@@ -58,7 +58,7 @@ class JasaPengirimanController extends Controller
      * @param  \App\Models\JasaPengiriman  $jasaPengiriman
      * @return \Illuminate\Http\Response
      */
-    public function edit(JasaPengiriman $jasaPengiriman)
+    public function edit($id)
     {
         $jasa_pengiriman = JasaPengiriman::findOrFail($id);
         return view('layouts.admin.datajasapengirimanadmin', ['jasa_pengiriman' => $jasa_pengiriman]);
@@ -71,7 +71,7 @@ class JasaPengirimanController extends Controller
      * @param  \App\Models\JasaPengiriman  $jasaPengiriman
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JasaPengiriman $jasaPengiriman)
+    public function update(Request $request, $id)
     {
         $jasa_pengiriman = JasaPengiriman::findOrfail($id);
 

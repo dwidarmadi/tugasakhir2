@@ -85,7 +85,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="/tambahjasapengiriman/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
+                                <a href="/jasapengiriman/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
                                     Jasa Pengiriman</a>
                             </div>
                             <table id="example2" class="table table-bordered table-hover">
@@ -97,11 +97,12 @@
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
+                                @foreach ($jasa_pengiriman as $jp =>$sv)
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>JNE</td>
-                                        <td>(021) 29278888</td>
+                                        <td>{{++$jp}}</td>
+                                        <td>{{$sv->name}}</td>
+                                        <td>{{$sv->no_tlp}}</td>
                                         <td>
                                             <a class="btn btn-info btn-sm" href="#">
                                                 <i class="fas fa-pencil-alt">
@@ -115,25 +116,10 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Si Cepat</td>
-                                        <td>(021) 50200050</td>
-                                        <td>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
+
                         </div>
                         <!-- /.card-body -->
                     </div>

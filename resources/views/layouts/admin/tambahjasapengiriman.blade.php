@@ -92,12 +92,12 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama</label>
-                                    <input type="email" class="form-control" name="name" required
+                                    <input type="text" class="form-control" name="name" required
                                         placeholder="Nama Jasa Pengiriman">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">No. Telepon</label>
-                                    <input type="password" class="form-control" name="no_tlp" required
+                                    <input type="text" class="form-control" name="no_tlp" required
                                         placeholder="Nomor Telepon">
                                 </div>
                             </div>
