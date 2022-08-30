@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                         <i class="fas fa-car-alt nav-icon"></i>
-                        <p>Pengiriman Hari Ini</p>
+                        <p>Pengiriman Hari Ini</p>s
                     </a>
                 </li>
                 <li class="nav-item">
@@ -86,16 +86,18 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form class="col" method="POST" action={{ route('jasapengiriman.update',$jasa_pengiriman->id) }}>
+                            @csrf
+                            @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="text" class="form-control" name="name" value="{{$jasa_pengiriman->name}}" required
                                         placeholder="Nama Jasa Pengiriman">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Telepon</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                    <input type="text" class="form-control" name="no_tlp" value="{{$jasa_pengiriman->no_tlp}}"
                                         placeholder="Nomor Telepon">
                                 </div>
                             </div>

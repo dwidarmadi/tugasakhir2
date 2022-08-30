@@ -61,7 +61,7 @@ class JasaPengirimanController extends Controller
     public function edit($id)
     {
         $jasa_pengiriman = JasaPengiriman::findOrFail($id);
-        return view('layouts.admin.datajasapengirimanadmin', ['jasa_pengiriman' => $jasa_pengiriman]);
+        return view('layouts.admin.editdatajasapengiriman', ['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
     /**
@@ -73,6 +73,7 @@ class JasaPengirimanController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $jasa_pengiriman = JasaPengiriman::findOrfail($id);
 
         $jasa_pengiriman->update($request->all());

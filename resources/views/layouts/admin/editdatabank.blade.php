@@ -86,7 +86,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form class="col" method="POST" action="/bank/{{$bank->id}}">
+                        <form class="col" method="POST" action={{ route('bank.update',$bank->id)}}>
                             @csrf
                             @method('PUT')
                             <div class="card-body">
