@@ -74,9 +74,9 @@
                 <div class="col-12">
                     <div class="card">
                         @if (Session::has('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{Session::get('success')}}
-                            </div>
+                        <div class="alert alert-success" role="alert">
+                            {{Session::get('success')}}
+                        </div>
                         @endif
                         <div class="card-header">
                             <h3 class="card-title">Daftar Produk</h3>
@@ -88,17 +88,17 @@
                                 <a href="/product/create" class="btn btn-primary mb-2"><i
                                         class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
-                            <table id="example2" class="table table-bordered">
+                            <table class="table table-responsive">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama Produk</th>
-                                        <th>Deskripsi</th>
-                                        <th>Harga</th>
-                                        <th>Jumlah</th>
-                                        <th>Foto</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
+                                        <th style="vertical-align: middle;">No</th>
+                                        <th style="vertical-align: middle;">Nama Produk</th>
+                                        <th style="vertical-align: middle;">Deskripsi</th>
+                                        <th style="vertical-align: middle;">Harga</th>
+                                        <th style="vertical-align: middle;">Jumlah</th>
+                                        <th style="vertical-align: middle;">Foto</th>
+                                        <th style="vertical-align: middle;">Status</th>
+                                        <th style="vertical-align: middle;">Aksi</th>
                                     </tr>
                                 </thead>
                                 @foreach ($products as $dm => $pr)
@@ -111,28 +111,38 @@
                                         <td>{{ $pr->qty }}</td>
                                         <td><img src="{{ asset('storage/photos/'.$pr->image) }}" alt="" width="150px"
                                                 height="150px"></td>
-                                        <td></td>
-                                        <td class="project-actions text-right">
-                                            <a class="btn btn-primary btn-sm" href={{ route('product.show',$pr->id) }}>
-                                                <i class="fas fa-folder">
-                                                </i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->id)}}>
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Edit
-                                            </a>
-                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                                data-target="#delete{{$pr->id}}">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Delete
-                                            </button>
+                                        <td>
+                                            @if ($pr->status === 'Tidak Tersedia')
+                                            <span class="badge badge-danger">{{$pr->status}}</span>
+                                            @else
+                                            <span class="badge badge-success">{{$pr->status}}</span>
+                                            @endif
+                                        </td>
+                                        <td class="project-actions text-right" style="vertical-align: middle;">
+                                            <div style="display: flex; flex-direction:row; gap:10px;">
+
+                                                <a class="btn btn-primary btn-sm"
+                                                    href={{ route('product.show',$pr->id) }}>
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    View
+                                                </a>
+                                                <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->id)}}>
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Edit
+                                                </a>
+                                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
+                                                    data-target="#delete{{$pr->id}}">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Delete
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
+                                @endforeach
                             </table>
 
 
