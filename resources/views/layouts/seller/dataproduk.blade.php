@@ -8,13 +8,13 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link">
+                    <a href={{route('product.store')}} class="nav-link">
                         <i class="fab fa-product-hunt nav-icon"></i>
                         <p>Produk Saya</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/product/create" class="nav-link">
+                    <a href={{route('product.create')}} class="nav-link">
                         <i class="far fa-plus-square nav-icon"></i>
                         <p>Tambah Produk</p>
                     </a>

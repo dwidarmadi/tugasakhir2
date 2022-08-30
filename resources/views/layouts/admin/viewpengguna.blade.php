@@ -28,16 +28,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
+                    <a href={{route('bank.store')}} class="nav-link">
                         <i class="fas fa-money-check-alt nav-icon"></i>
                         <p>Data BANK</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
+                    <a href={{route('jasapengiriman.store')}} class="nav-link">
                         <i class="fas fa-business-time nav-icon"></i>
                         <p>Data Jasa Pengiriman</p>
                     </a>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
