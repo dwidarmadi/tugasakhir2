@@ -87,17 +87,17 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>
-                                    <input type="text" name="name" maxlength="255" class="form-control" required
+                                    <input type="text" name="name" class="form-control" required
                                         placeholder="Nama Produk">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Deskripsi</label>
-                                    <input type="text" name="description" maxlength="255" class="form-control" required
+                                    <input type="text" name="description" class="form-control" required
                                         placeholder="Deskripsi">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Jumlah</label>
-                                    <input type="text" name="qty" maxlength="20" class="form-control" required
+                                    <input type="text" name="qty" class="form-control" required
                                         placeholder="Jumlah">
                                 </div>
                                 <div class="form-group">
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Harga</label></label>
-                                    <input type="text" name="price" maxlength="20" class="form-control" required
+                                    <input type="text" name="price" class="form-control" required
                                         placeholder="Harga">
                                 </div>
                                 <div class="mb-3">

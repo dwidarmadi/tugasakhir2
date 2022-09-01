@@ -7,6 +7,7 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\DashboardBuyer;
 use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\OrderController;
@@ -55,6 +56,12 @@ Route::resource('order', OrderController::class);
 
 
 Route::get('/', [LandingPageController::class,'index']);
+Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
+
+
+Route::get('/detail', function(){
+    return view('layouts.detail-landing');
+});
 
 /**ADMIN */
 
@@ -129,9 +136,9 @@ Route::get('/detailpesananadmin', function(){
 
 
 /* BUYER */
-Route::get('/dashboardbuyer', function(){
-    return view('layouts.buyer.dashboardbuyer');
-});
+// Route::get('/dashboardbuyer', function(){
+//     return view('layouts.buyer.dashboardbuyer');
+// });
 
 Route::get('/profilbuyer', function(){
     return view('layouts.buyer.profilbuyer');

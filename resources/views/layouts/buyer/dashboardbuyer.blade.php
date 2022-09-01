@@ -49,5 +49,64 @@
 
 
 @section('content')
+    <!-- Content Wrapper. Contains page content -->
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container">
+                <div class="col-sm-12">
+                    <h1 class="text-center"> KAIN TENUN SONGKET</h1>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
 
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid col-md-11   ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Product</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    @foreach ($products as $product)
+
+                                    <div class="d-flex col-md-4">
+                                        <div class="card">
+                                            <div class="text-center card-body d-flex flex-column justify-content-between px-0">
+                                                <img src="{{ asset('storage/photos/'.$product->image) }}" class="card-img-top"
+                                                    alt="..." style="height: 50%; width=auto">
+                                                    <div>
+
+                                                        <h5>{{$product->name}}</h5>
+                                                        <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>Rp. {{number_format($product->price)}}</p>
+                                                        <td class="project-actions text-right">
+                                                            <a class="btn btn-success btn-sm" href="{{route('product.show',$product->id)}}">
+                                                                <i class="fas fa-folder">
+                                                                </i>
+                                                                Details
+                                                            </a>
+                                                        </td>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                <!-- /.col -->
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    <!-- /.content-wrapper -->
 @endsection
