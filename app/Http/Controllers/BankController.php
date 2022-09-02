@@ -39,7 +39,7 @@ class BankController extends Controller
     public function store(Request $request)
     {
         $bank = Bank::create($request->all());
-        return redirect('/bank');
+        return redirect('admin/bank');
     }
 
     /**
@@ -77,13 +77,13 @@ class BankController extends Controller
         $bank = bank::findOrfail($id);
 
         $bank->update($request->all());
-        return redirect('/bank');
+        return redirect('admin/bank');
     }
 
     public function delete($id)
     {
         $bank = Bank::findOrfail($id);
-        return view('bank-delete',['banks' => $bank]);
+        return view('admin/bank-delete',['banks' => $bank]);
     }
 
     /**
@@ -96,10 +96,10 @@ class BankController extends Controller
     {
         $deletedBank = DB::table('banks')->where('id', $id)->delete();
         if($deletedBank){
-            return redirect('/bank')->with('success','Data Bank Telah Dihapus');
+            return redirect('admin/bank')->with('success','Data Bank Telah Dihapus');
         }
 
-        return redirect('/bank');
+        return redirect('/admin/bank');
 
     }
 }

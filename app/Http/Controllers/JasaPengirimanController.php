@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JasaPengiriman;
 use Illuminate\Http\Request;
+use App\Models\JasaPengiriman;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
 class JasaPengirimanController extends Controller
@@ -26,6 +27,9 @@ class JasaPengirimanController extends Controller
      */
     public function create()
     {
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
         return view('layouts.admin.tambahjasapengiriman');
     }
 
@@ -38,7 +42,10 @@ class JasaPengirimanController extends Controller
     public function store(Request $request)
     {
         $jasa_pengiriman = JasaPengiriman::create($request->all());
-        return redirect('/jasapengiriman');
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
+        return redirect('admin/jasapengiriman');
     }
 
     /**
@@ -61,6 +68,9 @@ class JasaPengirimanController extends Controller
     public function edit($id)
     {
         $jasa_pengiriman = JasaPengiriman::findOrFail($id);
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
         return view('layouts.admin.editdatajasapengiriman', ['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
@@ -75,14 +85,19 @@ class JasaPengirimanController extends Controller
     {
         // dd($request->all());
         $jasa_pengiriman = JasaPengiriman::findOrfail($id);
-
         $jasa_pengiriman->update($request->all());
-        return redirect('/jasapengiriman');
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
+        return redirect('admin/jasapengiriman');
     }
 
     public function delete($id)
     {
         $jasa_pengiriman = JasaPengiriman::findOrfail($id);
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
         return view('bank-delete',['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
@@ -95,10 +110,13 @@ class JasaPengirimanController extends Controller
     public function destroy($id)
     {
         $jasaPengiriman = DB::table('jasa_pengiriman')->where('id', $id)->delete();
+        if('role' === 'admin'){
+            return view('admin/jasapengiriman');
+        }
         if($jasaPengiriman){
-            return redirect('/jasapengiriman')->with('success','Data Bank Telah Dihapus');
+            return redirect('admin/jasapengiriman')->with('success','Data Bank Telah Dihapus');
         }
 
-        return redirect('/jasapengiriman');
+        return redirect('admin/jasapengiriman');
     }
 }

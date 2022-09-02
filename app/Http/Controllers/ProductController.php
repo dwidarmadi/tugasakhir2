@@ -119,7 +119,7 @@ class ProductController extends Controller
                 DetailProduct::create($file);
             }
 
-            return redirect('/product');
+            return redirect('seller/product');
         }
         // return redirect('product');
     }
@@ -162,7 +162,7 @@ class ProductController extends Controller
         $product = Product::findOrfail($id);
 
         $product->update($request->all());
-        return redirect('/product');
+        return redirect('seller/product');
     }
 
     public function delete($id)
@@ -181,10 +181,10 @@ class ProductController extends Controller
     {
         $deletedProduct = DB::table('products')->where('id', $id)->delete();
         if($deletedProduct){
-            return redirect('/product')->with('success','Produk Telah Dihapus');
+            return redirect('seller/product')->with('success','Produk Telah Dihapus');
         }
 
-        return redirect('/product');
+        return redirect('seller/product');
 
 
     }

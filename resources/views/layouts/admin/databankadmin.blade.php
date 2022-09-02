@@ -86,7 +86,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div>
-                            <a href="/bank/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
+                            <a href="/admin/bank/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
                                 Bank</a>
                         </div>
                         <table id="example2" class="table table-bordered table-hover">

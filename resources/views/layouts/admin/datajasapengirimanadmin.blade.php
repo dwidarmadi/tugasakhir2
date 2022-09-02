@@ -85,7 +85,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div>
-                            <a href="/jasapengiriman/create" class="btn btn-primary mb-2"><i
+                            <a href="/admin/jasapengiriman/create" class="btn btn-primary mb-2"><i
                                     class="fas fa-plus mr-2"></i>Tambah
                                 Jasa Pengiriman</a>
                         </div>

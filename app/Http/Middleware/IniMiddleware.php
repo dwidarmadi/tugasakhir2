@@ -22,7 +22,7 @@ class IniMiddleware
     public function login()
     {
         if(!auth()->user()->jabatan =='A'){
-            return 403;
+            return view('layouts.seller.viewproduk');
           }
     }
 }

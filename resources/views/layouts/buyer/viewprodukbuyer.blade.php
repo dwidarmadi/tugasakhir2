@@ -81,6 +81,23 @@
                                         <img src="{{ asset('storage/photos/'.$dm->image) }}" class="product-image"
                                             alt="Product Image">
                                     </div>
+                                    <div class="col-12 product-image-thumbs">
+                                        <div class="product-image-thumb active"><img
+                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-1.jpg" alt="Product Image">
+                                        </div>
+                                        <div class="product-image-thumb"><img
+                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-2.jpg" alt="Product Image">
+                                        </div>
+                                        <div class="product-image-thumb"><img
+                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-3.jpg" alt="Product Image">
+                                        </div>
+                                        <div class="product-image-thumb"><img
+                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-4.jpg" alt="Product Image">
+                                        </div>
+                                        <div class="product-image-thumb"><img
+                                                src="{{ asset('AdminLTE/') }}/dist/img/prod-5.jpg" alt="Product Image">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <h3 class="my-3">{{$dm->name}}</h3>

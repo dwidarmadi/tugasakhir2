@@ -85,7 +85,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div>
-                                <a href="/product/create" class="btn btn-primary mb-2"><i
+                                <a href="product/create" class="btn btn-primary mb-2"><i
                                         class="fas fa-plus mr-2"></i>Tambah Produk</a>
                             </div>
                             <table class="table table-responsive">

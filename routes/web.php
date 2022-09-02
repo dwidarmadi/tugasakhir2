@@ -44,18 +44,34 @@ use App\Http\Controllers\LandingPageController;
 // Route::put('/product-view{id}',[ProductController::class,'updateView']);
 
 
-Route::resource('product', ProductController::class);
-
-Route::resource('bank', BankController::class);
-
-Route::resource('jasapengiriman', JasaPengirimanController::class);
-
 Route::resource('order', OrderController::class);
+
+/**PREFIEX */
+
+Route::prefix('admin')->group(function(){
+    Route::get('/dashboard', function(){
+        return view('layouts.admin.dashboardadmin');
+    });
+    Route::resource('bank', BankController::class);
+
+    Route::resource('jasapengiriman', JasaPengirimanController::class);
+});
+
+Route::prefix('seller')->group(function(){
+    Route::get('/dashboard', function(){
+        return view('layouts.seller.dashboardseller');
+    });
+    Route::resource('product', ProductController::class);
+});
 
 
 Route::get('/', [LandingPageController::class,'index']);
 
 Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
+
+// Route::group(['middleware' => ['auth','web']], function() {
+//     Route::resource('product', ProductController::class);
+// });
 
 
 Route::get('/detail', function(){
@@ -73,9 +89,9 @@ Route::get('/test', function(){
 });
 
 
-Route::get('/dashboardadmin', function(){
-    return view('layouts.admin.dashboardadmin');
-});
+// Route::get('/dashboardadmin', function(){
+//     return view('layouts.admin.dashboardadmin');
+// });
 
 Route::get('/databankadmin', function(){
     return view('layouts.admin.databankadmin');
