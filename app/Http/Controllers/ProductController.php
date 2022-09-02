@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Models\DetailProduct;
-use Illuminate\Contracts\Session\Session;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use App\Models\DetailProduct;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -19,6 +20,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function index()
     {
         $products = DB::table('products')->get();
@@ -132,6 +137,7 @@ class ProductController extends Controller
         return view('layouts.seller.viewproduk',['products' => $product]);
 
     }
+
     /**
      * Show the form for editing the specified resource.
      *

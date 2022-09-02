@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function  login()
+    {
+        if(auth()->user()->role === 'A'){
+            return view('view/admin');
+            }
+        else if (auth()->user()->role === 'B'){
+            return view('view/buyer');
+            }
+    }
 }

@@ -50,12 +50,11 @@ Route::resource('bank', BankController::class);
 
 Route::resource('jasapengiriman', JasaPengirimanController::class);
 
-Route::resource('keranjangbelanja', KeranjangBelanjaController::class);
-
 Route::resource('order', OrderController::class);
 
 
 Route::get('/', [LandingPageController::class,'index']);
+
 Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
 
 

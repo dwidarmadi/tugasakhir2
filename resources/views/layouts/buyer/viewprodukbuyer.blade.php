@@ -100,6 +100,16 @@
                                     <div class="bg-gray py-2 px-3 mt-4">
                                         <h2 class="mb-0">Rp.{{number_format($dm->price)}}</h2>
                                     </div>
+                                    <div class="mt-4">
+                                        <div class="btn btn-primary btn-lg btn-flat">
+                                            <i class="fas fa-cart-plus fa-lg mr-2"></i>
+                                            Keranjang
+                                        </div>
+                                        <div class="btn btn-success btn-lg btn-flat">
+                                            <i class="fas fa-cash-register fa-lg mr-2"></i>
+                                            Bayar Sekarang
+                                        </div>
+                                    </div>
                                 </div>
                                 @endforeach
                             </div>
