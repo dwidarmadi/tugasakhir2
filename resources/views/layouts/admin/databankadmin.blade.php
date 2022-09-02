@@ -80,13 +80,19 @@
         <div class="row">
             <div class="col-7">
                 <div class="card">
+                    @if (Session::has('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('success')}}
+                    </div>
+                    @endif
                     <div class="card-header">
                         <h3 class="card-title">Daftar Bank</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div>
-                            <a href="/admin/bank/create" class="btn btn-primary mb-2"><i class="fas fa-plus mr-2"></i>Tambah
+                            <a href="/admin/bank/create" class="btn btn-primary mb-2"><i
+                                    class="fas fa-plus mr-2"></i>Tambah
                                 Bank</a>
                         </div>
                         <table id="example2" class="table table-bordered table-hover">
@@ -122,32 +128,31 @@
                             </tbody>
                         </table>
                         @foreach ($banks as $bk)
-                            <form action={{route('bank.destroy',$bk->id)}} method="POST">
-                                @csrf
-                                @method('delete')
-                                <div class="modal fade" id="delete{{$bk->id}}">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content bg-default">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Bank {{$bk->name}}</h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah yakin untuk hapus data bank {{$bk->name}} &hellip; ?</p>
-                                            </div>
-                                            <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-outline-light"
-                                                    data-dismiss="modal">Cancel</button>
-                                                <button type="submit" class="btn btn-primary">Yes</button>
-                                            </div>
+                        <form action={{route('bank.destroy',$bk->id)}} method="POST">
+                            @csrf
+                            @method('delete')
+                            <div class="modal fade" id="delete{{$bk->id}}">
+                                <div class="modal-dialog">
+                                    <div class="modal-content bg-default">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Bank {{$bk->name}}</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Apakah yakin untuk hapus data bank {{$bk->name}} &hellip; ?</p>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-outline-light"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Yes</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                            @endforeach
+                            </div>
+                        </form>
+                        @endforeach
 
                     </div>
                     <!-- /.card-body -->

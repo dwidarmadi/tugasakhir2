@@ -98,7 +98,7 @@ class JasaPengirimanController extends Controller
         if('role' === 'admin'){
             return view('admin/jasapengiriman');
         }
-        return view('bank-delete',['jasa_pengiriman' => $jasa_pengiriman]);
+        return view('jasapengiriman-delete',['jasa_pengiriman' => $jasa_pengiriman]);
     }
 
     /**
@@ -114,7 +114,7 @@ class JasaPengirimanController extends Controller
             return view('admin/jasapengiriman');
         }
         if($jasaPengiriman){
-            return redirect('admin/jasapengiriman')->with('success','Data Bank Telah Dihapus');
+            return redirect('admin/jasapengiriman')->with('success','Data Jasa Pengiriman Telah Dihapus');
         }
 
         return redirect('admin/jasapengiriman');

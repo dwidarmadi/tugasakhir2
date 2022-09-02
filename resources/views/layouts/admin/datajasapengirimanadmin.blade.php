@@ -79,6 +79,11 @@
         <div class="row">
             <div class="col-7">
                 <div class="card">
+                    @if (Session::has('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('success')}}
+                    </div>
+                    @endif
                     <div class="card-header">
                         <h3 class="card-title">Daftar Jasa Pengiriman</h3>
                     </div>
@@ -122,7 +127,7 @@
                             </tbody>
                         </table>
                         @foreach ($jasa_pengiriman as $bk)
-                        <form action={{route('bank.destroy',$bk->id)}} method="POST">
+                        <form action={{route('jasapengiriman.destroy',$bk->id)}} method="POST">
                             @csrf
                             @method('delete')
                             <div class="modal fade" id="delete{{$bk->id}}">
@@ -135,7 +140,8 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Apakah yakin untuk hapus data Jasa Pengiriman {{$bk->name}} &hellip; ?</p>
+                                            <p>Apakah yakin untuk hapus data Jasa Pengiriman {{$bk->name}} &hellip; ?
+                                            </p>
                                         </div>
                                         <div class="modal-footer justify-content-between">
                                             <button type="button" class="btn btn-outline-light"
