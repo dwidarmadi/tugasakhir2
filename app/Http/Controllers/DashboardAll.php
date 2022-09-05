@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 
-class DashboardBuyer extends Controller
+class DashboardAll extends Controller
 {
     public function index(){
         $products = Product::all();

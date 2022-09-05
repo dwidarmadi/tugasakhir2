@@ -8,6 +8,7 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\DashboardAll;
 use App\Http\Controllers\DashboardBuyer;
 use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\JasaPengirimanController;
@@ -53,7 +54,7 @@ Route::resource('order', OrderController::class);
 /**PREFIEX */
 
 Route::prefix('admin')->group(function(){
-    Route::get('/dashboard', [DashboardBuyer::class,'index2'])->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardAll::class,'index2'])->name('admin.dashboard');
 
     Route::resource('bank', BankController::class);
 
@@ -61,13 +62,13 @@ Route::prefix('admin')->group(function(){
 });
 
 Route::prefix('seller')->group(function(){
-    Route::get('/dashboard', [DashboardBuyer::class,'index1'])->name('seller.dashboard');
+    Route::get('/dashboard', [DashboardAll::class,'index1'])->name('seller.dashboard');
 
     Route::resource('product', ProductController::class);
 });
 
 Route::prefix('buyer')->group(function(){
-    Route::get('/dashboard', [DashboardBuyer::class,'index'])->name('buyer.dashboard');
+    Route::get('/dashboard', [DashboardAll::class,'index'])->name('buyer.dashboard');
 });
 
 
@@ -77,7 +78,7 @@ Route::prefix('buyer')->group(function(){
 Route::get('/', [LandingPageController::class,'index']);
 Route::get('/detail', [DetailProductController::class,'index']);
 
-// Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
+// Route::get('/dashboard-buyer', [DashboardAll::class,'index']);
 
 // Route::group(['middleware' => ['auth','web']], function() {
 //     Route::resource('product', ProductController::class);

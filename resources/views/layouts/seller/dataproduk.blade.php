@@ -109,7 +109,7 @@
                                         <td>{{ $pr->description }}</td>
                                         <td>Rp. {{ number_format($pr->price) }}</td>
                                         <td>{{ $pr->qty }}</td>
-                                        <td><img src="{{ asset('storage/photos/'.$pr->image) }}" alt="" width="150px"
+                                        <td><img src="{{ asset('photos/'.$pr->photo) }}" alt="" width="150px"
                                                 height="150px"></td>
                                         <td>
                                             @if ($pr->status === 'Tidak Tersedia')
@@ -122,7 +122,7 @@
                                             <div style="display: flex; flex-direction:row; gap:10px;">
 
                                                 <a class="btn btn-primary btn-sm"
-                                                    href={{ route('product.show',$pr->id) }}>
+                                                    href={{ route('product.show',$pr->idproduct) }}>
                                                     <i class="fas fa-folder">
                                                     </i>
                                                     View

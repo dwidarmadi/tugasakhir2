@@ -73,49 +73,75 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="card-body">
-                            <div class="row" >
+                            <div class="row">
 
                                 @foreach ($products as $dm)
-                                <div class="col-12 col-sm-6">
-                                    <div class="col-12">
-                                        <img src="{{ asset('storage/photos/'.$dm->image) }}" class="product-image"
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="{{ asset('photos/'.$productphotos[0]->photo) }}" class="product-image"
                                             alt="Product Image">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <h3 class="my-3">{{$dm->name}}</h3>
-                                    <h4>Deskripsi</h4>
-                                    <p>{{$dm->description}}</p>
-                                    <hr>
-                                    <h4>Stok</h4>
-                                    <h5>{{$dm->qty}}</h5>
-                                    <h4>Status</h4>
+                                            <div style="display: flex; flex-wrap:wrap;">
 
-                                    @if ($dm->status === 'Tidak Tersedia')
+                                                @foreach ($productphotos as $productphoto)
+
+                                                <div class="product-image-thumbs">
+                                                    <div class="product-image-thumb active"><img
+                                                            src="{{ asset('photos/'.$productphoto->photo) }}"
+                                                            alt="Product Image">
+                                                    </div>
+                                                </div>
+
+                                                @endforeach
+                                            </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <h3 class="my-3">{{$dm->name}}</h3>
+                                        <h4>Deskripsi</h4>
+                                        <p>{{$dm->description}}</p>
+                                        <hr>
+                                        <h4>Stok</h4>
+                                        <h5>{{$dm->qty}}</h5>
+                                        <h4>Status</h4>
+
+                                        @if ($dm->status === 'Tidak Tersedia')
                                         <span class="badge badge-danger">{{$dm->status}}</span>
-                                    @else
+                                        @else
                                         <span class="badge badge-success">{{$dm->status}}</span>
-                                    @endif
+                                        @endif
 
-                                    <div class="bg-gray py-2 px-3 mt-4">
-                                        <h2 class="mb-0">Rp.{{number_format($dm->price)}}</h2>
+                                        <div class="bg-gray py-2 px-3 mt-4">
+                                            <h2 class="mb-0">Rp.{{number_format($dm->price)}}</h2>
+                                        </div>
                                     </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card-body -->
+                        <!-- /.card -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
-                    <!-- /.card -->
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
+            <!-- /.container-fluid -->
 </section>
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+@endsection
+
+@section('scriptPlace')
+<script>
+    $(document).ready(function() {
+      $('.product-image-thumb').on('click', function () {
+        var $image_element = $(this).find('img')
+        $('.product-image').prop('src', $image_element.attr('src'))
+        $('.product-image-thumb.active').removeClass('active')
+        $(this).addClass('active')
+      })
+    })
+  </script>
 @endsection

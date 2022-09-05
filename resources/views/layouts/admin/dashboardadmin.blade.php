@@ -45,14 +45,21 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <div>
-                    <li class="nav-item" id="logout-form" action="http://127.0.0.1:8000/" method="POST">
-                            <a href="http://127.0.0.1:8000" class="nav-link">
-                                <i class="fas fa-sign-out-alt nav-icon"></i>
-                                <p>Log Out</p>
-                            </a>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
+                     </a>
+
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                         @csrf
+                     </form>
                     </li>
-                </div>
+
+
             </ul>
         </li>
     </ul>

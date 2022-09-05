@@ -26,7 +26,15 @@ class ProductController extends Controller
 
     public function index()
     {
-        $products = DB::table('products')->get();
+        DB::statement("SET SQL_MODE=''");
+
+        $products = DB::table('products')
+                        ->join('detail_products','products.id','=','detail_products.idproduct')
+                        // ->where('products.id','=',$id)
+                        ->groupBy('products.id')
+                        ->get();
+
+        // dd($products);
         return view('layouts.seller.dataproduk',['products'=>$products]);
     }
 
@@ -133,7 +141,9 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = DB::table('products')->where('id',$id)->get();
-            return view('layouts.seller.viewproduk',['products' => $product]);
+        $productphotos = DB::table('detail_products')->where('idproduct',$id)->get();
+        // dd($productphotos);
+        return view('layouts.seller.viewproduk',['products' => $product, 'productphotos'=>$productphotos]);
     }
 
     public function showBuyer($id)
