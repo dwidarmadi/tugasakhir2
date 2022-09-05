@@ -133,9 +133,13 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = DB::table('products')->where('id',$id)->get();
-        //dd($product);
-        return view('layouts.seller.viewproduk',['products' => $product]);
+            return view('layouts.seller.viewproduk',['products' => $product]);
+    }
 
+    public function showBuyer($id)
+    {
+        $product = DB::table('products')->where('id',$id)->get();
+            return view('layouts.seller.viewprodukbuyer',['products' => $product]);
     }
 
     /**

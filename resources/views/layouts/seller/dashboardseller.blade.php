@@ -85,7 +85,7 @@
                         <div class="icon">
                             <i class="fab fa-product-hunt nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href={{route('product.store')}} class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -100,7 +100,7 @@
                         <div class="icon">
                             <i class="far fa-plus-square nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href={{route('product.create')}} class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->

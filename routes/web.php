@@ -2,12 +2,14 @@
 
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\DashboardBuyer;
+use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\OrderController;
@@ -46,28 +48,36 @@ use App\Http\Controllers\LandingPageController;
 
 Route::resource('order', OrderController::class);
 
+// Route::get('/', [LoginController::class,'getUser']);
+
 /**PREFIEX */
 
 Route::prefix('admin')->group(function(){
-    Route::get('/dashboard', function(){
-        return view('layouts.admin.dashboardadmin');
-    });
+    Route::get('/dashboard', [DashboardBuyer::class,'index2'])->name('admin.dashboard');
+
     Route::resource('bank', BankController::class);
 
     Route::resource('jasapengiriman', JasaPengirimanController::class);
 });
 
 Route::prefix('seller')->group(function(){
-    Route::get('/dashboard', function(){
-        return view('layouts.seller.dashboardseller');
-    });
+    Route::get('/dashboard', [DashboardBuyer::class,'index1'])->name('seller.dashboard');
+
     Route::resource('product', ProductController::class);
 });
 
+Route::prefix('buyer')->group(function(){
+    Route::get('/dashboard', [DashboardBuyer::class,'index'])->name('buyer.dashboard');
+});
+
+
+
+
 
 Route::get('/', [LandingPageController::class,'index']);
+Route::get('/detail', [DetailProductController::class,'index']);
 
-Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
+// Route::get('/dashboard-buyer', [DashboardBuyer::class,'index']);
 
 // Route::group(['middleware' => ['auth','web']], function() {
 //     Route::resource('product', ProductController::class);
@@ -256,5 +266,5 @@ Route::get('/tamplate-landing', function(){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DetailProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\DetailProduct;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 class DetailProductController extends Controller
 {
@@ -14,7 +17,9 @@ class DetailProductController extends Controller
      */
     public function index()
     {
-        //
+            $products = DB::table('products')->get();
+            return redirect('layouts.detail-landing',['products' => $products]);
+
     }
 
     /**

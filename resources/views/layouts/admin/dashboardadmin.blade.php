@@ -46,11 +46,11 @@
                     </a>
                 </li>
                 <div>
-                    <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
-                            <i class="fas fa-sign-out-alt nav-icon"></i>
-                            <p>Log Out</p>
-                        </a>
+                    <li class="nav-item" id="logout-form" action="http://127.0.0.1:8000/" method="POST">
+                            <a href="http://127.0.0.1:8000" class="nav-link">
+                                <i class="fas fa-sign-out-alt nav-icon"></i>
+                                <p>Log Out</p>
+                            </a>
                     </li>
                 </div>
             </ul>
@@ -137,7 +137,8 @@
                         <div class="icon">
                             <i class="fas fa-money-check-alt nav-icon"></i>
                         </div>
-                        <a href={{route('bank.store')}} class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href={{route('bank.store')}} class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -152,7 +153,8 @@
                         <div class="icon">
                             <i class="fas fa-business-time nav-icon"></i>
                         </div>
-                        <a href={{route('bank.store')}} class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href={{route('bank.store')}} class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->

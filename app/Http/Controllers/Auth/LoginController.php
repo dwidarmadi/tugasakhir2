@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+// use GuzzleHttp\Psr7\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -38,13 +41,44 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function  login()
-    {
-        if(auth()->user()->role === 'A'){
-            return view('view/admin');
+    // public function  getUser(Request $request)
+    // {
+    //     // $role = Auth::user();
+    //     // var_dump($role);
+    //     // if($role === 'admin'){
+    //     //     return view('layouts.admin.dashboardadmin');
+    //     // }
+    //     // elseif($role === 'seller'){
+    //     //     return view('layouts.seller.dashboardseller');
+    //     // }
+    //     // elseif($role === 'buyer'){
+    //     //     return view('layouts.buyer.dashboardbuyer');
+    //     // }
+
+    //     // $input = $request->all();
+
+    // }
+
+    public function login(Request $request){
+        $input = $request->all();
+
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        if(auth()->attempt(array('email' =>$input['email'], 'password' => $input['password']))){
+            if(auth()->user()->role == 'buyer'){
+                return redirect()->route('buyer.dashboard');
             }
-        else if (auth()->user()->role === 'B'){
-            return view('view/buyer');
+            if(auth()->user()->role == 'seller'){
+                return redirect()->route('seller.dashboard');
             }
+            if(auth()->user()->role == 'admin'){
+                return redirect()->route('admin.dashboard');
+            }
+        }else{
+            return redirect()->route('login');
+        }
     }
 }

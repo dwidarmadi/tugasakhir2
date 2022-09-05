@@ -13,4 +13,16 @@ class DashboardBuyer extends Controller
 
         return view('layouts.buyer.dashboardbuyer',['products' => $products]);
     }
+
+    public function index1(){
+        $products = Product::all();
+
+        return view('layouts.seller.dashboardseller',['products' => $products]);
+    }
+
+    public function index2(){
+        $products = Product::all();
+
+        return view('layouts.admin.dashboardadmin');
+    }
 }
