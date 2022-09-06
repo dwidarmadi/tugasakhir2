@@ -29,7 +29,26 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    // if(auth()->user()->role == 'buyer'){
+    //     rotected $redirectTo = 'buyer/dashboard';
+    // }
+
+    public function redirectTo(){
+
+        $role = Auth::user()->role;
+        if($role == 'buyer'){
+            return redirect('buyer/dashboard');
+        }
+
+        if($role == 'seller'){
+            return redirect('seller/dashboard');
+        }
+
+        if($role == 'admin'){
+            return redirect('admin/dashboard');
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -58,6 +77,8 @@ class LoginController extends Controller
     //     // $input = $request->all();
 
     // }
+
+
 
     public function login(Request $request){
         $input = $request->all();

@@ -35,10 +35,16 @@
                 </li>
                 <div>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
-                            <i class="fas fa-sign-out-alt nav-icon"></i>
-                            <p>Log Out</p>
-                        </a>
+
+                        <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
+                     </a>
+
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                         @csrf
+                     </form>
                     </li>
                 </div>
             </ul>

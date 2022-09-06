@@ -1,3 +1,6 @@
+<?php
+    use Illuminate\Support\Facades\Auth;
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -69,12 +72,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     class="fas fa-shopping-basket nav-icon"></i><span class="ml-3"></span>Keranjang
                                 Belanja</a>
                         </li>
+                        @if (Auth::check())
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Daftar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link text-white">Masuk</a>
-                        </li>
+                        <a class="nav-link text-white" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                         <p style="color:#fff !importaant;"> keluar</p>
+                     </a>
+                    </li>
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                         @csrf
+                     </form>
+
+                    @else
+
+                    <li class="nav-item">
+                        <a href="{{ route('register') }}" class="nav-link text-white">Daftar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link text-white">Masuk</a>
+                    </li>
+                        @endif
                     </ul>
                     <!--Full Screen -->
                     <div class="nav-item">

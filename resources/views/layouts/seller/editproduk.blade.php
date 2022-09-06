@@ -40,10 +40,15 @@
                 </li>
                 <div>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt nav-icon"></i>
                             <p>Log Out</p>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </div>
             </ul>
@@ -83,7 +88,7 @@
                         <!-- /.card-header -->
                         <!-- form start -->
 
-                        <form class="col" method="POST" action="/product/{{$product->id}}">
+                        <form class="col" method="POST" action="{{ route('product.update',$product->id) }}">
                             @csrf
                             @method('PUT')
                             <div class="card-body">

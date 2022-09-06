@@ -3,6 +3,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\PHP;
 
@@ -70,9 +71,6 @@ Route::prefix('seller')->group(function(){
 Route::prefix('buyer')->group(function(){
     Route::get('/dashboard', [DashboardAll::class,'index'])->name('buyer.dashboard');
 });
-
-
-
 
 
 Route::get('/', [LandingPageController::class,'index']);

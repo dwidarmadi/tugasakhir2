@@ -182,7 +182,7 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::findOrfail($id);
-        return view('product-delete',['products' => $product]);
+        return view('/product-delete',['products' => $product]);
     }
 
     /**

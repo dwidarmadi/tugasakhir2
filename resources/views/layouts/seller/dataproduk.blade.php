@@ -39,10 +39,15 @@
                 </li>
                 <div>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt nav-icon"></i>
                             <p>Log Out</p>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </div>
             </ul>
@@ -127,13 +132,13 @@
                                                     </i>
                                                     View
                                                 </a>
-                                                <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->id)}}>
+                                                <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->idproduct)}}>
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                     Edit
                                                 </a>
                                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                                    data-target="#delete{{$pr->id}}">
+                                                    data-target="#delete">
                                                     <i class="fas fa-trash">
                                                     </i>
                                                     Delete
@@ -147,10 +152,10 @@
 
 
                             @foreach ($products as $dm)
-                            <form action={{route('product.destroy',$dm->id)}} method="POST">
+                            <form action={{route('product.destroy',$dm->idproduct)}} method="POST">
                                 @csrf
                                 @method('delete')
-                                <div class="modal fade" id="delete{{$dm->id}}">
+                                <div class="modal fade" id="delete">
                                     <div class="modal-dialog">
                                         <div class="modal-content bg-default">
                                             <div class="modal-header">

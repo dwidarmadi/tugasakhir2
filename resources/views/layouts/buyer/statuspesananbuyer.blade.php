@@ -32,11 +32,20 @@
                         <p>Tentang</p>
                     </a>
                 </li>
-                <li>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Log Out</button>
-                    </div>
+               <div>
+                <li class="nav-item">
+
+                    <a class="nav-link" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                      <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
+                 </a>
+
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                     @csrf
+                 </form>
                 </li>
+               </div>
             </ul>
         </li>
     </ul>
