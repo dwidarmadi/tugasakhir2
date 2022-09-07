@@ -80,7 +80,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>
@@ -90,14 +90,15 @@
                                             </button>
                                         </div>
                                     </th>
-                                    <th>No</th>
-                                    <th>Produk</th>
-                                    <th>Nama Produk</th>
-                                    <th>Jumlah</th>
-                                    <th>Harga</th>
-                                    <th>Harga Total</th>
-                                    <th>Aksi</th>
+                                    <th style="vertical-align: middle;">No</th>
+                                    <th style="vertical-align: middle;">Produk</th>
+                                    <th style="vertical-align: middle;">Nama Produk</th>
+                                    <th style="vertical-align: middle;">Jumlah</th>
+                                    <th style="vertical-align: middle;">Harga</th>
+                                    <th style="vertical-align: middle;">Harga Total</th>
+                                    <th style="vertical-align: middle;">Aksi</th>
                             </thead>
+                            @foreach ($products as $dm =>$pr)
                             <tbody>
                                 <tr>
                                     <td>
@@ -106,43 +107,15 @@
                                             <label for="check1"></label>
                                         </div>
                                     </td>
-                                    <td>1</td>
-                                    <td>Foto Produk</td>
-                                    <td>Kamen Motif Kedis</td>
-                                    <td>2</td>
-                                    <td>Rp. 1.000.000</td>
-                                    <td>Rp. 2.000.000</td>
-                                    <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm" href="#">
-                                        <i class="fas fa-folder">
-                                        </i>
-                                        View
-                                        </a>
-                                        <a class="btn btn-info btn-sm" href="#">
-                                        <i class="fas fa-pencil-alt">
-                                        </i>
-                                        Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Delete
-                                        </a>
-                                        </td>
-                                </tr>
-                                <tr>
+                                    <td>{{ ++$dm}}</td>
                                     <td>
-                                        <div class="icheck-primary">
-                                            <input type="checkbox" value="" id="check2">
-                                            <label for="check2"></label>
-                                        </div>
+                                        <img src="{{ asset('photos/'.$productphotos[0]->photo) }}" alt="" width="150px"
+                                                height="150px">
                                     </td>
-                                    <td>2</td>
-                                    <td>Foto Produk</td>
-                                    <td>Kamen Motif Bulan</td>
-                                    <td>1</td>
-                                    <td>Rp. 1.200.000</td>
-                                    <td>Rp. 1.200.000</td>
+                                    <td>{{ $pr->name}}</td>
+                                    <td>{{ $pr->qty}}</td>
+                                    <td>Rp. {{ number_format($pr->price)}}</td>
+                                    <td>Rp. {{number_format($pr->price * $pr->qty)}}</td>
                                     <td class="project-actions text-right">
                                         <a class="btn btn-primary btn-sm" href="#">
                                         <i class="fas fa-folder">
@@ -162,6 +135,7 @@
                                         </td>
                                 </tr>
                             </tbody>
+                            @endforeach
                         </table>
                         <div><h5>Total Belanja :</h5></div>
                         <div class="pt-2">

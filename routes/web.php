@@ -54,7 +54,9 @@ Route::prefix('seller')->group(function(){
 Route::prefix('buyer')->group(function(){
     Route::get('/dashboard', [DashboardAll::class,'index'])->name('buyer.dashboard');
 
-    Route::get('viewproductbuyer/{id}', ['ProductController@showbuyer'])->name('buyer.viewproductbuyer');
+    Route::get('/viewproductbuyer/{id}', [ProductController::class,'showbuyer'])->name('buyer.viewproductbuyer');
+
+    Route::get('/keranjangbelanja/{id}', [ProductController::class,'showchart'])->name('buyer.keranjangbelanja');
 });
 
 

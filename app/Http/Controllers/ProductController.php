@@ -140,18 +140,38 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = DB::table('products')->where('id',$id)->get();
-        $productphotos = DB::table('detail_products')->where('idproduct',$id)->get();
+        $product = DB::table('products')
+                    ->where('id',$id)
+                    ->get();
+        $productphotos = DB::table('detail_products')
+                    ->where('idproduct',$id)
+                    ->get();
         // dd($productphotos);
         return view('layouts.seller.viewproduk',['products' => $product, 'productphotos'=>$productphotos]);
     }
 
     public function showbuyer($id)
     {
-        return $id;
-        // $product = DB::table('products')->where('id',$id)->get();
+        $product = DB::table('products')
+                    ->where('id',$id)
+                    ->get();
+        $productphotos = DB::table('detail_products')
+                        ->where('idproduct',$id)
+                        ->get();
         // dd($product);
-        //return view('layouts.buyer.viewprodukbuyer',['products' => $product]);
+        // dd($productphotos);
+        return view('layouts.buyer.viewprodukbuyer',['products' => $product, 'productphotos'=>$productphotos]);
+    }
+    public function showchart($id)
+    {
+        $product = DB::table('products')
+                    ->where('id',$id)
+                    ->get();
+        $productphotos = DB::table('detail_products')
+                    ->where('idproduct',$id)
+                    ->get();
+        // dd($product);
+        return view('layouts.buyer.keranjangbelanja',['products' => $product, 'productphotos'=>$productphotos]);
     }
 
     /**

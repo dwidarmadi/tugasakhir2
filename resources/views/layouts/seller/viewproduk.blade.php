@@ -41,15 +41,14 @@
                 <div>
                     <li class="nav-item">
 
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
-                     </a>
+                            <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
+                        </a>
 
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </div>
             </ul>
@@ -86,19 +85,19 @@
                                     <div class="col-6">
                                         <img src="{{ asset('photos/'.$productphotos[0]->photo) }}" class="product-image"
                                             alt="Product Image">
-                                            <div style="display: flex; flex-wrap:wrap;">
+                                        <div style="display: flex; flex-wrap:wrap;">
 
-                                                @foreach ($productphotos as $productphoto)
+                                            @foreach ($productphotos as $productphoto)
 
-                                                <div class="product-image-thumbs">
-                                                    <div class="product-image-thumb active"><img
-                                                            src="{{ asset('photos/'.$productphoto->photo) }}"
-                                                            alt="Product Image">
-                                                    </div>
+                                            <div class="product-image-thumbs">
+                                                <div class="product-image-thumb active"><img
+                                                        src="{{ asset('photos/'.$productphoto->photo) }}"
+                                                        alt="Product Image">
                                                 </div>
-
-                                                @endforeach
                                             </div>
+
+                                            @endforeach
+                                        </div>
                                     </div>
 
                                     <div class="col-6">
@@ -141,13 +140,13 @@
 
 @section('scriptPlace')
 <script>
-    $(document).ready(function() {
-      $('.product-image-thumb').on('click', function () {
-        var $image_element = $(this).find('img')
-        $('.product-image').prop('src', $image_element.attr('src'))
-        $('.product-image-thumb.active').removeClass('active')
-        $(this).addClass('active')
-      })
+    $(document).ready(function () {
+        $('.product-image-thumb').on('click', function () {
+            var $image_element = $(this).find('img')
+            $('.product-image').prop('src', $image_element.attr('src'))
+            $('.product-image-thumb.active').removeClass('active')
+            $(this).addClass('active')
+        })
     })
-  </script>
+</script>
 @endsection
