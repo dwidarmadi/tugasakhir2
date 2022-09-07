@@ -41,15 +41,14 @@
                 <div>
                     <li class="nav-item">
 
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
-                     </a>
+                            <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Logout') }}
+                        </a>
 
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </div>
             </ul>
@@ -79,9 +78,11 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="card-body">
-                            <div class="row" >
+                            <div class="row">
+
 
                                 @foreach ($products as $dm)
+                                @csrf
                                 <div class="col-12 col-sm-6">
                                     <div class="col-12">
                                         <img src="{{ asset('storage/photos/'.$dm->image) }}" class="product-image"
@@ -113,7 +114,6 @@
                                     <h4>Stok</h4>
                                     <h5>{{$dm->qty}}</h5>
                                     <h4>Status</h4>
-
                                     @if ($dm->status === 'Tidak Tersedia')
                                         <span class="badge badge-danger">{{$dm->status}}</span>
                                     @else

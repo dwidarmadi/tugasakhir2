@@ -91,7 +91,7 @@
                                             {{number_format($product->price)}}</p>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-success btn-sm"
-                                                href="{{route('product.show',$product->id)}}">
+                                                href="{{route('buyer.viewproductbuyer',$product->id)}}">
                                                 <i class="fas fa-folder">
                                                 </i>
                                                 Details

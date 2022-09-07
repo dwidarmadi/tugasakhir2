@@ -26,31 +26,14 @@ use App\Http\Controllers\LandingPageController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+/**ROUTE TEST HALAMAN */
 
-/**ROUTE BARU */
-
-
-// /**ROUTE PRODUCT */
-// Route::get('/product',[ProductController::class,'show']);
-// /**TAMBAH PRODUCT */
-// Route::get('/product-add',[ProductController::class,'create']);
-// /**DATA PRODUCT */
-// Route::post('/product', [ProductController::class,'store']);
-// /**EDIT PRODUCT */
-// Route::get('/product-edit/{id}',[ProductController::class,'edit']);
-// /**UPDATE PRODUCT */
-// Route::put('/product/{id}', [ProductController::class,'update']);
-// //**DELETE  PODUK */
-// Route::get('/product-delete/{id}', [ProductController::class,'delete']);
-// Route::delete('/product-destroy/{id}', [ProductController::class,'destroy']);
-// /**VIEW PRODUCT */
-// Route::put('/product-view{id}',[ProductController::class,'updateView']);
+Route::get('/product-buyer', function(){
+    return view('layouts.buyer.viewprodukbuyer');
+});
 
 
 Route::resource('order', OrderController::class);
-
-// Route::get('/', [LoginController::class,'getUser']);
 
 /**PREFIEX */
 
@@ -70,18 +53,18 @@ Route::prefix('seller')->group(function(){
 
 Route::prefix('buyer')->group(function(){
     Route::get('/dashboard', [DashboardAll::class,'index'])->name('buyer.dashboard');
+
+    Route::get('viewproductbuyer/{id}', ['ProductController@showbuyer'])->name('buyer.viewproductbuyer');
 });
 
 
 Route::get('/', [LandingPageController::class,'index']);
 Route::get('/detail', [DetailProductController::class,'index']);
 
-// Route::get('/dashboard-buyer', [DashboardAll::class,'index']);
 
-// Route::group(['middleware' => ['auth','web']], function() {
-//     Route::resource('product', ProductController::class);
-// });
 
+
+////////////////////////////////////////////////////////////////////
 
 Route::get('/detail', function(){
     return view('layouts.detail-landing');

@@ -146,10 +146,12 @@ class ProductController extends Controller
         return view('layouts.seller.viewproduk',['products' => $product, 'productphotos'=>$productphotos]);
     }
 
-    public function showBuyer($id)
+    public function showbuyer($id)
     {
-        $product = DB::table('products')->where('id',$id)->get();
-            return view('layouts.seller.viewprodukbuyer',['products' => $product]);
+        return $id;
+        // $product = DB::table('products')->where('id',$id)->get();
+        // dd($product);
+        //return view('layouts.buyer.viewprodukbuyer',['products' => $product]);
     }
 
     /**
