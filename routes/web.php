@@ -9,6 +9,7 @@ use SebastianBergmann\CodeCoverage\Report\PHP;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\DashboardAll;
 use App\Http\Controllers\DashboardBuyer;
 use App\Http\Controllers\DetailProductController;
@@ -56,7 +57,11 @@ Route::prefix('buyer')->group(function(){
 
     Route::get('/viewproductbuyer/{id}', [ProductController::class,'showbuyer'])->name('buyer.viewproductbuyer');
 
-    Route::get('/keranjangbelanja/{id}', [ProductController::class,'showchart'])->name('buyer.keranjangbelanja');
+    Route::resource('chart', ChartController::class);
+
+    // Route::get('/keranjangbelanja/{id}', [ChartController::class,''])->name('buyer.keranjangbelanja');
+
+    // Route::get('/keranjangbelanja/{id}', [ChartController::class,'show'])->name('buyer.keranjangbelanja');
 });
 
 

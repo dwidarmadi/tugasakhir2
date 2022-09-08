@@ -115,7 +115,7 @@
                                         </div>
 
                                         <div class="mt-4">
-                                            <a href={{route('buyer.keranjangbelanja',$dm->id)}}>
+                                            <a href={{route('chart.show',$dm->id)}}>
                                                 <div class="btn btn-primary btn-lg btn-flat">
                                                     <i class="fas fa-cart-plus fa-lg mr-2"></i>
                                                     Keranjang

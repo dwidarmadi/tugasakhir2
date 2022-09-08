@@ -162,17 +162,7 @@ class ProductController extends Controller
         // dd($productphotos);
         return view('layouts.buyer.viewprodukbuyer',['products' => $product, 'productphotos'=>$productphotos]);
     }
-    public function showchart($id)
-    {
-        $product = DB::table('products')
-                    ->where('id',$id)
-                    ->get();
-        $productphotos = DB::table('detail_products')
-                    ->where('idproduct',$id)
-                    ->get();
-        // dd($product);
-        return view('layouts.buyer.keranjangbelanja',['products' => $product, 'productphotos'=>$productphotos]);
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -215,7 +205,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $deletedProduct = DB::table('products')->where('id', $id)->delete();
+        $deletedProduct = DB::table('products')
+                        ->where('id', $id)
+                        ->delete();
         if($deletedProduct){
             return redirect('seller/product')->with('success','Produk Telah Dihapus');
         }

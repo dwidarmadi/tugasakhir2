@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-shopping-basket nav-icon"></i>
                         <p>Keranjang Belanja</p>
                     </a>
