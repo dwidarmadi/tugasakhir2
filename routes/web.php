@@ -57,7 +57,7 @@ Route::prefix('buyer')->group(function(){
 
 Route::get('/', [LandingPageController::class,'index']);
 
-Route::get('/detail{$id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
+Route::get('/detail/{$id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
 
 
 
