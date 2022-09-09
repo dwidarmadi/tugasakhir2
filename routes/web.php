@@ -30,7 +30,9 @@ use App\Http\Controllers\LandingPageController;
 
 Route::resource('order', OrderController::class);
 
+
 /**PREFIEX */
+
 
 Route::prefix('admin')->group(function(){
     Route::get('/dashboard', [DashboardAll::class,'index2'])->name('admin.dashboard');
@@ -57,7 +59,8 @@ Route::prefix('buyer')->group(function(){
 
 Route::get('/', [LandingPageController::class,'index']);
 
-Route::get('/detail/{$id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
+Route::get('/detail/{id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
+
 
 
 
@@ -244,4 +247,3 @@ Route::get('/tamplate-landing', function(){
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
