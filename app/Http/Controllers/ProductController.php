@@ -163,6 +163,18 @@ class ProductController extends Controller
         return view('layouts.buyer.viewprodukbuyer',['products' => $product, 'productphotos'=>$productphotos]);
     }
 
+    public function showlanding($id)
+    {
+        $product = DB::table('products')
+                    ->where('id',$id)
+                    ->get();
+        $productphotos = DB::table('detail_products')
+                    ->where('idproduct',$id)
+                    ->get();
+        // dd($product);
+        // dd($productphotos);
+        return view('layouts.detail-landing',['products' => $product, 'productphotos'=>$productphotos]);
+    }
 
     /**
      * Show the form for editing the specified resource.

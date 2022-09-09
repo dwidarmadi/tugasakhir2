@@ -27,12 +27,6 @@ use App\Http\Controllers\LandingPageController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-/**ROUTE TEST HALAMAN */
-
-Route::get('/product-buyer', function(){
-    return view('layouts.buyer.viewprodukbuyer');
-});
-
 
 Route::resource('order', OrderController::class);
 
@@ -58,24 +52,18 @@ Route::prefix('buyer')->group(function(){
     Route::get('/viewproductbuyer/{id}', [ProductController::class,'showbuyer'])->name('buyer.viewproductbuyer');
 
     Route::resource('chart', ChartController::class);
-
-    // Route::get('/keranjangbelanja/{id}', [ChartController::class,''])->name('buyer.keranjangbelanja');
-
-    // Route::get('/keranjangbelanja/{id}', [ChartController::class,'show'])->name('buyer.keranjangbelanja');
 });
 
 
 Route::get('/', [LandingPageController::class,'index']);
-Route::get('/detail', [DetailProductController::class,'index']);
 
+Route::get('/detail{$id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
 
 
 
 ////////////////////////////////////////////////////////////////////
 
-Route::get('/detail', function(){
-    return view('layouts.detail-landing');
-});
+
 
 /**ADMIN */
 

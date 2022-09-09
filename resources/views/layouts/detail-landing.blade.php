@@ -121,8 +121,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         @foreach ($products as $dm)
                                             <div class="col-12 col-sm-6">
                                                 <div class="col-12">
-                                                    <img src="{{ asset('storage/photos/' . $dm->image) }}"
+                                                    <img src="{{ asset('photos/'.$productphotos[0]->photo) }}"
                                                         class="product-image" alt="Product Image">
+                                                        <div style="display: flex; flex-wrap:wrap;">
+
+                                                            @foreach ($productphotos as $productphoto)
+
+                                                            <div class="product-image-thumbs">
+                                                                <div class="product-image-thumb active"><img
+                                                                        src="{{ asset('photos/'.$productphoto->photo) }}"
+                                                                        alt="Product Image">
+                                                                </div>
+                                                            </div>
+
+                                                            @endforeach
+                                                        </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-6">
