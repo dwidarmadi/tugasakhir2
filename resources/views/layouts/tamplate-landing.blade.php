@@ -146,7 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <h5>{{$product->name}}</h5>
                                                             <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>Rp. {{number_format($product->price)}}</p>
                                                             <td class="project-actions text-right">
-                                                                <a class="btn btn-success btn-sm" href="{{route('detail',$product->id)}}">
+                                                                <a class="btn btn-success btn-sm" href="{{route('product.showlanding',$product->id)}}">
                                                                     <i class="fas fa-folder">
                                                                     </i>
                                                                     Details
