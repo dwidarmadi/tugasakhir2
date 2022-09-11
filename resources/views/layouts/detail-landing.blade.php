@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand-md bg-dark navbar-light navbar-white">
             <div class="container">
-                <a href="../../index3.html" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="{{ asset('AdminLTE/') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light text-white">TENUN SONGKET</span>
@@ -65,17 +65,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="index3.html" class="nav-link text-white"><i
+                            <a href="/login" class="nav-link text-white"><i
                                     class="fas fa-shopping-basket nav-icon"></i><span class="ml-3"></span>Keranjang
                                 Belanja</a>
                         </li>
+                        @if (Auth::check())
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Daftar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Masuk</a>
-                        </li>
-                    </ul>
+                        <a class="nav-link text-white" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                         <p style="color:#fff !importaant;"> keluar</p>
+                     </a>
+                    </li>
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                         @csrf
+                     </form>
+
+                    @else
+
+                    <li class="nav-item">
+                        <a href="{{ route('register') }}" class="nav-link text-white">Daftar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link text-white">Masuk</a>
+                    </li>
+                        @endif
                     <!--Full Screen -->
                     <div class="nav-item">
                         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -109,7 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Product</h3>
+                                <h3 class="card-title">Produk</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -119,54 +133,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         @csrf
 
                                         @foreach ($products as $dm)
-                                            <div class="col-12 col-sm-6">
-                                                <div class="col-12">
-                                                    <img src="{{ asset('photos/'.$productphotos[0]->photo) }}"
-                                                        class="product-image" alt="Product Image">
-                                                        <div style="display: flex; flex-wrap:wrap;">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="col-12">
+                                                <img src="{{ asset('photos/'.$productphotos[0]->photo) }}"
+                                                    class="product-image" alt="Product Image">
+                                                <div style="display: flex; flex-wrap:wrap;">
 
-                                                            @foreach ($productphotos as $productphoto)
+                                                    @foreach ($productphotos as $productphoto)
 
-                                                            <div class="product-image-thumbs">
-                                                                <div class="product-image-thumb active"><img
-                                                                        src="{{ asset('photos/'.$productphoto->photo) }}"
-                                                                        alt="Product Image">
-                                                                </div>
-                                                            </div>
-
-                                                            @endforeach
+                                                    <div class="product-image-thumbs">
+                                                        <div class="product-image-thumb active"><img
+                                                                src="{{ asset('photos/'.$productphoto->photo) }}"
+                                                                alt="Product Image">
                                                         </div>
+                                                    </div>
+
+                                                    @endforeach
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-sm-6">
-                                                <h3 class="my-3">{{ $dm->name }}</h3>
-                                                <h4>Deskripsi</h4>
-                                                <p>{{ $dm->description }}</p>
-                                                <hr>
-                                                <h4>Stok</h4>
-                                                <h5>{{ $dm->qty }}</h5>
-                                                <h4>Status</h4>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <h3 class="my-3">{{ $dm->name }}</h3>
+                                            <h4>Deskripsi</h4>
+                                            <p>{{ $dm->description }}</p>
+                                            <hr>
+                                            <h4>Stok</h4>
+                                            <h5>{{ $dm->qty }}</h5>
+                                            <h4>Status</h4>
 
-                                                @if ($dm->status === 'Tidak Tersedia')
-                                                    <span class="badge badge-danger">{{ $dm->status }}</span>
-                                                @else
-                                                    <span class="badge badge-success">{{ $dm->status }}</span>
-                                                @endif
+                                            @if ($dm->status === 'Tidak Tersedia')
+                                            <span class="badge badge-danger">{{ $dm->status }}</span>
+                                            @else
+                                            <span class="badge badge-success">{{ $dm->status }}</span>
+                                            @endif
 
-                                                <div class="bg-gray py-2 px-3 mt-4">
-                                                    <h2 class="mb-0">Rp.{{ number_format($dm->price) }}</h2>
-                                                </div>
-                                                <div class="mt-4">
+                                            <div class="bg-gray py-2 px-3 mt-4">
+                                                <h2 class="mb-0">Rp.{{ number_format($dm->price) }}</h2>
+                                            </div>
+                                            <div class="mt-4">
+                                                <a href="/login">
                                                     <div class="btn btn-primary btn-lg btn-flat">
+
                                                         <i class="fas fa-cart-plus fa-lg mr-2"></i>
                                                         Keranjang
                                                     </div>
+                                                </a>
+                                                <a href="/login">
                                                     <div class="btn btn-success btn-lg btn-flat">
                                                         <i class="fas fa-cash-register fa-lg mr-2"></i>
                                                         Bayar Sekarang
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
+                                        </div>
                                         @endforeach
 
                                     </div>
@@ -209,7 +228,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset('AdminLTE/') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/') }}/dist/js/adminlte.min.js"></script>
-
 </body>
-
 </html>
+<script>
+    $(document).ready(function () {
+        $('.product-image-thumb').on('click', function () {
+            var $image_element = $(this).find('img')
+            $('.product-image').prop('src', $image_element.attr('src'))
+            $('.product-image-thumb.active').removeClass('active')
+            $(this).addClass('active')
+        })
+    })
+</script>
+

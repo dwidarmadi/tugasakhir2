@@ -60,25 +60,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // public function  getUser(Request $request)
-    // {
-    //     // $role = Auth::user();
-    //     // var_dump($role);
-    //     // if($role === 'admin'){
-    //     //     return view('layouts.admin.dashboardadmin');
-    //     // }
-    //     // elseif($role === 'seller'){
-    //     //     return view('layouts.seller.dashboardseller');
-    //     // }
-    //     // elseif($role === 'buyer'){
-    //     //     return view('layouts.buyer.dashboardbuyer');
-    //     // }
-
-    //     // $input = $request->all();
-
-    // }
-
-
 
     public function login(Request $request){
         $input = $request->all();

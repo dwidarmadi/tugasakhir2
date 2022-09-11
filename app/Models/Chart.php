@@ -9,6 +9,8 @@ class Chart extends Model
 {
     use HasFactory;
 
+    protected $table = 'products';
+    protected $primarykey = 'id';
     protected $fillable=[
         'idchart',
         'img',

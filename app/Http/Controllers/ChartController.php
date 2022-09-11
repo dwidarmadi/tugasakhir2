@@ -19,14 +19,15 @@ class ChartController extends Controller
         DB::statement("SET SQL_MODE=''");
 
         $products = DB::table('products')
-                        ->join('charts','products.id','=','charts.')
+                        ->join('charts','products.id','=','charts.idchart')
+                        ->join('detail_products','products.id','=','detail_products.idproduct')
                         // ->where('products.id','=',$id)
                         ->groupBy('products.id')
                         ->get();
 
         // dd($products);
 
-        return view('layouts.buyer.keranjangbelanja');
+        return view('layouts.buyer.keranjangbelanja',['products' => $products]);
     }
 
     /**
@@ -47,7 +48,20 @@ class ChartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $chartproduct = [
+            'idchart' => $request->idproduct,
+            'name' => $request->nameproduct,
+            'qty' => $request->jumlahbelanja,
+            'price' => $request->hargaproduct,
+            'subtol' => $request->jumlahbelanja * $request->hargaproduct,
+        ];
+
+        // dd($chartproduct);
+
+        DB::table('charts')->insert($chartproduct);
+
+        return redirect('/buyer/dashboard');
     }
 
     /**

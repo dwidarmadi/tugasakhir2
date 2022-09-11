@@ -51,20 +51,6 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-            <!-- Navbar Search -->
-            <li class="nav-item">
-                <form class="form-inline ml-auto pt-2">
-                    <div class="input-group input-group-sm">
-                        <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-navbar" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                     <i class="fas fa-expand-arrows-alt icon-white"></i>
@@ -86,6 +72,10 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <!-- Sidebar user panel (optional) -->
+
+
+            @yield('sidebar')
+            {{-- <!-- Sidebar Menu -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
                     <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
@@ -95,13 +85,7 @@
                     <a href="#" class="d-block">User</a>
                 </div>
             </div>
-
-            @yield('sidebar')
-            <!-- Sidebar Menu -->
-            <div>
-
-            </div>
-            <!-- /.sidebar-menu -->
+            <!-- /.sidebar-menu --> --}}
         </div>
         <!-- /.sidebar -->
     </aside>

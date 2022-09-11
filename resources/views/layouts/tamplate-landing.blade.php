@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand-md bg-dark navbar-light navbar-white">
             <div class="container">
-                <a href="../../index3.html" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="{{ asset('AdminLTE/') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light text-white">TENUN SONGKET</span>
@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <!-- SEARCH FORM -->
                     <form class="form-inline ml-auto">
-                        <div class="input-group input-group-sm">
+                        {{-- <div class="input-group input-group-sm">
                             <input class="form-control form-control-navbar" type="search" placeholder="Search"
                                 aria-label="Search">
                             <div class="input-group-append">
@@ -61,37 +61,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </form>
 
 
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="index3.html" class="nav-link text-white"><i
+                            <a href="/login" class="nav-link text-white"><i
                                     class="fas fa-shopping-basket nav-icon"></i><span class="ml-3"></span>Keranjang
                                 Belanja</a>
                         </li>
                         @if (Auth::check())
                         <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                            <a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
-                         <p style="color:#fff !importaant;"> keluar</p>
-                     </a>
-                    </li>
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
+                                <p style="color:#fff !importaant;"> keluar</p>
+                            </a>
+                        </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
 
-                    @else
+                        @else
 
-                    <li class="nav-item">
-                        <a href="{{ route('register') }}" class="nav-link text-white">Daftar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/login" class="nav-link text-white">Masuk</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{ route('register') }}" class="nav-link text-white">Daftar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link text-white">Masuk</a>
+                        </li>
                         @endif
                     </ul>
                     <!--Full Screen -->
@@ -126,6 +125,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid col-md-8">
                     <div class="">
                         <div class="card">
+                            @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{Session::get('success')}}
+                            </div>
+                            @endif
                             <div class="card-header">
                                 <h3 class="card-title">Product</h3>
                             </div>
@@ -138,21 +142,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                         <div class="d-flex col-md-4">
                                             <div class="card">
-                                                <div class="text-center card-body d-flex flex-column justify-content-between px-0">
-                                                    <img src="{{ asset('storage/photos/'.$product->image) }}" class="card-img-top"
-                                                        alt="..." style="height: 50%; width=auto">
-                                                        <div>
+                                                <div
+                                                    class="text-center card-body d-flex flex-column justify-content-between px-0">
+                                                    <img src="{{ asset('photos/'.$product->photo) }}" alt="" width="250px"
+                                                        height="250px"></td>
+                                                    <div>
 
-                                                            <h5>{{$product->name}}</h5>
-                                                            <p class="card-text"><i class="fas fa-tag"></i><span class="ml-3"></span>Rp. {{number_format($product->price)}}</p>
-                                                            <td class="project-actions text-right">
-                                                                <a class="btn btn-success btn-sm" href="{{route('pruduct.showlanding',$product->id)}}">
-                                                                    <i class="fas fa-folder">
-                                                                    </i>
-                                                                    Details
-                                                                </a>
-                                                            </td>
-                                                        </div>
+                                                        <h5>{{$product->name}}</h5>
+                                                        <p class="card-text"><i class="fas fa-tag"></i><span
+                                                                class="ml-3"></span>Rp.
+                                                            {{number_format($product->price)}}</p>
+                                                        <td class="project-actions text-right">
+                                                            <a class="btn btn-success btn-sm"
+                                                                href="{{route('pruduct.showlanding',$product->idproduct)}}">
+                                                                <i class="fas fa-folder">
+                                                                </i>
+                                                                Details
+                                                            </a>
+                                                        </td>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

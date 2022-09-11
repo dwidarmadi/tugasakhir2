@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\DB;
 class DashboardAll extends Controller
 {
     public function index(){
-        $products = Product::all();
-
+        DB::statement("SET SQL_MODE=''");
+        // $products = Product::all();
+        $products = DB::table('products')
+                        ->join('detail_products','products.id','=','detail_products.idproduct')
+                        // ->where('products.id','=',$id)
+                        ->groupBy('products.id')
+                        ->get();
+        //dd($products);
         return view('layouts.buyer.dashboardbuyer',['products' => $products]);
     }
 

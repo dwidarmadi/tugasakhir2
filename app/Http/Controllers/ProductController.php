@@ -171,8 +171,6 @@ class ProductController extends Controller
         $productphotos = DB::table('detail_products')
                     ->where('idproduct',$id)
                     ->get();
-        // dd($product);
-        // dd($productphotos);
         return view('layouts.detail-landing',['products' => $product, 'productphotos'=>$productphotos]);
     }
 

@@ -1,6 +1,17 @@
 @extends('layouts.tamplate')
 @section('sidebar')
 <!-- Sidebar Menu -->
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+            alt="User Image">
+    </div>
+    <div class="info">
+        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
@@ -20,19 +31,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="far fa-lightbulb nav-icon"></i>
                         <p>Pesanan Masuk</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-car-alt nav-icon"></i>
                         <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
                     </a>
@@ -43,7 +54,7 @@
                         <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt nav-icon"></i>
-                            <p>Log Out</p>
+                            <p>Keluar</p>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -114,7 +125,8 @@
                                         <td>{{ $pr->description }}</td>
                                         <td>Rp. {{ number_format($pr->price) }}</td>
                                         <td>{{ $pr->qty }}</td>
-                                        <td><img src="{{ asset('photos/'.$pr->photo) }}" alt="" width="150px"
+                                        <td>
+                                            <img src="{{ asset('photos/'.$pr->photo) }}" alt="" width="150px"
                                                 height="150px"></td>
                                         <td>
                                             @if ($pr->status === 'Tidak Tersedia')

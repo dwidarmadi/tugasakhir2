@@ -17,7 +17,8 @@ class DetailProductController extends Controller
      */
     public function index()
     {
-            $products = DB::table('products')->get();
+            $products = DB::table('products')
+                        ->get();
             return redirect('layouts.detail-landing',['products' => $products]);
 
     }
