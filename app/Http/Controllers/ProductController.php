@@ -198,6 +198,7 @@ class ProductController extends Controller
         $product = Product::findOrfail($id);
 
         $product->update($request->all());
+
         return redirect('seller/product');
     }
 

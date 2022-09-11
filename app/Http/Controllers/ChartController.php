@@ -88,9 +88,18 @@ class ChartController extends Controller
      * @param  \App\Models\Chart  $chart
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chart $chart)
+    public function edit($id)
     {
-        //
+        DB::statement("SET SQL_MODE=''");
+
+        $charts = DB::table('charts')
+                        ->join('detail_products','charts.idchart','=','detail_products.idproduct')
+                        ->join('products','charts.idchart','=','products.id')
+                        ->where('charts.idchart','=',$id)
+                        ->groupBy('charts.idchart')
+                        ->get();
+        // dd($charts);
+        return view('layouts.buyer.editchart', ['products' => $charts]);
     }
 
     /**
@@ -100,9 +109,25 @@ class ChartController extends Controller
      * @param  \App\Models\Chart  $chart
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chart $chart)
+    public function update(Request $request, $id)
     {
-        //
+
+        $chart = Chart::findOrfail($id);
+
+        $chartproduct = [
+            'qty' => $request->jumlahbelanja,
+        ];
+
+        $x = DB::table('charts')->where('id',$id)->update($chartproduct);
+
+
+
+        if($x){
+            return redirect('buyer/chart');
+            // return "datamasuk";
+        }
+
+        return "error";
     }
 
     /**

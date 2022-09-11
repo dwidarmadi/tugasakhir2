@@ -118,7 +118,7 @@
                                         </i>
                                         View
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-info btn-sm" href="{{route('chart.edit', $pr->idproduct)}}">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
