@@ -131,12 +131,6 @@
                                             </div>
 
                                             <div class="mt-4">
-                                                {{-- <a href={{route('chart.store',$dm->id)}}>
-                                                <div class="btn btn-primary btn-lg btn-flat">
-                                                    <i class="fas fa-cart-plus fa-lg mr-2"></i>
-                                                    Keranjang
-                                                </div>
-                                                </a> --}}
                                                 <button type="submit" class="btn btn-primary btn-lg btn-flat"> <i
                                                         class="fas fa-cart-plus fa-lg mr-2"></i> Keranjang </button>
                                                 <div class="btn btn-success btn-lg btn-flat">

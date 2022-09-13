@@ -4,8 +4,7 @@
 <!-- Sidebar Menu -->
 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
-        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-            alt="User Image">
+        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -45,14 +44,13 @@
                 </li>
                 <div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                     </a>
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
+                            <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </div>
             </ul>
@@ -81,6 +79,11 @@
         <div class="row">
             <div class="col-10">
                 <div class="card">
+                    @if (Session::has('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('success')}}
+                    </div>
+                    @endif
                     <div class="card-header">
                         <h3 class="card-title">Daftar Keranjang Belanja
                             <a href="/buyer/dashboard" class="btn btn-primary ml-3">
@@ -106,37 +109,62 @@
                                     <td>{{ ++$dm}}</td>
                                     <td>
                                         <img src="{{ asset('photos/'.$pr->photo) }}" alt="" width="150px"
-                                                height="150px">
+                                            height="150px">
                                     </td>
                                     <td>{{ $pr->name}}</td>
                                     <td>{{ $pr->qty}}</td>
                                     <td>Rp. {{ number_format($pr->price)}}</td>
                                     <td>Rp. {{number_format($pr->price * $pr->qty)}}</td>
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm" href="#">
-                                        <i class="fas fa-folder">
-                                        </i>
-                                        View
+                                        <a class="btn btn-info btn-sm" href="{{route('chart.edit', $pr->id)}}">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="{{route('chart.edit', $pr->idproduct)}}">
-                                        <i class="fas fa-pencil-alt">
-                                        </i>
-                                        Edit
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Delete
-                                        </a>
-                                        </td>
+                                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
+                                            data-target="#delete">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </button>
+                                    </td>
                                 </tr>
                             </tbody>
                             @endforeach
                         </table>
-                        <div><h5>Total Belanja :</h5></div>
+
+                        @foreach ($products as $dm)
+                        <form action={{route('chart.destroy',$dm->id)}} method="POST">
+                            @csrf
+                            @method('delete')
+                            <div class="modal fade" id="delete">
+                                <div class="modal-dialog">
+                                    <div class="modal-content bg-default">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Produk {{$dm->name}}</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Apakah yakin untuk menghapus produk {{$dm->name}} &hellip; ?</p>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-outline-light"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        @endforeach
+
+                        <div>
+                            <h5>Total Belanja :</h5>
+                        </div>
                         <div class="pt-2">
-                            <a href="#" class="btn btn-primary">Check Out</a>
-                            <a href="#" class="btn btn-danger">Kosongkan Keranjang Belanja</a>
+                            <a href="#" class="btn btn-primary">Bayar</a>
                         </div>
                     </div>
                     <!-- /.card-body -->

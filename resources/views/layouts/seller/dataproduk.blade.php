@@ -162,7 +162,6 @@
                                 @endforeach
                             </table>
 
-
                             @foreach ($products as $dm)
                             <form action={{route('product.destroy',$dm->idproduct)}} method="POST">
                                 @csrf

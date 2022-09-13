@@ -10,11 +10,11 @@ class Chart extends Model
     use HasFactory;
 
     protected $table = 'products';
-    // protected $table = 'charts';
+
     protected $primarykey = 'id';
 
     protected $fillable=[
-        'idchart',
+        'idproduct',
         'img',
         'name',
         'qty',

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('charts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('idchart')->nullable();
+            $table->unsignedBigInteger('idproduct')->nullable();
             $table->string('name');
             $table->string('qty');
             $table->string('price');
