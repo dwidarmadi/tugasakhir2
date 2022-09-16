@@ -100,31 +100,31 @@
                         <!-- /.card-header -->
                         <!-- form start -->
 
-                        <form class="col" method="POST" action="{{ route('product.update',$product->id) }}">
+                        <form class="col" method="POST" action="{{ route('product.update',$products->id) }}">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Produk</label>
-                                    <input type="text" name="name" maxlength="255" class="form-control" value="{{$product->name}}" required
+                                    <input type="text" name="name" maxlength="255" class="form-control" value="{{$products->name}}" required
                                         placeholder="Nama Produk">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Deskripsi</label>
-                                    <input type="text" name="description" maxlength="255" class="form-control" value="{{$product->description}}" required
+                                    <input type="text" name="description" maxlength="255" class="form-control" value="{{$products->description}}" required
                                         placeholder="Deskripsi">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Jumlah</label>
-                                    <input type="text" name="qty" maxlength="20" class="form-control" value="{{$product->qty}}" required
+                                    <input type="text" name="qty" maxlength="20" class="form-control" value="{{$products->qty}}" required
                                         placeholder="Jumlah">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Status</label>
                                     <div class="form-group">
                                         <select class="form-control" name="status" id="status" required>
-                                            <option value="{{$product->status}}">{{$product->status}}   </option>
-                                            @if ($product->status == 'Tersedia')
+                                            <option value="{{$products->status}}">{{$products->status}}   </option>
+                                            @if ($products->status == 'Tersedia')
                                                 <option value="Tidak Tersedia">Tidak Tersedia</option>
                                             @else
                                                 <option value="Tersedia">Tersedia</option>
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Harga</label></label>
-                                    <input type="text" name="price" maxlength="20" class="form-control" value="{{$product->price}}" required
+                                    <input type="text" name="price" maxlength="20" class="form-control" value="{{$products->price}}" required
                                         placeholder="Harga">
                                 </div>
                                 <div class="mb-3">

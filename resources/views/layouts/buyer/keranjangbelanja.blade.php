@@ -116,7 +116,7 @@
                                     <td>Rp. {{ number_format($pr->price)}}</td>
                                     <td>Rp. {{number_format($pr->price * $pr->qty)}}</td>
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-info btn-sm" href="{{route('chart.edit', $pr->id)}}">
+                                        <a class="btn btn-info btn-sm" href="{{route('chart.edit',$pr->id)}}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Edit

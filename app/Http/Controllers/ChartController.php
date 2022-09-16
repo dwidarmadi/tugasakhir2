@@ -24,7 +24,7 @@ class ChartController extends Controller
                         ->groupBy('products.id')
                         ->get();
 
-        // dd($products);
+        //  dd($products);
 
         return view('layouts.buyer.keranjangbelanja',['products' => $products]);
     }
@@ -90,11 +90,10 @@ class ChartController extends Controller
     public function edit($id)
     {
         DB::statement("SET SQL_MODE=''");
-
         $charts = DB::table('charts')
                         ->join('detail_products','charts.idproduct','=','detail_products.idproduct')
                         ->join('products','charts.idproduct','=','products.id')
-                        ->where('charts.idproduct','=',$id)
+                        ->where('charts.id','=',$id)
                         ->groupBy('charts.idproduct')
                         ->get();
         // dd($charts);
@@ -118,16 +117,14 @@ class ChartController extends Controller
             'qty' => $request->jumlahbelanja,
         ];
 
-        $updatechart = DB::table('charts')
-            ->where('id',$id)
-            ->update($chartproduct);
-            dd($updatechart);
-        if($updatechart){
-
+        $updatedChart = DB::table('charts')
+                        ->where('id',$id->id)
+                        ->update($chartproduct);
+            // dd($updatedChart);
+        if($updatedChart){
             return redirect('buyer/chart');
             // return "datamasuk";
         }
-
         return "error";
     }
 
@@ -139,13 +136,12 @@ class ChartController extends Controller
      */
     public function destroy($id)
     {
-        $deleteChart = DB::table('charts')
-                        ->where('id', $id)
+        $deletedChart = DB::table('charts')
+                        ->where('id',$id)
                         ->delete();
-        // dd($id);
-        if($deleteChart){
-            return redirect('buyer/chart')
-                    ->with('success','Produk Telah Dihapus');
+        // dd($deletedChart);
+        if($deletedChart){
+            return redirect('/buyer/chart')->with('success','Produk Telah Dihapus');
         }
 
         return redirect('buyer/chart');

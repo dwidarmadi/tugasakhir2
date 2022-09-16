@@ -183,7 +183,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
-        return view('layouts.seller.editproduk', ['product' => $product]);
+        return view('layouts.seller.editproduk', ['products' => $product]);
     }
 
     /**
@@ -217,8 +217,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $deletedProduct = DB::table('products')
-                        ->where('id', $id)
-                        ->delete();
+                            ->where('id',$id)
+                            ->delete();
+        // dd($id);
         if($deletedProduct){
             return redirect('seller/product')->with('success','Produk Telah Dihapus');
         }

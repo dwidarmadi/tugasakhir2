@@ -137,14 +137,13 @@
                                         </td>
                                         <td class="project-actions text-right" style="vertical-align: middle;">
                                             <div style="display: flex; flex-direction:row; gap:10px;">
-
                                                 <a class="btn btn-primary btn-sm"
-                                                    href={{ route('product.show',$pr->idproduct) }}>
+                                                    href={{ route('product.show',$pr->id) }}>
                                                     <i class="fas fa-folder">
                                                     </i>
                                                     View
                                                 </a>
-                                                <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->idproduct)}}>
+                                                <a class="btn btn-info btn-sm" href={{ route('product.edit',$pr->id)}}>
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                     Edit
@@ -170,7 +169,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content bg-default">
                                             <div class="modal-header">
-                                                <h4 class="modal-title">Produk {{$dm->name}}</h4>
+                                                <h4 class="modal-title">Produk {{$dm->id}}</h4>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>

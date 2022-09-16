@@ -51,7 +51,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </li>rm>
+                    </li>
         </li>
         </div>
     </ul>
@@ -66,7 +66,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fab fa-product-hunt nav-icon"></i><span class="ml-3"></span>Detail Produk</h1>
+                <h1><i class="fas fa-pencil-alt nav-icon"></i><span class="ml-3"></span>Edit Produk</h1>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -82,7 +82,6 @@
                     <div class="card-body">
                         <div class="card-body">
                             <div class="row">
-
                                 @foreach ($products as $dm)
                                 <form action={{route('chart.update',$dm->id)}} method="post">
                                     @csrf
@@ -93,16 +92,16 @@
                                                 class="product-image" alt="Product Image">
                                             <div style="display: flex; flex-wrap:wrap;">
 
-                                                {{-- @foreach ($productphotos as $productphoto) --}}
+                                                {{-- @foreach ($productphotos as $productphoto)
 
-                                                {{-- <div class="product-image-thumbs">
+                                                <div class="product-image-thumbs">
                                                     <div class="product-image-thumb active"><img
                                                             src="{{ asset('photos/'.$dm->photo) }}"
                                                             alt="Product Image">
                                                     </div>
-                                                </div> --}}
+                                                </div>
 
-                                                {{-- @endforeach --}}
+                                                @endforeach --}}
                                             </div>
                                         </div>
 
