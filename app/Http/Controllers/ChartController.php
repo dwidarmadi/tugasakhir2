@@ -18,15 +18,28 @@ class ChartController extends Controller
     {
         DB::statement("SET SQL_MODE=''");
 
-        $products = DB::table('products')
-                        ->join('charts','products.id','=','charts.idproduct')
-                        ->join('detail_products','products.id','=','detail_products.idproduct')
-                        ->groupBy('products.id')
-                        ->get();
+        $products = DB::table('charts')
+            ->join('products', 'charts.idproduct', '=', 'products.id')
+            ->join('detail_products', 'products.id', '=', 'detail_products.idproduct')
+            ->select(
+                'charts.*',
+                'products.id as idproduct',
+                'detail_products.photo as fotoproduk'
+            )
+            ->groupBy('products.id')
+            ->get();
 
-        //  dd($products);
+        // dd($products);
 
-        return view('layouts.buyer.keranjangbelanja',['products' => $products]);
+        // $products = DB::table('products')
+        //     ->join('charts', 'products.id', '=', 'charts.idproduct')
+        //     ->join('detail_products', 'products.id', '=', 'detail_products.idproduct')
+        //     ->groupBy('products.id')
+        //     ->get();
+
+        // dd($products[0]->charts->id);
+
+        return view('layouts.buyer.keranjangbelanja', ['products' => $products]);
     }
 
     /**
@@ -72,14 +85,24 @@ class ChartController extends Controller
     public function show($id)
     {
         $product = DB::table('products')
-                    ->where('id',$id)
-                    ->get();
+            ->where('id', $id)
+            ->get();
         $productphotos = DB::table('detail_products')
-                    ->where('idproduct',$id)
-                    ->get();
+            ->where('idproduct', $id)
+            ->get();
         // dd($product);
-        return view('layouts.buyer.keranjangbelanja',['products' => $product, 'productphotos'=>$productphotos]);
+        return view('layouts.buyer.keranjangbelanja', ['products' => $product, 'productphotos' => $productphotos]);
     }
+
+    public function showmodal($id)
+    {
+        $chart = DB::table('charts')
+            ->where('id', $id)
+            ->get();
+        // dd($product);
+        return view('layouts.buyer.datamodal', ['charts' => $chart])->render();
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -89,14 +112,33 @@ class ChartController extends Controller
      */
     public function edit($id)
     {
+
+        // dd($id);
         DB::statement("SET SQL_MODE=''");
+
         $charts = DB::table('charts')
-                        ->join('detail_products','charts.idproduct','=','detail_products.idproduct')
-                        ->join('products','charts.idproduct','=','products.id')
-                        ->where('charts.id','=',$id)
-                        ->groupBy('charts.idproduct')
-                        ->get();
-        // dd($charts);
+            ->join('products', 'charts.idproduct', '=', 'products.id')
+            ->join('detail_products', 'products.id', '=', 'detail_products.idproduct')
+            ->select(
+                'charts.*',
+                'products.id as idproduct',
+                'products.description as deskripsi',
+                'products.status as statusproduk',
+                'products.qty as stockproduk',
+                'detail_products.photo as fotoproduk'
+            )
+            ->where('charts.id', '=', $id)
+            ->groupBy('products.id')
+            ->get();
+
+        // DB::statement("SET SQL_MODE=''");
+        // $charts = DB::table('charts')
+        //     ->join('detail_products', 'charts.idproduct', '=', 'detail_products.idproduct')
+        //     ->join('products', 'charts.idproduct', '=', 'products.id')
+        //     ->where('charts.id', '=', $id)
+        //     ->groupBy('charts.idproduct')
+        //     ->get();
+        // // dd($charts);
         return view('layouts.buyer.editchart', ['products' => $charts]);
     }
 
@@ -110,18 +152,16 @@ class ChartController extends Controller
     public function update(Request $request, $id)
     {
 
-
-        $chart = Chart::findOrfail($id);
-
         $chartproduct = [
             'qty' => $request->jumlahbelanja,
         ];
 
         $updatedChart = DB::table('charts')
-                        ->where('id',$id->id)
-                        ->update($chartproduct);
-            // dd($updatedChart);
-        if($updatedChart){
+            ->where('id', $id)
+            ->update($chartproduct);
+
+
+        if ($updatedChart) {
             return redirect('buyer/chart');
             // return "datamasuk";
         }
@@ -137,14 +177,13 @@ class ChartController extends Controller
     public function destroy($id)
     {
         $deletedChart = DB::table('charts')
-                        ->where('id',$id)
-                        ->delete();
+            ->where('id', $id)
+            ->delete();
         // dd($deletedChart);
-        if($deletedChart){
-            return redirect('/buyer/chart')->with('success','Produk Telah Dihapus');
+        if ($deletedChart) {
+            return redirect('/buyer/chart')->with('success', 'Produk Telah Dihapus');
         }
 
         return redirect('buyer/chart');
-
     }
 }

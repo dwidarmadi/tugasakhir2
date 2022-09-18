@@ -29,13 +29,13 @@ class ProductController extends Controller
         DB::statement("SET SQL_MODE=''");
 
         $products = DB::table('products')
-                        ->join('detail_products','products.id','=','detail_products.idproduct')
-                        // ->where('products.id','=',$id)
-                        ->groupBy('products.id')
-                        ->get();
+            ->join('detail_products', 'products.id', '=', 'detail_products.idproduct')
+            // ->where('products.id','=',$id)
+            ->groupBy('products.id')
+            ->get();
 
         // dd($products);
-        return view('layouts.seller.dataproduk',['products'=>$products]);
+        return view('layouts.seller.dataproduk', ['products' => $products]);
     }
 
     /**
@@ -94,20 +94,19 @@ class ProductController extends Controller
         ]);
 
 
-        if($validate->fails()){
+        if ($validate->fails()) {
             return "kurang foto / file harus gambar";
         }
 
         $insertProduct = Product::create($productdata);
 
-        if($insertProduct){
+        if ($insertProduct) {
 
             $photos = [];
 
-            if ($request->file('photos')){
-                foreach($request->file('photos') as $key => $file)
-                {
-                    $fileName = time().rand(1,99).'.'.$file->extension();
+            if ($request->file('photos')) {
+                foreach ($request->file('photos') as $key => $file) {
+                    $fileName = time() . rand(1, 99) . '.' . $file->extension();
                     $file->move(public_path('photos'), $fileName);
                     // $photos[]['idproduct'] = $insertProduct->id;
                     // $photos[]['photo'] = $fileName;
@@ -141,37 +140,46 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = DB::table('products')
-                    ->where('id',$id)
-                    ->get();
+            ->where('id', $id)
+            ->get();
         $productphotos = DB::table('detail_products')
-                    ->where('idproduct',$id)
-                    ->get();
+            ->where('idproduct', $id)
+            ->get();
         // dd($productphotos);
-        return view('layouts.seller.viewproduk',['products' => $product, 'productphotos'=>$productphotos]);
+        return view('layouts.seller.viewproduk', ['products' => $product, 'productphotos' => $productphotos]);
     }
 
     public function showbuyer($id)
     {
         $product = DB::table('products')
-                    ->where('id',$id)
-                    ->get();
+            ->where('id', $id)
+            ->get();
         $productphotos = DB::table('detail_products')
-                        ->where('idproduct',$id)
-                        ->get();
+            ->where('idproduct', $id)
+            ->get();
         // dd($product);
         // dd($productphotos);
-        return view('layouts.buyer.viewprodukbuyer',['products' => $product, 'productphotos'=>$productphotos]);
+        return view('layouts.buyer.viewprodukbuyer', ['products' => $product, 'productphotos' => $productphotos]);
     }
 
     public function showlanding($id)
     {
         $product = DB::table('products')
-                    ->where('id',$id)
-                    ->get();
+            ->where('id', $id)
+            ->get();
         $productphotos = DB::table('detail_products')
-                    ->where('idproduct',$id)
-                    ->get();
-        return view('layouts.detail-landing',['products' => $product, 'productphotos'=>$productphotos]);
+            ->where('idproduct', $id)
+            ->get();
+        return view('layouts.detail-landing', ['products' => $product, 'productphotos' => $productphotos]);
+    }
+
+    public function showmodal($id)
+    {
+        $product = DB::table('products')
+            ->where('id', $id)
+            ->get();
+        // dd($product);
+        return view('layouts.seller.datamodal', ['products' => $product])->render();
     }
 
     /**
@@ -205,7 +213,7 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::findOrfail($id);
-        return view('/product-delete',['products' => $product]);
+        return view('/product-delete', ['products' => $product]);
     }
 
     /**
@@ -216,16 +224,15 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+
         $deletedProduct = DB::table('products')
-                            ->where('id',$id)
-                            ->delete();
-        // dd($id);
-        if($deletedProduct){
-            return redirect('seller/product')->with('success','Produk Telah Dihapus');
+            ->where('id', $id)
+            ->delete();
+
+        if ($deletedProduct) {
+            return redirect('seller/product')->with('success', 'Produk Telah Dihapus');
         }
 
         return redirect('seller/product');
-
-
     }
 }

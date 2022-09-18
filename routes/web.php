@@ -34,39 +34,44 @@ Route::resource('order', OrderController::class);
 /**PREFIEX */
 
 
-Route::prefix('admin')->group(function(){
-    Route::get('/dashboard', [DashboardAll::class,'index2'])->name('admin.dashboard');
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [DashboardAll::class, 'index2'])->name('admin.dashboard');
 
     Route::resource('bank', BankController::class);
 
     Route::resource('jasapengiriman', JasaPengirimanController::class);
 });
 
-Route::prefix('seller')->group(function(){
-    Route::get('/dashboard', [DashboardAll::class,'index1'])->name('seller.dashboard');
+Route::prefix('seller')->group(function () {
+    Route::get('/dashboard', [DashboardAll::class, 'index1'])->name('seller.dashboard');
 
     Route::resource('product', ProductController::class);
 });
 
-Route::prefix('buyer')->group(function(){
-    Route::get('/dashboard', [DashboardAll::class,'index'])->name('buyer.dashboard');
+Route::prefix('buyer')->group(function () {
+    Route::get('/dashboard', [DashboardAll::class, 'index'])->name('buyer.dashboard');
 
-    Route::get('/viewproductbuyer/{id}', [ProductController::class,'showbuyer'])->name('buyer.viewproductbuyer');
+    Route::get('/viewproductbuyer/{id}', [ProductController::class, 'showbuyer'])->name('buyer.viewproductbuyer');
 
     Route::resource('chart', ChartController::class);
 });
 
 
-Route::get('/', [LandingPageController::class,'index']);
+Route::get('/', [LandingPageController::class, 'index']);
 
-Route::get('/detail/{id}', [ProductController::class,'showlanding'])->name('pruduct.showlanding');
+Route::get('/detail/{id}', [ProductController::class, 'showlanding'])->name('pruduct.showlanding');
+
+Route::get('/showdetail/{id}', [ProductController::class, 'showmodal'])->name('pruduct.showmodal');
+
+Route::get('/showdetail/{id}', [ChartController::class, 'showmodal'])->name('chart.showmodal');
+
 
 
 
 
 
 /*TAMPLATE LANDING*/
-Route::get('/tamplate-landing', function(){
+Route::get('/tamplate-landing', function () {
     return view('layouts.tamplate-landing');
 });
 
