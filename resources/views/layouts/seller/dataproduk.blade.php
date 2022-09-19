@@ -142,7 +142,7 @@
                                                             href={{ route('product.show', $pr->idproduct) }}>
                                                             <i class="fas fa-folder">
                                                             </i>
-                                                            View
+                                                            Lihat
                                                         </a>
                                                         <a class="btn btn-info btn-sm"
                                                             href={{ route('product.edit', $pr->idproduct) }}>
@@ -154,7 +154,7 @@
                                                             data-target="#idproduct" data-id="{{ $pr->idproduct }}">
                                                             <i class="fas fa-trash">
                                                             </i>
-                                                            Delete
+                                                            Hapus
                                                         </a>
                                                     </div>
                                                 </td>

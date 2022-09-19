@@ -48,9 +48,13 @@ class BankController extends Controller
      * @param  \App\Models\Bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function show(Bank $bank)
+    public function show($id)
     {
-        //
+        $bank = DB::table('banks')
+        ->where('id', $id)
+        ->get();
+
+        return view('layouts.admin.datamodalbank',['banks'=>$bank])->render();
     }
 
     /**

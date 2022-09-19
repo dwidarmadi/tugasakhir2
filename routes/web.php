@@ -26,14 +26,13 @@ use App\Http\Controllers\LandingPageController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+*/
 
-Route::resource('order', OrderController::class);
+// Route::resource('order', OrderController::class);
 
+Route::get('/', [LandingPageController::class, 'index']);
 
 /**PREFIEX */
-
-
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardAll::class, 'index2'])->name('admin.dashboard');
 
@@ -54,16 +53,17 @@ Route::prefix('buyer')->group(function () {
     Route::get('/viewproductbuyer/{id}', [ProductController::class, 'showbuyer'])->name('buyer.viewproductbuyer');
 
     Route::resource('chart', ChartController::class);
+
 });
 
-
-Route::get('/', [LandingPageController::class, 'index']);
-
+/**MODAL */
 Route::get('/detail/{id}', [ProductController::class, 'showlanding'])->name('pruduct.showlanding');
+
+Route::get('/showdetailchart/{id}', [ChartController::class, 'showmodal'])->name('chart.showmodal');
 
 Route::get('/showdetail/{id}', [ProductController::class, 'showmodal'])->name('pruduct.showmodal');
 
-Route::get('/showdetail/{id}', [ChartController::class, 'showmodal'])->name('chart.showmodal');
+Route::get('/showdetailbank/{id}', [BankController::class, 'show'])->name('bank.showmodalbank');
 
 
 

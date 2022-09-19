@@ -153,6 +153,7 @@
                                 @php
                                     $jumlahkeranjang = count($products);
                                     $datawal=0;
+                                    $grandtotal=0;
                                 @endphp
 
                                 @for ($i = 0; $i < $jumlahkeranjang; $i++)
@@ -190,7 +191,7 @@
         $(document).ready(function() {
             $("#idprodukchart").on('show.bs.modal', function(e) {
                 var idProductChart = $(e.relatedTarget).data('id');
-                $.get('/showdetail/' + idProductChart, function(data) {
+                $.get('/showdetailchart/' + idProductChart, function(data) {
                     $(".modal-content").html(data);
                 });
             });
