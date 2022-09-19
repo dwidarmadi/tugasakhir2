@@ -66,7 +66,7 @@ class BankController extends Controller
     public function edit($id)
     {
         $bank = Bank::findOrFail($id);
-        return view('layouts.admin.editdatabank', ['bank' => $bank]);
+        return view('layouts.admin.editdatabank',['bank' => $bank]);
     }
 
     /**

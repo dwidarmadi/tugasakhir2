@@ -65,6 +65,8 @@ Route::get('/showdetail/{id}', [ProductController::class, 'showmodal'])->name('p
 
 Route::get('/showdetailbank/{id}', [BankController::class, 'show'])->name('bank.showmodalbank');
 
+Route::get('/showdetailjp/{id}', [JasaPengirimanController::class, 'show'])->name('jasa_pengiriman.showmodaljp');
+
 
 
 

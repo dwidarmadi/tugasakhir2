@@ -54,9 +54,13 @@ class JasaPengirimanController extends Controller
      * @param  \App\Models\JasaPengiriman  $jasaPengiriman
      * @return \Illuminate\Http\Response
      */
-    public function show(JasaPengiriman $jasaPengiriman)
+    public function show($id)
     {
-        //
+        $jasapengiriman = DB::table('jasa_pengiriman')
+        ->where('id', $id)
+        ->get();
+
+return view('layouts.admin.datamodaljp',['jasa_pengiriman'=>$jasapengiriman])->render();
     }
 
     /**

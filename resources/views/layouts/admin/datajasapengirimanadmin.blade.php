@@ -132,7 +132,7 @@
                                             Edit
                                         </a>
                                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                            data-target="#delete{{$sv->id}}">
+                                        data-target="#idjpmodal" data-id="{{ $sv->id }}">
                                             <i class="fas fa-trash">
                                             </i>
                                             Delete
@@ -142,33 +142,21 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        @foreach ($jasa_pengiriman as $bk)
-                        <form action={{route('jasapengiriman.destroy',$bk->id)}} method="POST">
-                            @csrf
-                            @method('delete')
-                            <div class="modal fade" id="delete{{$bk->id}}">
-                                <div class="modal-dialog">
-                                    <div class="modal-content bg-default">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Jasa Pengiriman {{$bk->name}}</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Apakah yakin untuk hapus data Jasa Pengiriman {{$bk->name}} &hellip; ?
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer justify-content-between">
-                                            <button type="button" class="btn btn-outline-light"
-                                                data-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Yes</button>
-                                        </div>
+                        <div class="modal fade" id="idjpmodal">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-default">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Produk</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-content">
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        @endforeach
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -183,4 +171,19 @@
 </section>
 <!-- /.content -->
 <!-- /.content-wrapper -->
+@endsection
+
+@section('scriptPlace')
+<!-- Init Modal -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#idjpmodal").on('show.bs.modal', function(e) {
+            var idJasapengiriman = $(e.relatedTarget).data('id');
+            $.get('/showdetailjp/' + idJasapengiriman, function(data) {
+                $(".modal-content").html(data);
+            });
+        });
+    });
+</script>
+<!-- End -->
 @endsection

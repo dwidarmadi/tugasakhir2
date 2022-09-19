@@ -133,7 +133,7 @@
                                             Edit
                                         </a>
                                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                            data-target="#delete{{$fc->id}}">
+                                        data-target="#idbankmodal" data-id="{{ $fc->id }}">
                                             <i class="fas fa-trash">
                                             </i>
                                             Delete
