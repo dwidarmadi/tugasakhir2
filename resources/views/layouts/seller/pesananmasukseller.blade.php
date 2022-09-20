@@ -49,20 +49,15 @@
                         <p>Informasi Pesanan</p>
                     </a>
                 </li>
-                <div>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                     </a>
-
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
-                    </li>
-                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             </ul>
         </li>
     </ul>

@@ -4,8 +4,7 @@
 <!-- Sidebar Menu -->
 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
-        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-            alt="User Image">
+        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -55,20 +54,15 @@
                         <p>Repots</p>
                     </a>
                 </li>
-                <div>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                     </a>
-
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
-                    </li>
-                </div>
+                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             </ul>
         </li>
     </ul>
@@ -93,7 +87,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-14">
                 <div class="card">
                     @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">
@@ -132,7 +126,7 @@
                                             Edit
                                         </a>
                                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
-                                        data-target="#idjpmodal" data-id="{{ $sv->id }}">
+                                            data-target="#idjpmodal" data-id="{{ $sv->id }}">
                                             <i class="fas fa-trash">
                                             </i>
                                             Delete
@@ -147,8 +141,7 @@
                                 <div class="modal-content bg-default">
                                     <div class="modal-header">
                                         <h4 class="modal-title">Produk</h4>
-                                        <button type="button" class="close" data-dismiss="modal"
-                                            aria-label="Close">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -176,10 +169,10 @@
 @section('scriptPlace')
 <!-- Init Modal -->
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("#idjpmodal").on('show.bs.modal', function(e) {
+    $(document).ready(function () {
+        $("#idjpmodal").on('show.bs.modal', function (e) {
             var idJasapengiriman = $(e.relatedTarget).data('id');
-            $.get('/showdetailjp/' + idJasapengiriman, function(data) {
+            $.get('/showdetailjp/' + idJasapengiriman, function (data) {
                 $(".modal-content").html(data);
             });
         });

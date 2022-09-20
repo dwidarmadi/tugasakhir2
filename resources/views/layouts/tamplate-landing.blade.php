@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand-md bg-dark navbar-light navbar-white">
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white" style="background: #003840;">
             <div class="container">
                 <a href="/" class="navbar-brand">
                     <img src="{{ asset('AdminLTE/') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
@@ -44,10 +44,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="index3.html" class="nav-link text-white">About</a>
+                            <a href="#" class="nav-link text-white">Tentang</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Contact</a>
+                            <a href="#" class="nav-link text-white">Kontak</a>
                         </li>
                     </ul>
 
@@ -131,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             @endif
                             <div class="card-header">
-                                <h3 class="card-title">Product</h3>
+                                <h3 class="card-title">Produk</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -144,8 +144,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="card">
                                                 <div
                                                     class="text-center card-body d-flex flex-column justify-content-between px-0">
-                                                    <img src="{{ asset('photos/'.$product->photo) }}" alt="" width="250px"
-                                                        height="250px"></td>
+                                                    <img src="{{ asset('photos/'.$product->photo) }}" alt=""
+                                                        width="250px" height="250px"></td>
                                                     <div>
 
                                                         <h5>{{$product->name}}</h5>
@@ -190,15 +190,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.control-sidebar -->
 
         <!-- Main Footer -->
+        <!-- Footer -->
         <footer class="main-footer">
-            <!-- To the right -->
-            <div class="float-right d-none d-sm-inline">
-                Anything you want
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
-            reserved.
+            <strong>Copyright &copy; 2022 <a href="https://adminlte.io">KamenTenunSongket.com</a></strong>
         </footer>
+        <!-- /.footer -->
     </div>
     <!-- ./wrapper -->
 

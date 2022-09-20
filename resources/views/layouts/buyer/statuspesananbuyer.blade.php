@@ -4,8 +4,7 @@
 <!-- Sidebar Menu -->
 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
-        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-            alt="User Image">
+        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -43,20 +42,15 @@
                         <p>Tentang</p>
                     </a>
                 </li>
-               <div>
                 <li class="nav-item">
-
-                    <a class="nav-link" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
-                      <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                 </a>
-
-                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                     @csrf
-                 </form>
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </li>
-               </div>
             </ul>
         </li>
     </ul>
@@ -122,7 +116,8 @@
                                         <span class="badge badge-primary">Dalam Proses</span>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-upload"></i><span class="ml-2"></span> Bukti Pembayaran</a>
+                                        <a href="#" class="btn btn-primary"><i class="fas fa-upload"></i><span
+                                                class="ml-2"></span> Bukti Pembayaran</a>
                                     </td>
                                 </tr>
                             </tbody>

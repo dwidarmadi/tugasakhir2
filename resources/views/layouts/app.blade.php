@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-white bg-dark">
+        <nav class="navbar navbar-expand-md navbar-light navbar-white" style="background: #003840;">
             <div class="container">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">TENUN SONGKET</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

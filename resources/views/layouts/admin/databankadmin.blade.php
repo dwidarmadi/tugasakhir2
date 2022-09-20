@@ -52,23 +52,21 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="far fa-file-alt nav-icon"></i>
-                        <p>Repots</p>
+                        <p>Laporan</p>
                     </a>
                 </li>
-                <div>
                     <li class="nav-item">
-
                         <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
                           <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
                      </a>
-
                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                          @csrf
                      </form>
                     </li>
-                </div>
+
+
             </ul>
         </li>
     </ul>
@@ -94,7 +92,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-14">
                 <div class="card">
                     @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">

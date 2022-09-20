@@ -4,8 +4,7 @@
 <!-- Sidebar Menu -->
 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
-        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-            alt="User Image">
+        <img src="{{ asset('AdminLTE') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -43,20 +42,15 @@
                         <p>Tentang</p>
                     </a>
                 </li>
-                <div>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">
-                          <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                     </a>
-
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                         @csrf
-                     </form>
-                    </li>
-                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             </ul>
         </li>
     </ul>
@@ -118,11 +112,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="tabprofil">Edit
                                         Profil</a>
-                                    </li>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="tabpassword">Edit
                                         Password</a>
-                                    </li>
+                                </li>
                             </ul>
                         </div>
 
@@ -218,22 +212,22 @@
 @endsection
 
 @section('scriptPlace')
-    <script type="text/javascript">
+<script type="text/javascript">
+    $("#detailuser").show();
+    $("#editpassword").hide();
+
+    $("#tabprofil").on('click', function () {
         $("#detailuser").show();
+        $("#tabprofil").addClass('active')
+        $("#tabpassword").removeClass('active')
         $("#editpassword").hide();
+    })
 
-        $("#tabprofil").on('click', function(){
-            $("#detailuser").show();
-            $("#tabprofil").addClass('active')
-            $("#tabpassword").removeClass('active')
-            $("#editpassword").hide();
-        })
-
-        $("#tabpassword").on('click', function(){
-            $("#detailuser").hide();
-            $("#tabpassword").addClass('active')
-            $("#tabprofil").removeClass('active')
-            $("#editpassword").show();
-        })
-    </script>
+    $("#tabpassword").on('click', function () {
+        $("#detailuser").hide();
+        $("#tabpassword").addClass('active')
+        $("#tabprofil").removeClass('active')
+        $("#editpassword").show();
+    })
+</script>
 @endsection
