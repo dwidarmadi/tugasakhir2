@@ -1,4 +1,6 @@
 @extends('layouts.tamplate')
+
+@section('sidebar')
 <!-- Sidebar Menu -->
 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
     <div class="image">
@@ -10,7 +12,6 @@
     </div>
 </div>
 <!-- /.sidebar-menu -->
-@section('sidebar')
 <!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -65,7 +66,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-shopping-cart nav-icon"></i><span class="ml-3"></span>Check Out</h1>
+                <h1><i class="fas fa-shopping-cart nav-icon"></i><span class="ml-3"></span>Konfirmasi Pembayaran</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -80,7 +81,7 @@
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Konfirmasi Check Out</h3>
+                            <h3 class="card-title">Konfirmasi Bayar Sekarang</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -89,11 +90,6 @@
                         </div>
                         <form>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputNama">Nama Pemesan</label>
-                                    <input type="email" class="form-control" id="exampleInputNama"
-                                        placeholder="Nama Pemesan">
-                                </div>
                                 <div class="form-group">
                                     <label for="exampleInputNoTelepon">No. Telepon</label>
                                     <input type="text" class="form-control" id="exampleInputNoTelepon"

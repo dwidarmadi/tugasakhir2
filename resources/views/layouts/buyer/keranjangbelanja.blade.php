@@ -163,7 +163,7 @@
                                 <h5>Rp. {{number_format($grandtotal)}}</h5>
                         </div>
                         <div class="pt-2">
-                            <a href="#" class="btn btn-primary">Bayar</a>
+                            <a href="/checkout" class="btn btn-primary">Bayar</a>
                         </div>
                     </div>
                     <!-- /.card-body -->

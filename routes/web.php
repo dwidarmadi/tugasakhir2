@@ -69,6 +69,23 @@ Route::get('/showdetailjp/{id}', [JasaPengirimanController::class, 'show'])->nam
 
 
 
+/**TEST ROUTE */
+
+Route::get('/checkout', function(){
+    return view('layouts.buyer.checkout');
+});
+
+Route::get('/tentang', function(){
+    return view('layouts.tentang');
+});
+
+Route::get('/carabelanja', function(){
+    return view('layouts.carabelanja');
+});
+
+
+
+
 
 
 

@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content-header">
                 <div class="container">
                     <div class="col-sm-12">
-                        <h1 class="text-center m-0"> KAIN TENUN SONGKET</h1>
+                        <h1 class="text-center m-0">KAIN TENUN SONGKET</h1>
                     </div><!-- /.col -->
                     <!-- /.col -->
                     <!-- /.row -->
@@ -125,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid col-md-8">
+                <div class="container-fluid col-10">
                     <div class="">
                         <div class="card">
                             @if (Session::has('success'))
@@ -134,42 +134,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             @endif
                             <div class="card-header">
-                                <h3 class="card-title">Produk</h3>
+                                <h3 class="card-title"><b>Cara Belanja</b></h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="container">
-
-                                    <div class="row">
-                                        @foreach ($products as $product)
-
-                                        <div class="d-flex col-md-4">
-                                            <div class="card">
-                                                <div
-                                                    class="text-center card-body d-flex flex-column justify-content-between px-0">
-                                                    <img src="{{ asset('photos/'.$product->photo) }}" alt=""
-                                                        width="250px" height="250px"></td>
-                                                    <div>
-
-                                                        <h5>{{$product->name}}</h5>
-                                                        <p class="card-text"><i class="fas fa-tag"></i><span
-                                                                class="ml-3"></span>Rp.
-                                                            {{number_format($product->price)}}</p>
-                                                        <td class="project-actions text-right">
-                                                            <a class="btn btn-success btn-sm"
-                                                                href="{{route('pruduct.showlanding',$product->idproduct)}}">
-                                                                <i class="fas fa-folder">
-                                                                </i>
-                                                                Details
-                                                            </a>
-                                                        </td>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
-
-                                    </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>1.</th>
+                                                <td>Lakukan proses pendaftaran dengan klik tombol <b>Daftar</b> untuk pembeli yang belum mempunyai akun.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>2.</th>
+                                                <td>Bagi pembeli yang sudah mempunyai akun silakan masuk ke sistem penjualan Kain Tenun Songket dengan klik tombol <b>Masuk</b>.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>3.</th>
+                                                <td>Pilihlah produk yang ingin dibeli.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>4.</th>
+                                                <td>Produk akan masuk kedalam keranjang belanja.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>5.</th>
+                                                <td>Klik bayar untuk membeli produk.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>6.</th>
+                                                <td>Isilah data yang diperlukan saat check out, kemudian klik tombol <b>Proses Pesanan</b>.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>7.</th>
+                                                <td>Transfer ke bank yang sudah dipilih.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>8.</th>
+                                                <td>Upload bukti pembayaran anda.</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
                                 </div>
                             </div>
 

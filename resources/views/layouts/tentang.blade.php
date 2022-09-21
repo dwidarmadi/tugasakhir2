@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content-header">
                 <div class="container">
                     <div class="col-sm-12">
-                        <h1 class="text-center m-0"> KAIN TENUN SONGKET</h1>
+                        <h1 class="text-center m-0">KAIN TENUN SONGKET</h1>
                     </div><!-- /.col -->
                     <!-- /.col -->
                     <!-- /.row -->
@@ -125,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid col-md-8">
+                <div class="container-fluid col-10">
                     <div class="">
                         <div class="card">
                             @if (Session::has('success'))
@@ -134,41 +134,58 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             @endif
                             <div class="card-header">
-                                <h3 class="card-title">Produk</h3>
+                                <h3 class="card-title"><b>Tentang</b></h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="container">
-
-                                    <div class="row">
-                                        @foreach ($products as $product)
-
-                                        <div class="d-flex col-md-4">
-                                            <div class="card">
-                                                <div
-                                                    class="text-center card-body d-flex flex-column justify-content-between px-0">
-                                                    <img src="{{ asset('photos/'.$product->photo) }}" alt=""
-                                                        width="250px" height="250px"></td>
-                                                    <div>
-
-                                                        <h5>{{$product->name}}</h5>
-                                                        <p class="card-text"><i class="fas fa-tag"></i><span
-                                                                class="ml-3"></span>Rp.
-                                                            {{number_format($product->price)}}</p>
-                                                        <td class="project-actions text-right">
-                                                            <a class="btn btn-success btn-sm"
-                                                                href="{{route('pruduct.showlanding',$product->idproduct)}}">
-                                                                <i class="fas fa-folder">
-                                                                </i>
-                                                                Details
-                                                            </a>
-                                                        </td>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Email   :</th>
+                                                <td>kaintenunsongjet@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Telepon :</th>
+                                                <td>+6287 861 393 876</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Alamat  :</th>
+                                                <td>Banjar Dinas Klungah, Desa Wisma Kerta,
+                                                    Kecamatan Sidemen, Kabupaten Karangasem, Bali 80864</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Google Maps</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="mapouter">
+                                        <div class="gmap_canvas">
+                                            <iframe class="gmap_iframe" frameborder="0"
+                                                scrolling="no" marginheight="0" marginwidth="0"
+                                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=BR Klungah&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                            </iframe>
                                         </div>
-                                        @endforeach
+                                        <style>
+                                            .mapouter {
+                                                position: relative;
+                                                text-align: right;
+                                                width: 600px;
+                                                height: 400px;
+                                            }
 
+                                            .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                                width: 600px;
+                                                height: 400px;
+                                            }
+
+                                            .gmap_iframe {
+                                                width: 600px !important;
+                                                height: 400px !important;
+                                            }
+                                        </style>
                                     </div>
                                 </div>
                             </div>
