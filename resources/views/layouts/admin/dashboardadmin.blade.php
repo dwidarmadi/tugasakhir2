@@ -103,7 +103,7 @@
                         <div class="icon">
                             <i class="far fa-lightbulb nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -118,7 +118,7 @@
                         <div class="icon">
                             <i class="fas fa-car-alt nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -133,7 +133,7 @@
                         <div class="icon">
                             <i class="fas fa-user nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -148,7 +148,7 @@
                         <div class="icon">
                             <i class="fas fa-money-check-alt nav-icon"></i>
                         </div>
-                        <a href={{route('bank.store')}} class="small-box-footer">More info <i
+                        <a href={{route('bank.store')}} class="small-box-footer">Selengkapnya <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                         <div class="icon">
                             <i class="fas fa-business-time nav-icon"></i>
                         </div>
-                        <a href={{route('bank.store')}} class="small-box-footer">More info <i
+                        <a href={{route('bank.store')}} class="small-box-footer">Selengkapnya <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -174,12 +174,12 @@
                     <div class="small-box bg-secondary">
                         <div class="inner">
                             <h3>2</h3>
-                            <p>Reports</p>
+                            <p>Laporan</p>
                         </div>
                         <div class="icon">
                             <i class="far fa-file-alt nav-icon"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- /.row -->

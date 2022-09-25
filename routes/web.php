@@ -83,6 +83,14 @@ Route::get('/carabelanja', function(){
     return view('layouts.carabelanja');
 });
 
+Route::get('/pay', function(){
+    return view('layouts.buyer.uploadpay');
+});
+
+Route::get('/pesanan', function(){
+    return view('layouts.buyer.statuspesananbuyer');
+});
+
 
 
 

@@ -85,15 +85,15 @@
                         <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No Transaksi</th>
-                                    <th>Dipesan</th>
-                                    <th>Alamat</th>
-                                    <th>Bank</th>
-                                    <th>Kurir</th>
-                                    <th>Harga Total</th>
-                                    <th>Status Pembayaran</th>
-                                    <th>Jadwal Pengiriman</th>
-                                    <th>Status Produk</th>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Jumlah</th>
+                                    <th>Harga</th>
+                                    <th>No Telepon</th>
+                                    <th>Email</th>
+                                    <th>Alamat Pesanan</th>
+                                    <th>Transfer</th>
+                                    <th>Jasa Pengiriman</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
