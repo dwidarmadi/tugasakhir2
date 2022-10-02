@@ -77,6 +77,7 @@ class ProductController extends Controller
             'qty' => $request->qty,
             'status' => $request->status,
             'price' => $request->price,
+            'iduser' => auth()->user()->id
         ];
 
         $detailproductdata = [
@@ -108,8 +109,6 @@ class ProductController extends Controller
                 foreach ($request->file('photos') as $key => $file) {
                     $fileName = time() . rand(1, 99) . '.' . $file->extension();
                     $file->move(public_path('photos'), $fileName);
-                    // $photos[]['idproduct'] = $insertProduct->id;
-                    // $photos[]['photo'] = $fileName;
                     $photos[$key]['idproduct'] = $insertProduct->id;
                     $photos[$key]['photo'] = $fileName;
                 }
@@ -119,16 +118,11 @@ class ProductController extends Controller
 
             foreach ($photos as $key => $file) {
 
-                // $xdata = [
-                //     'idproduct' => $insertProduct->id,
-                // ];
-
                 DetailProduct::create($file);
             }
 
             return redirect('seller/product');
         }
-        // return redirect('product');
     }
 
     /**

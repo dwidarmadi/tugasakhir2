@@ -14,7 +14,7 @@
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
+                                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -48,9 +48,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="nav-link" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                            <p>Keluar</p>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
