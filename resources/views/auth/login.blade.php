@@ -7,6 +7,13 @@
             <div class="card">
                 <div class="card-header text-white"  style="background: #005A5B;">{{ __('Login') }}</div>
                 <div class="card-body">
+                    @if (\Session::has('error'))
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>{!! \Session::get('error') !!}</li>
+                            </ul>
+                        </div>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="row mb-3">

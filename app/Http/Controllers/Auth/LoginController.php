@@ -70,6 +70,17 @@ class LoginController extends Controller
         ]);
 
         if(auth()->attempt(array('email' =>$input['email'], 'password' => $input['password']))){
+            if(auth()->user()->email_verified_at == NULL) {
+                if(auth()->user()->role == 'buyer' || auth()->user()->role == 'seller'){
+                    Auth::logout();
+
+                    request()->session()->invalidate();
+
+                    request()->session()->regenerateToken();
+
+                    return redirect()->route('login')->with('error', 'Please verify your email!');
+                }
+            }
             if(auth()->user()->role == 'buyer'){
                 return redirect()->route('buyer.dashboard');
             }
@@ -80,7 +91,7 @@ class LoginController extends Controller
                 return redirect()->route('admin.dashboard');
             }
         }else{
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error', 'Wrong email/password!');
         }
     }
 }

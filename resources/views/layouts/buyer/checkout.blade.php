@@ -86,28 +86,50 @@
                         <!-- /.card-header -->
                         <!-- form start -->
                         <div class="ml-3 mt-3">
-                            <h5>Total Belanja :</h5>
+                            @php
+                            $jumlahkeranjang = count($data_cart);
+                            $datawal=0;
+                            $grandtotal=0;
+                            @endphp
+
+                            @for ($i = 0; $i < $jumlahkeranjang; $i++) @php $subtotal=$data_cart[$i]->price *
+                                $data_cart[$i]->qty;
+                                $grandtotal=$datawal+=$subtotal;
+
+                                @endphp
+                                @endfor
+                            <h5>Total Belanja : Rp. {{number_format($grandtotal)}}</h5>
                         </div>
-                        <form>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action={{ route('buyer.checkout.store') }} method="post">
+                            @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputNoTelepon">No. Telepon</label>
-                                    <input type="text" class="form-control" id="exampleInputNoTelepon"
-                                        placeholder="Nomor Telepon">
+                                    <label for="phone">No. Telepon</label>
+                                    <input type="text" class="form-control" id="phone"
+                                        placeholder="Nomor Telepon" name="phone">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputAlamat">Alamat Pesanan</label>
-                                    <input type="email" class="form-control" id="exampleInputAlamat"
-                                        placeholder="Alamat Pesanan">
+                                    <label for="alamat">Alamat Pesanan</label>
+                                    <input type="text" class="form-control" id="alamat"
+                                        placeholder="Alamat Pesanan" name="alamat">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputTransfer">Transfer via</label>
+                                    <label for="payment">Transfer via</label>
                                     <div class="form-group">
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                        <select class="custom-select rounded-0" id="payment" name="payment">
                                             <option>BCA</option>
                                             <option>BNI</option>
                                             <option>Mandiri</option>
@@ -115,10 +137,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPengiriman">Pilih Jasa Pengiriman</label>
+                                    <label for="shipper">Pilih Jasa Pengiriman</label>
                                     <div class="form-group">
-                                        <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                                            <option>J&N</option>
+                                        <select class="custom-select rounded-0" id="shipper" name="shipper">
+                                            <option>J&T</option>
                                             <option>JNE</option>
                                             <option>Si Cepat Express</option>
                                         </select>

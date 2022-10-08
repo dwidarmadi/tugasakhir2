@@ -17,6 +17,7 @@ use App\Http\Controllers\JasaPengirimanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ use App\Http\Controllers\LandingPageController;
 | contains the "web" middleware group. Now create something great!
 */
 
+Auth::routes(['verify' => true]);
 // Route::resource('order', OrderController::class);
 
 Route::get('/', [LandingPageController::class, 'index']);
@@ -54,6 +56,9 @@ Route::prefix('buyer')->group(function () {
 
     Route::resource('chart', ChartController::class);
 
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('buyer.checkout.index');
+    Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('buyer.checkout.store');
+
 });
 
 /**MODAL */
@@ -71,10 +76,6 @@ Route::get('/showdetailjp/{id}', [JasaPengirimanController::class, 'show'])->nam
 
 /**TEST ROUTE */
 
-Route::get('/checkout', function(){
-    return view('layouts.buyer.checkout');
-});
-
 Route::get('/tentang', function(){
     return view('layouts.tentang');
 });
@@ -90,9 +91,6 @@ Route::get('/pay', function(){
 Route::get('/pesanan', function(){
     return view('layouts.buyer.statuspesananbuyer');
 });
-
-
-
 
 
 
