@@ -47,6 +47,8 @@ Route::prefix('seller')->group(function () {
     Route::get('/dashboard', [DashboardAll::class, 'index1'])->name('seller.dashboard');
 
     Route::resource('product', ProductController::class);
+
+    Route::resource('order', OrderController::class);
 });
 
 Route::prefix('buyer')->group(function () {
@@ -58,7 +60,6 @@ Route::prefix('buyer')->group(function () {
 
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('buyer.checkout.index');
     Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('buyer.checkout.store');
-
 });
 
 /**MODAL */
@@ -76,19 +77,19 @@ Route::get('/showdetailjp/{id}', [JasaPengirimanController::class, 'show'])->nam
 
 /**TEST ROUTE */
 
-Route::get('/tentang', function(){
+Route::get('/tentang', function () {
     return view('layouts.tentang');
 });
 
-Route::get('/carabelanja', function(){
+Route::get('/carabelanja', function () {
     return view('layouts.carabelanja');
 });
 
-Route::get('/pay', function(){
+Route::get('/pay', function () {
     return view('layouts.buyer.uploadpay');
 });
 
-Route::get('/pesanan', function(){
+Route::get('/pesanan', function () {
     return view('layouts.buyer.statuspesananbuyer');
 });
 

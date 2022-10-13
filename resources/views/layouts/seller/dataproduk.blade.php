@@ -14,7 +14,7 @@
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
-                                with font-awesome or any other icon font library -->
+                                                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('order.index') }}" class="nav-link">
                             <i class="far fa-lightbulb nav-icon"></i>
                             <p>Pesanan Masuk</p>
                         </a>
@@ -101,7 +101,7 @@
                                     <a href="product/create" class="btn btn-primary mb-2"><i
                                             class="fas fa-plus mr-2"></i>Tambah Produk</a>
                                 </div>
-                                <table class="table table-responsive">
+                                <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th style="vertical-align: middle;">No</th>
