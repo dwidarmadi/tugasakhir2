@@ -21,9 +21,11 @@ class CheckoutController extends Controller
     public function index()
     {
         $cart = Chart::all();
+        $total = $cart->sum('subtol');
 
         return view('layouts.buyer.checkout', [
-            'data_cart' => $cart
+            'data_cart' => $cart,
+            'total' => $total
         ]);
     }
 
@@ -52,7 +54,7 @@ class CheckoutController extends Controller
             'payment' => 'required',
             'shipper' => 'required',
         ]);
-        $data_order['invoice_code'] = 'INV-'.time().'-'.strtoupper(Str::random(5));
+        $data_order['invoice_code'] = 'INV-' . time() . '-' . strtoupper(Str::random(5));
         $data_order['user_id'] = Auth::user()->id;
         $data_order['name'] = Auth::user()->name;
         $data_order['status'] = 'Waiting Payment';
@@ -63,7 +65,7 @@ class CheckoutController extends Controller
 
         $new_data_order = Order::create($data_order)->id;
 
-        for($i=0; $i<count($data_cart); $i++){
+        for ($i = 0; $i < count($data_cart); $i++) {
             $product_search = Product::find($data_cart[$i]->idproduct);
 
             $new_detail_order = [
