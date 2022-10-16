@@ -78,8 +78,8 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background: #D19C97;
-            opacity: 0.5;
+            background: #28a745;
+            opacity: 1;
             z-index: 12;
         }
 
@@ -152,7 +152,7 @@
             bottom: 0;
             height: 3px;
             width: 25px;
-            background: #D19C97;
+            background: #28a745;
         }
 
         .forms .signup-form .title:before {
@@ -186,12 +186,12 @@
 
         .form-content .input-box input:focus,
         .form-content .input-box input:valid {
-            border-color: #D19C97;
+            border-color: #28a745;
         }
 
         .form-content .input-box i {
             position: absolute;
-            color: #D19C97;
+            color: #28a745;
             font-size: 17px;
         }
 
@@ -216,7 +216,7 @@
 
         .forms .form-content .button input {
             color: #fff;
-            background: #D19C97;
+            background: #28a745;
             border-radius: 6px;
             padding: 0;
             cursor: pointer;
@@ -224,11 +224,11 @@
         }
 
         .forms .form-content .button input:hover {
-            background: #D19C97;
+            background: #28a745;
         }
 
         .forms .form-content label {
-            color: #D19C97;
+            color: #28a745;
             cursor: pointer;
         }
 
@@ -276,15 +276,15 @@
         <input type="checkbox" id="flip">
         <div class="cover">
             <div class="front">
-                <img src="https://i.ibb.co/LJzrb9J/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg" alt="">
+                {{-- <img src="https://i.ibb.co/LJzrb9J/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg" alt=""> --}}
                 <div class="text">
                     <span class="text-1">Selamat Datang <br /> </span>
                     {{-- <span class="text-2">Let's get connected</span> --}}
                 </div>
             </div>
             <div class="back">
-                <img class="backImg" src="https://i.ibb.co/LJzrb9J/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg"
-                    alt="">
+                {{-- <img class="backImg" src="https://i.ibb.co/LJzrb9J/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg"
+                    alt=""> --}}
                 <div class="text">
                     <span class="text-1">Complete miles of journey <br> with one step</span>
                     <span class="text-2">Let's get started</span>
