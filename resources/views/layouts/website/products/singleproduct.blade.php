@@ -52,31 +52,23 @@
 @section('content')
     <div class="container product-container">
         <div class="row product">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Email :</th>
-                        <td>kaintenunsongjet@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <th>Telepon :</th>
-                        <td>+6287 861 393 876</td>
-                    </tr>
-                    <tr>
-                        <th>Alamat :</th>
-                        <td>Banjar Dinas Klungah, Desa Wisma Kerta,
-                            Kecamatan Sidemen, Kabupaten Karangasem, Bali 80864</td>
-                    </tr>
-                    <tr>
-                        <th>Google Maps</th>
-                    </tr>
-                </thead>
-            </table>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d505102.41901645117!2d115.43392499999999!3d-8.488427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3556e1733ed7fb6!2sBanjar%20Klungah!5e0!3m2!1sen!2sus!4v1665894930230!5m2!1sen!2sus"
-                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="col-md-6 text-center">
+                <img src="{{ url('photos/' . $product->photo) }}" width="100%" />
+            </div>
+            <div class="col-md-6">
+                <div id="product-detail">
+                    <h2>
+                        {{ $product->name }}
+                    </h2>
+                    <h3>
+                        Rp. {{ number_format($product->price) }}
+                    </h3>
+                    <p>
+                        {{ $product->description }}
+                    </p>
+                </div>
+                <a href="{{ route('login') }}" class="btn btn-primary btn-lg text-white buy-now">Beli Sekarang</a>
+            </div>
         </div>
     </div>
 @endsection

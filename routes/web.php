@@ -33,6 +33,13 @@ Auth::routes(['verify' => true]);
 // Route::resource('order', OrderController::class);
 
 Route::get('/', [LandingPageController::class, 'index']);
+Route::get('/produk/{id}', [LandingPageController::class, 'SingleProduct'])->name('public.singleproduct');
+Route::get('/about', function () {
+    return view('layouts.tentang');
+});
+Route::get('/cara-belanja', function () {
+    return view('layouts.carabelanja');
+});
 
 /**PREFIEX */
 Route::prefix('admin')->group(function () {
