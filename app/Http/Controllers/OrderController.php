@@ -97,7 +97,7 @@ class OrderController extends Controller
 
         $data = DB::table('orders')->where('invoice_code', $id)->update($data_shipping);
 
-        return redirect('buyer/order/order-list');
+        return redirect('seller/order');
     }
 
     /**
