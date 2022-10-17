@@ -19,7 +19,7 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="order/order-in" class="nav-link">
                         <i class="fas fa-info nav-icon"></i>
                         <p>Informasi Pesanan</p>
                     </a>
