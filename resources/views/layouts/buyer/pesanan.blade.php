@@ -118,8 +118,11 @@
                                         @elseif ($or->status == 'On Process')
                                         <span class="badge badge-success">On Process</span>
                                         @elseif ($or->status == 'Shipping')
-                                        <span class="badge badge-success">Shipping</span>
+                                        {{-- {{$or->airwaybill}} ne ye yan --}}
+                                        <span class="badge badge-success" id="shipping" onclick="jung()" aria-label="{{ $or->airwaybill }}">Shipping</span>
                                         @elseif ($or->status == 'Delivered')
+                                        {{-- ape ne? dini set airwaibill ne pas pecik shipping to  --}}
+                                        {{-- apa data ketone? apane adane resi --}}
                                         <span class="badge badge-success">Delivered</span>
                                         @elseif ($or->status == 'Received')
                                         <span class="badge badge-success">Received</span>
@@ -145,4 +148,15 @@
 </section>
 <!-- /.content -->
 <!-- /.content-wrapper -->
+@endsection
+@section('scriptPlace')
+<script>
+
+    function jung(){
+        let getElement = document.getElementById('shipping')
+        let airway = getElement.ariaLabel;
+
+        alert("No Resi: "+ airway);
+    }
+</script>
 @endsection
