@@ -19,7 +19,7 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/buyer/order/order-list" class="nav-link">
                         <i class="fas fa-cart-arrow-down nav-icon"></i>
                         <p>Status Pesanan</p>
                     </a>
@@ -31,28 +31,29 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="order/history" class="nav-link">
                         <i class="fas fa-history nav-icon"></i>
                         <p>Histori Pesanan</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-exclamation-circle nav-icon"></i>
-                        <p>Tentang</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </li>
-            </ul>
         </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fas fa-exclamation-circle nav-icon"></i>
+                <p>Tentang</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </li>
+    </ul>
+    </li>
     </ul>
 </nav>
 <!-- /.sidebar-menu -->
@@ -75,52 +76,60 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Pesanan</h3>
+                        <h3 class="card-title">Pesanan Berlangsung</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Jumlah</th>
-                                    <th>Harga</th>
-                                    <th>No Telepon</th>
-                                    <th>Email</th>
-                                    <th>Alamat Pesanan</th>
-                                    <th>Transfer</th>
-                                    <th>Jasa Pengiriman</th>
-                                    <th>Aksi</th>
+                                    <th>Invoice Code</th>
+                                    <th>Alamat Pengiriman</th>
+                                    <th>Pembayaran</th>
+                                    <th>Kurir</th>
+                                    <th>Total Belanja</th>
+                                    <th>Detail Order</th>
+                                    <th>Status Pesanan</th>
                                 </tr>
                             </thead>
+                            @foreach ($orders as $ord => $or)
                             <tbody>
                                 <tr>
-                                    <td>T001</td>
-                                    <td>15-04-2022</td>
-                                    <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
-                                    <td>BCA</td>
-                                    <td>JNE</td>
-                                    <td>Rp. 1.000.000</td>
+                                    <td>{{$or->invoice_code}}</td>
+                                    <td>{{$or->alamat}}</td>
+                                    <td>{{$or->payment}}</td>
+                                    <td>{{$or->shipper}}</td>
+                                    <td>Rp. {{number_format($or->total)}}</td>
                                     <td>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
-                                        <span class="badge badge-primary">Dalam Proses</span>
-                                    </td>
-                                    <td>17-05-2022</td>
-                                    <td>
-                                        <span class="badge badge-success">Diterima</span>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
-                                        <span class="badge badge-primary">Dalam Proses</span>
+                                        <a class="btn btn-success btn-sm" href="#">
+                                           List Product
+                                        </a>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-upload"></i><span
-                                                class="ml-2"></span> Bukti Pembayaran</a>
+                                        @if ($or->status == 'Waiting Payment')
+                                        <a href="{{ route('buyer.pay', $or->invoice_code) }}"><span class="badge badge-warning">Waiting Payment</span></a>
+                                        @elseif ($or->status == 'Checking Payment')
+                                        <span class="badge badge-primary">Checking Payment</span>
+                                        @elseif ($or->status == 'Payment Failed')
+                                        <a href="{{ route('buyer.pay', $or->invoice_code) }}"><span class="badge badge-danger">Payment Failed</span></a>
+                                        @elseif ($or->status == 'On Process')
+                                        <span class="badge badge-success">On Process</span>
+                                        @elseif ($or->status == 'Shipping')
+                                        <span class="badge badge-success">Shipping</span>
+                                        @elseif ($or->status == 'Delivered')
+                                        <span class="badge badge-success">Delivered</span>
+                                        @elseif ($or->status == 'Received')
+                                        <span class="badge badge-success">Received</span>
+                                        @elseif ($or->status == 'Checking on Shipping')
+                                        <span class="badge badge-warning">Checking on Shipping</span>
+                                        @endif
                                     </td>
                                 </tr>
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <!-- /.card-body -->

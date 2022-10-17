@@ -92,46 +92,43 @@
                             <table id="example2" class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama Barang</th>
-                                        <th>Jumlah</th>
-                                        <th>Subtotal</th>
+                                        <th>Invoice Code</th>
+                                        <th>Alamat Pengiriman</th>
+                                        <th>Pembayaran</th>
+                                        <th>Kurir</th>
+                                        <th>Total Belanja</th>
+                                        <th>Detail Order</th>
+                                        <th>Status Pesanan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($orders as $odr => $order)
-                                        <tr>
-                                            <td>{{ ++$odr }}</td>
-                                            <td>{{ $order->name }}</td>
-                                            <td>{{ $order->qty }}</td>
-                                            <td>{{ $order->subtol }}</td>
-                                        </tr>
-                                    @endforeach
-                                    {{-- <tr>
-                                        <td>T001</td>
-                                        <td>10-05-2022</td>
+                                    <tr>
+                                        <td>{{$orders->invoice_code}}</td>
+                                        <td>{{$orders->alamat}}</td>
+                                        <td>{{$orders->payment}}</td>
+                                        <td>{{$orders->shipper}}</td>
+                                        <td>Rp. {{number_format($orders->total)}}</td>
                                         <td>
-                                            <span class="badge badge-danger">Belum Dibayar</span>
-                                            <span class="badge badge-primary">Dibayar</span>
+                                            <a class="btn btn-success btn-sm" href="#">
+                                               List Product
+                                            </a>
                                         </td>
                                         <td>
-                                            <span class="badge badge-success">Diterima</span>
-                                            <span class="badge badge-danger">Dalam Proses</span>
-                                            <span class="badge badge-primary">Dalam Proses</span>
+                                            @if ($orders->status == 'On Process')
+                                            <a href="{{ route('seller.shipping', $orders->invoice_code) }}"><span class="badge badge-success">On Process</span></a>
+                                            @elseif ($orders->status == 'Shipping')
+                                            <span class="badge badge-success">Shipping</span>
+                                            @elseif ($orders->status == 'Delivered')
+                                            <span class="badge badge-success">Delivered</span>
+                                            @elseif ($orders->status == 'Received')
+                                            <span class="badge badge-success">Received</span>
+                                            @elseif ($orders->status == 'Checking on Shipping')
+                                            <span class="badge badge-warning">Checking on Shipping</span>
+                                            @endif
                                         </td>
-                                        <td>12-05-2022</td> --}}
-                                    {{-- <td>
-                                        <a class="btn btn-success btn-sm" href="#">
-                                            <i class="fas fa-info"></i>
-                                            Detail
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash"> </i>
-                                            Delete
-                                        </a>
-                                    </td> --}}
-                                    {{-- </tr> --}}
+                                    </tr>
                                 </tbody>
+
                             </table>
                         </div>
                         <!-- /.card-body -->

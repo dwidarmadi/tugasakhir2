@@ -11,41 +11,50 @@
     </div>
 </div>
 <!-- /.sidebar-menu -->
+
 <!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
-           with font-awesome or any other icon font library -->
+                                                with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
+                    <a href={{ route('product.store') }} class="nav-link">
+                        <i class="fab fa-product-hunt nav-icon"></i>
+                        <p>Produk Saya</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ route('product.create') }} class="nav-link">
+                        <i class="far fa-plus-square nav-icon"></i>
+                        <p>Tambah Produk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('order.index') }}" class="nav-link">
+                        <i class="far fa-lightbulb nav-icon"></i>
+                        <p>Pesanan Masuk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-cart-arrow-down  nav-icon"></i>
-                        <p>Status Pesanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/buyer/chart" class="nav-link">
-                        <i class="fas fa-shopping-basket nav-icon"></i>
-                        <p>Keranjang Belanja</p>
+                        <i class="fas fa-car-alt nav-icon"></i>
+                        <p>Pesanan Dikirim</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-history nav-icon"></i>
-                        <p>Histori Pesanan</p>
+                        <i class="fas fa-info nav-icon"></i>
+                        <p>Informasi Pesanan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-exclamation-circle nav-icon"></i>
-                        <p>Tentang</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">
-                        <i class="fas fa-sign-out-alt nav-icon"></i> {{ __('Keluar') }}
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <p>Keluar</p>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
@@ -65,7 +74,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1><i class="fas fa-upload nav-icon"></i><span class="ml-3"></span>Upload Bukti Pembayaran</h1>
+                <h1><i class="fas fa-upload nav-icon"></i><span class="ml-3"></span>Upload Resi Pengiriman</h1>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -78,12 +87,12 @@
             <div class="col-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Upload Bukti Transaksi</h3>
+                        <h3 class="card-title">Upload Resi Pengiriman</h3>
                     </div>
-                    <form class="col" method="post" action={{ route('buyer.pay.store', $invoice) }} enctype="multipart/form-data">
+                    <form class="col" method="post" action={{ route('seller.shipping.store', $invoice) }}>
                         @csrf
                         <div class="card-body">
-                            <input type="file" name="attachment">
+                            <input type="name" name="airwaybill" placeholder="airwaybill">
                             <div class="pt-3">
                                 <button type="submit" class="btn btn-success">Upload</button>
                             </div>

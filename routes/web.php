@@ -48,6 +48,9 @@ Route::prefix('admin')->group(function () {
     Route::resource('bank', BankController::class);
 
     Route::resource('jasapengiriman', JasaPengirimanController::class);
+
+    Route::get('/order/order-in', [OrderController::class, 'indexAdmin'])->name('admin.orderlist.index');
+    Route::post('/update/payment-status/{id}', [OrderController::class, 'paymentUpdate'])->name('admin.payment.check');
 });
 
 Route::prefix('seller')->group(function () {
@@ -56,6 +59,9 @@ Route::prefix('seller')->group(function () {
     Route::resource('product', ProductController::class);
 
     Route::resource('order', OrderController::class);
+
+    Route::get('/shipping/{id}', [OrderController::class, 'createShipping'])->name('seller.shipping');
+    Route::post('/shipping/store/{id}', [OrderController::class, 'storeShipping'])->name('seller.shipping.store');
 });
 
 Route::prefix('buyer')->group(function () {
@@ -67,6 +73,13 @@ Route::prefix('buyer')->group(function () {
 
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('buyer.checkout.index');
     Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('buyer.checkout.store');
+
+    Route::get('/order/history', [OrderController::class, 'indexHistory'])->name('buyer.orderhistory.index');
+    Route::get('/order/order-list', [OrderController::class, 'indexBuyer'])->name('buyer.orderlist.index');
+
+
+    Route::get('/pay/{id}', [OrderController::class, 'createPay'])->name('buyer.pay');
+    Route::post('/pay/store/{id}', [OrderController::class, 'storePay'])->name('buyer.pay.store');
 });
 
 /**MODAL */
@@ -90,10 +103,6 @@ Route::get('/tentang', function () {
 
 Route::get('/carabelanja', function () {
     return view('layouts.carabelanja');
-});
-
-Route::get('/pay', function () {
-    return view('layouts.buyer.uploadpay');
 });
 
 Route::get('/pesanan', function () {

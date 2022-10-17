@@ -19,7 +19,7 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/buyer/order/order-list" class="nav-link">
                         <i class="fas fa-cart-arrow-down nav-icon"></i>
                         <p>Status Pesanan</p>
                     </a>
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/order/history" class="nav-link">
                         <i class="fas fa-history nav-icon"></i>
                         <p>Histori Pesanan</p>
                     </a>
@@ -86,48 +86,38 @@
                         <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Produk</th>
-                                    <th>Nama Produk</th>
-                                    <th>Jumlah</th>
+                                    <th>Invoice Code</th>
+                                    <th>Alamat Pengiriman</th>
+                                    <th>Pembayaran</th>
                                     <th>Kurir</th>
-                                    <th>Harga Total</th>
-                                    <th>Status Pembayaran</th>
-                                    <th>Jadwal Pengiriman</th>
-                                    <th>Status Produk</th>
-                                    <th>Aksi</th>
+                                    <th>Total Belanja</th>
+                                    <th>Detail Order</th>
+                                    <th>Status Pesanan</th>
                                 </tr>
                             </thead>
+                            @foreach ($orders as $ord => $or)
                             <tbody>
                                 <tr>
-                                    <td>T001</td>
-                                    <td>15-04-2022</td>
-                                    <td>Jl. Pasekan No.2 Batubulan, Gianyar</td>
-                                    <td>BCA</td>
-                                    <td>JNE</td>
-                                    <td>Rp. 1.000.000</td>
-                                    <td>
-                                        <span class="badge badge-success">Sudah Dibayar</span>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
-                                    </td>
-                                    <td>17-05-2022</td>
-                                    <td>
-                                        <span class="badge badge-success">Diterima</span>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
-                                        <span class="badge badge-primary">Dalam Proses</span>
-                                    </td>
+                                    <td>{{$or->invoice_code}}</td>
+                                    <td>{{$or->alamat}}</td>
+                                    <td>{{$or->payment}}</td>
+                                    <td>{{$or->shipper}}</td>
+                                    <td>Rp. {{number_format($or->total)}}</td>
                                     <td>
                                         <a class="btn btn-success btn-sm" href="#">
-                                            <i class="fas fa-check"></i>
-                                            Diterima
+                                           List Product
                                         </a>
-                                        <a class="btn btn-danger btn-sm mt-2" href="#">
-                                            <i class="fas fa-trash"> </i>
-                                            Delete
-                                        </a>
+                                    </td>
+                                    <td>
+                                        @if ($or->status == 'Received')
+                                        <span class="badge badge-success">Selesai</span>
+                                        @elseif ($or->status == 'Cancelled')
+                                        <span class="badge badge-danger">Cancelled</span>
+                                        @endif
                                     </td>
                                 </tr>
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <!-- /.card-body -->

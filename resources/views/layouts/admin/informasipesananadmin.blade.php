@@ -99,44 +99,62 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Pesanan Masuk</h3>
+                        <h3 class="card-title">Pesanan Berlangsung</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example2" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No Transaksi</th>
-                                    <th>Waktu Pesanan</th>
+                                    <th>Invoice Code</th>
+                                    <th>Payment</th>
                                     <th>Pembayaran</th>
-                                    <th>Status Produk</th>
-                                    <th>Jadwal Pengiriman</th>
-                                    <th>Aksi</th>
+                                    <th>Kurir</th>
+                                    <th>Total Belanja</th>
+                                    <th>Detail Order</th>
+                                    <th>Payment</th>
                                 </tr>
                             </thead>
+                            @foreach ($orders as $ord => $or)
                             <tbody>
                                 <tr>
-                                    <td>T001</td>
-                                    <td>10-05-2022</td>
-                                    <td>Belum Dibayar</td>
+                                    <td>{{$or->invoice_code}}</td>
                                     <td>
-                                        <span class="badge badge-success">Diterima</span>
-                                        <span class="badge badge-danger">Belum Dibayar</span>
-                                        <span class="badge badge-primary">Dalam Proses</span>
+                                        <img src="{{ asset('photos/' . $or->payment_img) }}" alt=""
+                                                        width="150px" height="150px">
                                     </td>
-                                    <td>12-05-2022</td>
+                                    <td>{{$or->payment}}</td>
+                                    <td>{{$or->shipper}}</td>
+                                    <td>Rp. {{number_format($or->total)}}</td>
                                     <td>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt">
-                                                </i>
-                                                Detail
-                                            </a>
-                                        </td>
+                                        <a class="btn btn-success btn-sm" href="#">
+                                           List Product
+                                        </a>
+                                    </td>
+                                    <td>
+                                        @if ($or->status == "Payment Checking" || $or->payment == "Payment Failed")
+                                        <form method="post" action={{ route('admin.payment.check', $or->invoice_code) }}>
+                                            @csrf
+                                            <input type="hidden" value="a" name="status">
+                                            <button type="submit" class="btn btn-sm btn-success">Approved</button>
+                                        </form>
+                                        <br>
+                                        <form method="post" action={{ route('admin.payment.check', $or->invoice_code) }}>
+                                            @csrf
+                                            <input type="hidden" value="d" name="status">
+                                            <button type="submit" class="btn btn-sm btn-danger">Declined</button>
+                                        </form>
+                                        @else
+                                        <span class="badge badge-success">Payment Approved</span>
+                                        @endif
+
+                                    </td>
                                 </tr>
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <!-- /.card-body -->

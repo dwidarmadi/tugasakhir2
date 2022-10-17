@@ -20,7 +20,7 @@
         <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/buyer/order/order-list" class="nav-link">
                         <i class="fas fa-cart-arrow-down  nav-icon"></i>
                         <p>Status Pesanan</p>
                     </a>
@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="order/history" class="nav-link">
                         <i class="fas fa-history nav-icon"></i>
                         <p>Histori Pesanan</p>
                     </a>
