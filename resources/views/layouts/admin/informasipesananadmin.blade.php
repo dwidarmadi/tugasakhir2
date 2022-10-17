@@ -135,7 +135,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        @if (($or->status == "Checking Payment") || ($or->payment == "Payment Failed"))
+                                        @if ($or->status == "Checking Payment")
                                         <form method="post" action={{ route('admin.payment.check', $or->invoice_code) }}>
                                             @csrf
                                             <input type="hidden" value="a" name="status">
@@ -147,6 +147,8 @@
                                             <input type="hidden" value="d" name="status">
                                             <button type="submit" class="btn btn-sm btn-danger">Declined</button>
                                         </form>
+                                        @elseif ($or->status == "Payment Failed")
+                                        <span class="badge badge-danger">Payment Declined</span>
                                         @else
                                         <span class="badge badge-success">Payment Approved</span>
                                         @endif
