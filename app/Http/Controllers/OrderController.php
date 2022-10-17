@@ -18,9 +18,9 @@ class OrderController extends Controller
     {
         $data = DB::table('orders')->join('order_details', 'orders.id', 'order_details.order_id' )->select('orders.*')->where('order_details.seller_id', Auth::user()->id)
                     ->where('orders.status', '!=', 'Waiting Payment')
-                    ->orWhere('orders.status', '!=', 'Checking Payment')
-                    ->orWhere('orders.status', '!=', 'Failed Payment')
-                    ->orWhere('orders.status', '!=', 'Cancelled')
+                    ->where('orders.status', '!=', 'Checking Payment')
+                    ->where('orders.status', '!=', 'Failed Payment')
+                    ->where('orders.status', '!=', 'Cancelled')
                     ->first();
 
         return view('layouts.seller.pesananmasukseller', ['orders' => $data]);

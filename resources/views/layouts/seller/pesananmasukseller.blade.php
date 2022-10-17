@@ -103,6 +103,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        @if ($orders != null)
                                         <td>{{$orders->invoice_code}}</td>
                                         <td>{{$orders->alamat}}</td>
                                         <td>{{$orders->payment}}</td>
@@ -126,9 +127,9 @@
                                             <span class="badge badge-warning">Checking on Shipping</span>
                                             @endif
                                         </td>
+                                        @endif
                                     </tr>
                                 </tbody>
-
                             </table>
                         </div>
                         <!-- /.card-body -->
